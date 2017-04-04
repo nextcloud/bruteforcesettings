@@ -37,7 +37,7 @@ style('bruteforcesettings', [
 /** @var \OCP\IL10N $l */
 ?>
 <form id="IPWhiteList" class="section">
-	<h2><?php p($l->t('Brute force ip whitelist')); ?></h2>
+	<h2><?php p($l->t('Brute-force IP whitelist')); ?></h2>
 
 	<table id="whitelist-list">
 
