@@ -1,0 +1,6 @@
+{ "translations": {
+    "Delete" : "Eliminar",
+    "Error while deleting a whitelist" : "Error al eliminar una lista blanca",
+    "Add" : "Añadir"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
