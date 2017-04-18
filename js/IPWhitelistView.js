@@ -65,7 +65,7 @@
 				_this.render();
 			});
 			$.when(loadingWhitelists).fail(function () {
-				OC.Notification.showTemporary(t('bruteforcesettings', 'Error while whitelists.'));
+				OC.Notification.showTemporary(t('bruteforcesettings', 'Error while loading whitelists.'));
 			});
 		},
 
