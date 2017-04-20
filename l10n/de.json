@@ -1,6 +1,8 @@
 { "translations": {
     "Delete" : "Löschen",
+    "Error while loading whitelists." : "Fehler beim Laden der Whitelist",
     "Error while deleting a whitelist" : "Fehler beim Löschen der Whitelist",
+    "Brute-force IP whitelist" : "Brute-Force IP Whitelist",
     "Add" : "Hinzufügen"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
