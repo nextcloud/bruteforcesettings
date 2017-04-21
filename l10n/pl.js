@@ -2,6 +2,7 @@ OC.L10N.register(
     "bruteforcesettings",
     {
     "Delete" : "Usuń",
+    "Error while loading whitelists." : "Błąd podczas ładowania białych list",
     "Error while deleting a whitelist" : "Błąd podczas usuwania białej listy",
     "Add" : "Dodaj"
 },
