@@ -1,6 +1,8 @@
 { "translations": {
     "Delete" : "Verwijderen",
+    "Error while loading whitelists." : "Fout tijdens laden toegangslijsten.",
     "Error while deleting a whitelist" : "Fout tijdens verwijderen van toegangslijst",
+    "Brute-force IP whitelist" : "Bruteforce IP toegangslijst",
     "Add" : "Toevoegen"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
