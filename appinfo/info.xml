@@ -8,7 +8,7 @@
 	<licence>AGPL</licence>
 	<author>Roeland Jago Douma</author>
 	<default_enable/>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<category>other</category>
 	<dependencies>
         <nextcloud min-version="12" max-version="12" />
