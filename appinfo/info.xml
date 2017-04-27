@@ -2,6 +2,7 @@
 <info>
 	<id>bruteforcesettings</id>
 	<name>Brute-force settings</name>
+	<summary>Whitelist IPs</summary>
 	<description><![CDATA[Brute Force Protection is meant to protect Nextcloud servers from attempts to
 guess user passwords in various ways. Besides the obvious "*let's try a big
 list of commonly used passwords*" attack, it also makes it harder to use
@@ -16,7 +17,7 @@ protection which can be useful for testing purposes or when there are false
 positives due to a lot of users on one IP address.]]></description>
 	<licence>AGPL</licence>
 	<author>Roeland Jago Douma</author>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<category>auth</category>
 	<website>https://github.com/nextcloud/bruteforcesettings</website>
 	<bugs>https://github.com/nextcloud/bruteforcesettings/issues</bugs>
