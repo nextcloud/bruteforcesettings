@@ -38,6 +38,7 @@ style('bruteforcesettings', [
 ?>
 <form id="IPWhiteList" class="section">
 	<h2><?php p($l->t('Brute-force IP whitelist')); ?></h2>
+	<em><?php p('To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all.') ?></em>
 
 	<table id="whitelist-list">
 
