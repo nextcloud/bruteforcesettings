@@ -6,3 +6,5 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Add description text to settings panel
+- Improve app description
+- Add app screenshot
