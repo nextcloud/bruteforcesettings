@@ -4,6 +4,7 @@ OC.L10N.register(
     "Delete" : "Eyða",
     "Error while loading whitelists." : "Villa við að hlaða inn hvítlistum.",
     "Error while deleting a whitelist" : "Villa við að eyða hvítlista",
+    "Brute-force settings" : "Stillingar þvingunar",
     "Brute-force IP whitelist" : "Þvinga fram lista með leyfðum IP-tölum (hvítlista)",
     "Add" : "Bæta við"
 },
