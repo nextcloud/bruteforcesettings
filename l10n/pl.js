@@ -4,6 +4,7 @@ OC.L10N.register(
     "Delete" : "Usuń",
     "Error while loading whitelists." : "Błąd podczas ładowania białych list",
     "Error while deleting a whitelist" : "Błąd podczas usuwania białej listy",
+    "Brute-force settings" : "Ustawienia brute-force",
     "Brute-force IP whitelist" : "Biała lista IP brute-force",
     "Add" : "Dodaj"
 },
