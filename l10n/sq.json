@@ -1,0 +1,6 @@
+{ "translations": {
+    "Delete" : "Fshi",
+    "Error while loading whitelists." : "Gabim gjatë ngarkimit së listës bardhë",
+    "Error while deleting a whitelist" : "Gabimi gjatë fshirjes së listës së bardhë"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
