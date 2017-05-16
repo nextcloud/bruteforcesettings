@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Fshi",
     "Error while loading whitelists." : "Gabim gjatë ngarkimit së listës bardhë",
-    "Error while deleting a whitelist" : "Gabimi gjatë fshirjes së listës së bardhë"
+    "Error while deleting a whitelist" : "Gabimi gjatë fshirjes së listës së bardhë",
+    "Add" : "Shto"
 },
 "nplurals=2; plural=(n != 1);");
