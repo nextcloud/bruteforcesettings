@@ -4,7 +4,8 @@ OC.L10N.register(
     "Delete" : "Törlés",
     "Error while loading whitelists." : "Hiba kivétellista betöltése közben.",
     "Error while deleting a whitelist" : "Hiba történt a kivétellista törlésekor",
-    "Brute-force IP whitelist" : "Brute-force IP kivétellista",
+    "Brute-force settings" : "Beállítások kényszerítése",
+    "Brute-force IP whitelist" : "IP kivétellista kényszerítése",
     "Add" : "Hozzáadás"
 },
 "nplurals=2; plural=(n != 1);");
