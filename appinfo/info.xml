@@ -23,7 +23,7 @@ positives due to a lot of users on one IP address.]]></description>
 	<bugs>https://github.com/nextcloud/bruteforcesettings/issues</bugs>
 	<repository type="git">https://github.com/nextcloud/bruteforcesettings.git</repository>
 	<dependencies>
-        <nextcloud min-version="12" max-version="13" />
+        <nextcloud min-version="12" max-version="14" />
 	</dependencies>
 	<screenshot>https://raw.githubusercontent.com/nextcloud/bruteforcesettings/master/screenshots/1.png</screenshot>
 
