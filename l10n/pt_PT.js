@@ -2,6 +2,10 @@ OC.L10N.register(
     "bruteforcesettings",
     {
     "Delete" : "Apagar",
+    "Error while loading whitelists." : "Erro ao carregar lista segura.",
+    "Error while deleting a whitelist" : "Erro ao apagar lista segura.",
+    "Brute-force settings" : "Definições de \"brute-force\"",
+    "Brute-force IP whitelist" : "Lista segura de IPs \"brute-force\"",
     "Add" : "Add"
 },
 "nplurals=2; plural=(n != 1);");
