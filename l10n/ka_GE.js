@@ -8,4 +8,4 @@ OC.L10N.register(
     "Brute-force IP whitelist" : "Brute-force-ის IP whitelist-ი",
     "Add" : "დამატება"
 },
-"nplurals=2; plural=(n==1);");
+"nplurals=2; plural=(n!=1);");
