@@ -5,6 +5,7 @@ OC.L10N.register(
     "Error while loading whitelists." : "Chyba při načítání whitelistů.",
     "Error while deleting a whitelist" : "Chyba při mazání whitelistu",
     "Brute-force settings" : "Nastavení ochrany proti útokům hrubou silou",
+    "Whitelist IPs" : "IP adresy ze kterých je umožněn přístup",
     "Brute-force IP whitelist" : "IP whitelist pro ochranu proti útokům hrubou silou",
     "Add" : "Přidat"
 },
