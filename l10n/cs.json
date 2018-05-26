@@ -1,7 +1,7 @@
 { "translations": {
     "Delete" : "Smazat",
-    "Error while loading whitelists." : "Chyba při načítání whitelistů.",
-    "Error while deleting a whitelist" : "Chyba při mazání whitelistu",
+    "Error while loading whitelists." : "Chyba při načítání seznamů povolených.",
+    "Error while deleting a whitelist" : "Chyba při mazání seznamu povolených",
     "Brute-force settings" : "Nastavení ochrany proti útokům hrubou silou",
     "Whitelist IPs" : "IP adresy ze kterých je umožněn přístup",
     "Brute-force IP whitelist" : "IP whitelist pro ochranu proti útokům hrubou silou",
