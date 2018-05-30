@@ -5,6 +5,7 @@ OC.L10N.register(
     "Error while loading whitelists." : "При загрузке белого списка произошла ошибка",
     "Error while deleting a whitelist" : "При удалении белого списка произошла ошибка.",
     "Brute-force settings" : "Настройки защиты от перебора",
+    "Whitelist IPs" : "Список разрешенных IP",
     "Brute-force IP whitelist" : "Белый список адресов IP защиты от перебора",
     "Add" : "Добавить"
 },
