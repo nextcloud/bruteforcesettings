@@ -1,5 +1,5 @@
 /**
- * @copyright 2016, Roeland Jago Douma <roeland@famdouma.nl>
+ * @copyright Copyright (c) 2018 Roeland Jago Douma <roeland@famdouma.nl>
  *
  * @author Roeland Jago Douma <roeland@famdouma.nl>
  *
@@ -16,29 +16,20 @@
  * GNU Affero General Public License for more details.
  *
  * You should have received a copy of the GNU Affero General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
-(function() {
+import Vue from 'vue';
+import App from './App.vue';
 
-	OCA.BruteForceSettings = OCA.BruteForceSettings || {};
+Vue.prototype.t = t;
+Vue.prototype.oc_defaults = oc_defaults;
+Vue.prototype.OC = OC;
 
-	OCA.BruteForceSettings.WhiteList = {
+const app = new Vue({
+	render: h => h(App)
+}).$mount('#bruteforcesettings');
 
-		collection: null,
-		view: null,
+export { app };
 
-		init: function () {
-			this.collection = new OCA.BruteForceSettings.WhitelistCollection();
-			this.view = new OCA.BruteForceSettings.WhitelistView({
-				collection: this.collection
-			});
-			this.view.reload();
-		}
-	};
-})();
-
-$(document).ready(function() {
-	OCA.BruteForceSettings.WhiteList.init();
-});

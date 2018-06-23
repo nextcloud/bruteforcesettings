@@ -7,9 +7,34 @@ source_dir=$(build_dir)/source
 sign_dir=$(build_dir)/sign
 package_name=$(app_name)
 cert_dir=$(HOME)/.nextcloud/certificates
-version+=1.0.2
+version+=1.1.0
 
-all: appstore
+all: dev-setup build-js-production
+
+dev-setup: clean clean-dev npm-init
+
+npm-init:
+	npm install
+
+npm-update:
+	npm update
+
+build-js:
+	npm run dev
+
+build-js-production:
+	npm run build
+
+watch-js:
+	npm run watch
+
+clean:
+	rm -f js/bruteforcesettings.js
+	rm -f js/bruteforcesettings.js.map
+	rm -rf $(build_dir)
+
+clean-dev:
+	rm -rf node_modules
 
 release: appstore create-tag
 
@@ -17,11 +42,7 @@ create-tag:
 	git tag -s -a v$(version) -m "Tagging the $(version) release."
 	git push origin v$(version)
 
-clean:
-	rm -rf $(build_dir)
-	rm -rf node_modules
-
-appstore: clean
+appstore: clean clean-dev
 	mkdir -p $(sign_dir)
 	rsync -a \
 	--exclude=/build \
