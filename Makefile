@@ -31,10 +31,10 @@ watch-js:
 clean:
 	rm -f js/bruteforcesettings.js
 	rm -f js/bruteforcesettings.js.map
-	rm -rf $(build_dir)
 
 clean-dev:
 	rm -rf node_modules
+	rm -rf $(build_dir)
 
 release: appstore create-tag
 
@@ -42,7 +42,7 @@ create-tag:
 	git tag -s -a v$(version) -m "Tagging the $(version) release."
 	git push origin v$(version)
 
-appstore: clean clean-dev
+appstore: clean-dev
 	mkdir -p $(sign_dir)
 	rsync -a \
 	--exclude=/build \
