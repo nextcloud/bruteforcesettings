@@ -21,30 +21,10 @@
  *
  */
 
-script('core', [
-	'oc-backbone-webdav',
-]);
-script('bruteforcesettings', [
-	'IPWhitelist',
-	'IPWhitelistModel',
-	'IPWhitelistCollection',
-	'IPWhitelistView',
-]);
-style('bruteforcesettings', [
-	'settings'
-])
+script('bruteforcesettings', 'bruteforcesettings');
+style('bruteforcesettings', 'settings');
 
-/** @var \OCP\IL10N $l */
 ?>
-<form id="IPWhiteList" class="section">
-	<h2><?php p($l->t('Brute-force IP whitelist')); ?></h2>
-	<em><?php p('To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all.') ?></em>
+<div id="bruteforcesettings" class="section">
 
-	<table id="whitelist-list">
-
-	</table>
-
-	<input type="text" name="whitelist_ip" id="whitelist_ip" placeholder="2001:db8::" style="width: 200px;" />/
-	<input type="number" id="whitelist_mask" name="whitelist_mask" placeholder="64" style="width: 50px;">
-	<input type="button" id="whitelist_submit" value="<?php p($l->t('Add')); ?>">
-</form>
+</div>
