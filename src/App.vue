@@ -20,7 +20,7 @@
   -
   -->
 <template>
-	<div id="bruteforcesettigs" class="section">
+	<div id="bruteforcesettings" class="section">
 		<h2>{{ t('bruteforcesettings', 'Brute-force IP whitelist') }}</h2>
 		<p class="settings-hint">{{ t('bruteforcesettings', 'To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all.') }}</p>
 
