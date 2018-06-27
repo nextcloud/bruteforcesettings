@@ -1,7 +1,5 @@
 { "translations": {
-    "Brute-force IP whitelist" : "Brute-force IP kvitliste",
-    "Add" : "Legg til",
-    "Delete" : "Slett",
-    "Brute-force settings" : "Brute-force instillingar"
+    "Brute-force settings" : "Brute-force instillingar",
+    "Brute-force IP whitelist" : "Brute-force IP kvitliste"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

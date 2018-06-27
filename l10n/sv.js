@@ -1,9 +1,7 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Brute-force IP whitelist" : "Brute-force IP vitlista",
-    "Add" : "Lägg till",
-    "Delete" : "Radera",
-    "Brute-force settings" : "Brute-force inställningar"
+    "Brute-force settings" : "Brute-force inställningar",
+    "Brute-force IP whitelist" : "Brute-force IP vitlista"
 },
 "nplurals=2; plural=(n != 1);");
