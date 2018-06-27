@@ -1,11 +1,9 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Delete" : "Borrar",
-    "Error while loading whitelists." : "Error al cargar las listas blancas. ",
-    "Error while deleting a whitelist" : "Se presentó un error al borrar una lista blanca",
-    "Brute-force settings" : "Ajustes de fuerza-bruta",
     "Brute-force IP whitelist" : "IPs en lista blanca de fuerza-bruta",
-    "Add" : "Agregar"
+    "Add" : "Agregar",
+    "Delete" : "Borrar",
+    "Brute-force settings" : "Ajustes de fuerza-bruta"
 },
 "nplurals=2; plural=(n != 1);");
