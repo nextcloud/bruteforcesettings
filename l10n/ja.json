@@ -1,5 +1,6 @@
 { "translations": {
     "Brute-force settings" : "ブルートフォース設定",
+    "Whitelist IPs" : "ホワイトリストのIP",
     "Brute-force IP whitelist" : "ブルートフォースIPホワイトリスト"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

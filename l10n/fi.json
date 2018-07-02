@@ -1,5 +1,6 @@
 { "translations": {
     "Brute-force settings" : "Pakolliset asetukset",
-    "Brute-force IP whitelist" : "Turvallisten IP-osoitteiden lista"
+    "Brute-force IP whitelist" : "Turvallisten IP-osoitteiden lista",
+    "Add new whitelist" : "Lisää uusi turvallinen lista"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
