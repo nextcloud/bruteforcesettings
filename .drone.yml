@@ -8,7 +8,7 @@ pipeline:
     image: node
     commands:
       - make
-      - git diff --exit-code
+      - git diff --exit-code js/bruteforcesettings.js
     when:
       matrix:
         TESTS: vue-build
