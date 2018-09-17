@@ -1,8 +1,9 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Brute-force settings" : "Pakolliset asetukset",
+    "Brute-force settings" : "Brute-force-asetukset",
+    "Whitelist IPs" : "Sallitut IP:t",
     "Brute-force IP whitelist" : "Turvallisten IP-osoitteiden lista",
-    "Add new whitelist" : "Lisää uusi turvallinen lista"
+    "Add new whitelist" : "Lisää uusi sallittujen lista"
 },
 "nplurals=2; plural=(n != 1);");
