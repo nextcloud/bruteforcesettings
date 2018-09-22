@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
+    "Brute-force settings" : "Nastavitve Grobe Sile",
     "Whitelist IPs" : "Beli seznam naslovov IP",
     "Add new whitelist" : "Dodaj nov beli seznam"
 },
