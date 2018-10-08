@@ -2,6 +2,7 @@ OC.L10N.register(
     "bruteforcesettings",
     {
     "Brute-force settings" : "Ustawienia brute-force",
+    "Whitelist IPs" : "Biała lista adresów IP",
     "Brute-force IP whitelist" : "Biała lista IP brute-force",
     "Add new whitelist" : "Dodaj nową białą listę"
 },
