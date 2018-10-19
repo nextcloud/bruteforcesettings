@@ -60,6 +60,7 @@ appstore: clean-dev
 	--exclude=/.gitignore \
 	--exclude=/.scrutinizer.yml \
 	--exclude=/.travis.yml \
+	--exclude=.l10nignore \
 	--exclude=/Makefile \
 	$(project_dir)/ $(sign_dir)/$(app_name)
 	tar -czf $(build_dir)/$(app_name)-$(version).tar.gz \
