@@ -15,7 +15,7 @@ bruteforce protected controller with the same API slower for a 24 hour period.
 With this app, the admin can exempt an IP address or range from this
 protection which can be useful for testing purposes or when there are false
 positives due to a lot of users on one IP address.]]></description>
-	<version>1.1.0</version>
+	<version>1.2.0</version>
 	<licence>agpl</licence>
 	<author>Roeland Jago Douma</author>
 	<namespace>BruteForceSettings</namespace>
