@@ -15,7 +15,7 @@ bruteforce protected controller with the same API slower for a 24 hour period.
 With this app, the admin can exempt an IP address or range from this
 protection which can be useful for testing purposes or when there are false
 positives due to a lot of users on one IP address.]]></description>
-	<version>1.2.0</version>
+	<version>1.3.0</version>
 	<licence>agpl</licence>
 	<author>Roeland Jago Douma</author>
 	<namespace>BruteForceSettings</namespace>
@@ -25,7 +25,7 @@ positives due to a lot of users on one IP address.]]></description>
 	<repository type="git">https://github.com/nextcloud/bruteforcesettings.git</repository>
 	<screenshot>https://raw.githubusercontent.com/nextcloud/bruteforcesettings/master/screenshots/1.png</screenshot>
 	<dependencies>
-		<nextcloud min-version="12" max-version="15" />
+		<nextcloud min-version="12" max-version="16" />
 	</dependencies>
 	<settings>
 		<admin>OCA\BruteForceSettings\Settings\IPWhitelist</admin>

@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.3.0
+- Made 16 compatible
+
 ## 1.2.0
 - Made 15 compatible
 
