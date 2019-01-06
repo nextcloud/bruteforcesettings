@@ -106,3 +106,9 @@ export default {
 	},
 }
 </script>
+
+<style>
+	#whitelist-list {
+		min-width: 262px;
+	}
+</style>
