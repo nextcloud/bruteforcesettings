@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import Axios from 'nextcloud-axios'
 import BruteForceItem from './components/BruteForceItem'
 
 export default {
@@ -63,40 +63,27 @@ export default {
 		};
 	},
 	beforeMount: function() {
-		let requestToken = OC.requestToken;
-		let tokenHeaders = { headers: { requesttoken: requestToken } };
-
-		axios.get(OC.generateUrl('apps/bruteforcesettings/ipwhitelist'), tokenHeaders)
+		Axios.get(OC.generateUrl('apps/bruteforcesettings/ipwhitelist'))
 			.then((response) => {
 			this.items = response.data;
 		});
 	},
 	methods: {
 		deleteWhitelist(id) {
-			let requestToken = OC.requestToken;
-			let tokenHeaders = { headers: { requesttoken: requestToken } };
-
-			axios.delete(OC.generateUrl('apps/bruteforcesettings/ipwhitelist/{id}', {id: id}), tokenHeaders)
+			Axios.delete(OC.generateUrl('apps/bruteforcesettings/ipwhitelist/{id}', {id: id}))
 				.then((response) => {
 					this.items = this.items.filter(item => item.id !== id);
 				});
 		},
 		addWhitelist() {
-			let requestToken = OC.requestToken;
-			let tokenHeaders = { headers: { requesttoken: requestToken } };
-
-			axios.post(
+			Axios.post(
 				OC.generateUrl('apps/bruteforcesettings/ipwhitelist'),
 				{
 					ip: this.newWhitelist.ip,
 					mask: this.newWhitelist.mask
-				},
-				tokenHeaders)
+				})
 				.then((response) => {
-					console.log(response.data);
-			console.log(this.items);
 					this.items.push(response.data);
-			console.log(this.items);
 
 					this.newWhitelist.ip = '';
 					this.newWhitelist.mask = '';
