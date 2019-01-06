@@ -37,7 +37,7 @@
 		<br/>
 		<h3>{{ t('bruteforcesettings', 'Add new whitelist') }}</h3>
 		<form @submit.prevent="addWhitelist">
-			<input type="text" id="ip" name="ip" placeholder="2001:db8::" v-model="newWhitelist.ip">
+			<input type="text" id="ip" name="ip" placeholder="2001:db8::" v-model="newWhitelist.ip">/
 			<input type="number" id="mask" name="mask" placeholder="64" v-model="newWhitelist.mask">
 			<input type="submit" class="button" :value="t('bruteforcesettings', 'Add')">
 		</form>
@@ -106,3 +106,9 @@ export default {
 	},
 }
 </script>
+
+<style>
+	#whitelist-list {
+		min-width: 262px;
+	}
+</style>

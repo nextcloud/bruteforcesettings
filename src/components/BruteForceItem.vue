@@ -49,3 +49,18 @@
 		},
 	}
 </script>
+
+<style>
+	td span {
+		padding: 10px 15px;
+		display: inline-block;
+	}
+
+	.action-column {
+		width: 46px;
+	}
+
+	.action-column a {
+		display: inline-block;
+	}
+</style>
