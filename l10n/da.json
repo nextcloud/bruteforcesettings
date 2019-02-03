@@ -1,5 +1,6 @@
 { "translations": {
     "Brute-force settings" : "Brute-force instillinger",
-    "Brute-force IP whitelist" : "Brute-force IP whitelist"
+    "Brute-force IP whitelist" : "Brute-force IP whitelist",
+    "Add" : "Tilføj"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
