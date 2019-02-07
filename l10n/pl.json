@@ -2,6 +2,7 @@
     "Brute-force settings" : "Ustawienia brute-force",
     "Whitelist IPs" : "Biała lista adresów IP",
     "Brute-force IP whitelist" : "Biała lista IP brute-force",
+    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Aby dodać do białej listy zakresy IP, należy je określić poniżej. Zwróć uwagę, że z dowolnego dopuszczonego adresu IP może zostać przeprowadzona próba uwierzytelnienia bez zabezpieczenia przed atakiem. Ze względów bezpieczeństwa zaleca się dodanie do białej listy tak małej liczby hostów, jak to możliwe, a najlepiej nawet żadnej.",
     "Add new whitelist" : "Dodaj nową białą listę",
     "Add" : "Dodaj",
     "Delete" : "Usuń"
