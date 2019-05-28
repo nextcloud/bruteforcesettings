@@ -1,9 +1,12 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Brute-force settings" : "강제 설정",
-    "Whitelist IPs" : "허용된 IP들",
-    "Brute-force IP whitelist" : "강제 IP 허용 목록",
+    "Brute-force settings" : "무작위 대입 설정",
+    "Whitelist IPs" : "허용된 IP",
+    "Brute Force Protection is meant to protect Nextcloud servers from attempts to\nguess user passwords in various ways. Besides the obvious \"*let's try a big\nlist of commonly used passwords*\" attack, it also makes it harder to use\nslightly more sophisticated attacks via the reset password form or trying to\nfind app password tokens.\n\nIf triggered, brute force protection makes requests coming from an IP on a\nbruteforce protected controller with the same API slower for a 24 hour period.\n\nWith this app, the admin can exempt an IP address or range from this\nprotection which can be useful for testing purposes or when there are false\npositives due to a lot of users on one IP address." : "무작위 대입 보호 기능은 Nextcloud 서버를 다양한 사용자 암호 탈취 공격으로부터\n보호합니다. 쉽게 진행할 수 있는 \"*잘 알려진 큰 암호 목록에 있는 암호 무작위 대입*\"\n공격 외에도 암호 초기화 폼이나 앱 암호 토큰 등을 사용하는 고수준 공격에 대해서도\n방어할 수 있습니다.\n\n무작위 대입 보호 기능의 조건과 일치하면 공격 대상으로 간주하는 IP에서 들어오는 요청을\n24시간 동안 더 느리게 처리합니다.\n\n관리자는 이 앱 설정에서 보호에서 제외할 IP 범위를 지정할 수 있습니다. 테스트 목적이나\n한 IP 주소를 여러 명이서 사용하는 등의 거짓 탐지를 줄일 수 있습니다.",
+    "Brute-force IP whitelist" : "무작위 대입 IP 허용 목록",
+    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "무작위 대입 보호를 특정 IP에서 사용하지 않으려면 아래 허용 목록에 입력하십시오. 이 목록에 있는 IP 주소 범위에서는 느려지지 않고 인증 요청을 보낼 수 있습니다. 보안상의 이유로 최소한의 IP 주소만 허용 목록에 추가하거나, 허용 목록을 사용하지 않는 것을 추천합니다.",
+    "Add new whitelist" : "새 허용 목록 추가",
     "Add" : "추가",
     "Delete" : "삭제"
 },
