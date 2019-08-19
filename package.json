@@ -16,7 +16,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "css-loader": "^3.0.0",
+    "css-loader": "^3.2.0",
     "nextcloud-axios": "^0.2.0",
     "vue": "^2.6.10"
   },
