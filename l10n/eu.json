@@ -1,6 +1,7 @@
 { "translations": {
     "Brute-force settings" : "Bortxatzeko ezarpenak",
     "Brute-force IP whitelist" : "Bortxatzeko IP zerrenda txuria",
+    "Add new whitelist" : "Zerrenda zuri berri bat gehitu",
     "Add" : "Gehitu",
     "Delete" : "Ezabatu"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
