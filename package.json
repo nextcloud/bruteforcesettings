@@ -18,11 +18,11 @@
   "dependencies": {
     "css-loader": "^3.2.1",
     "nextcloud-axios": "^0.2.1",
-    "vue": "^2.6.10"
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "vue-loader": "^15.7.2",
-    "vue-template-compiler": "^2.6.10",
+    "vue-template-compiler": "^2.6.11",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-merge": "^4.2.2"
