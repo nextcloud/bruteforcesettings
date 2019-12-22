@@ -1,4 +1,6 @@
 { "translations": {
-    "Brute-force settings" : "Axustes de fuercia bruto"
+    "Brute-force settings" : "Axustes de fuercia bruto",
+    "Add" : "Amestar",
+    "Delete" : "Desaniciar"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

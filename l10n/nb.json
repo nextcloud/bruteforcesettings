@@ -1,6 +1,8 @@
 { "translations": {
     "Brute-force settings" : "Innstillinger for rå makt",
     "Brute-force IP whitelist" : "Rå makt tillatte IP-addresser",
-    "Add new whitelist" : "Legg til ny hvitlisting"
+    "Add new whitelist" : "Legg til ny hvitlisting",
+    "Add" : "Legg til",
+    "Delete" : "Slett"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -1,5 +1,7 @@
 { "translations": {
     "Brute-force settings" : "Brute-force тохиргоо",
-    "Brute-force IP whitelist" : "Brute-force IP whitelist"
+    "Brute-force IP whitelist" : "Brute-force IP whitelist",
+    "Add" : "нэмэх",
+    "Delete" : "Устгах"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

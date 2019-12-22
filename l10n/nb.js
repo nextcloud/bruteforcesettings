@@ -3,6 +3,8 @@ OC.L10N.register(
     {
     "Brute-force settings" : "Innstillinger for rå makt",
     "Brute-force IP whitelist" : "Rå makt tillatte IP-addresser",
-    "Add new whitelist" : "Legg til ny hvitlisting"
+    "Add new whitelist" : "Legg til ny hvitlisting",
+    "Add" : "Legg til",
+    "Delete" : "Slett"
 },
 "nplurals=2; plural=(n != 1);");

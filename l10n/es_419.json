@@ -1,5 +1,7 @@
 { "translations": {
     "Brute-force settings" : "Configuracion de fuerza bruta",
-    "Brute-force IP whitelist" : "Lista blanca de IP de fuerza bruta"
+    "Brute-force IP whitelist" : "Lista blanca de IP de fuerza bruta",
+    "Add" : "Agregar",
+    "Delete" : "Borrar"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
