@@ -16,14 +16,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "css-loader": "^3.4.0",
+    "css-loader": "^3.4.2",
     "nextcloud-axios": "^0.2.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {
     "vue-loader": "^15.8.3",
     "vue-template-compiler": "^2.6.11",
-    "webpack": "^4.41.4",
+    "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "webpack-merge": "^4.2.2"
   }
