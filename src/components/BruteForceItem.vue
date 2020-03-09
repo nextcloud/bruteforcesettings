@@ -22,32 +22,32 @@
   -->
 <template>
 	<tr>
-		<td><span>{{ip}}/{{mask}}</span></td>
+		<td><span>{{ ip }}/{{ mask }}</span></td>
 		<td class="action-column">
 			<span>
-				<a class="icon-delete has-tooltip" :title="t('bruteforcesettings', 'Delete')" @click="$emit('delete', id)"></a>
+				<a class="icon-delete has-tooltip" :title="t('bruteforcesettings', 'Delete')" @click="$emit('delete', id)" />
 			</span>
 		</td>
 	</tr>
 </template>
 
 <script>
-	export default {
-		name: 'BruteForceItem',
-		props: {
-			item: {
-				type: Object,
-				required: true
-			}
+export default {
+	name: 'BruteForceItem',
+	props: {
+		item: {
+			type: Object,
+			required: true,
 		},
-		data: function() {
-			return {
-				id: this.item.id,
-				ip: this.item.ip,
-				mask: this.item.mask,
-			};
-		},
-	}
+	},
+	data: function() {
+		return {
+			id: this.item.id,
+			ip: this.item.ip,
+			mask: this.item.mask,
+		}
+	},
+}
 </script>
 
 <style>

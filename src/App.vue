@@ -22,23 +22,32 @@
 <template>
 	<div id="bruteforcesettings" class="section">
 		<h2>{{ t('bruteforcesettings', 'Brute-force IP whitelist') }}</h2>
-		<p class="settings-hint">{{ t('bruteforcesettings', 'To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all.') }}</p>
+		<p class="settings-hint">
+			{{ t('bruteforcesettings', 'To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all.') }}
+		</p>
 
 		<table id="whitelist-list">
 			<tbody>
 				<BruteForceItem v-for="item in items"
 					:key="item.id"
 					:item="item"
-					@delete="deleteWhitelist"
-				/>
+					@delete="deleteWhitelist" />
 			</tbody>
 		</table>
 
-		<br/>
+		<br>
 		<h3>{{ t('bruteforcesettings', 'Add new whitelist') }}</h3>
 		<form @submit.prevent="addWhitelist">
-			<input type="text" id="ip" name="ip" placeholder="2001:db8::" v-model="newWhitelist.ip">/
-			<input type="number" id="mask" name="mask" placeholder="64" v-model="newWhitelist.mask">
+			<input id="ip"
+				v-model="newWhitelist.ip"
+				type="text"
+				name="ip"
+				placeholder="2001:db8::">/
+			<input id="mask"
+				v-model="newWhitelist.mask"
+				type="number"
+				name="mask"
+				placeholder="64">
 			<input type="submit" class="button" :value="t('bruteforcesettings', 'Add')">
 		</form>
 	</div>
@@ -51,45 +60,45 @@ import BruteForceItem from './components/BruteForceItem'
 export default {
 	name: 'App',
 	components: {
-		BruteForceItem
+		BruteForceItem,
 	},
 	data: function() {
 		return {
 			items: [],
 			newWhitelist: {
 				ip: '',
-				mask: ''
-			}
-		};
+				mask: '',
+			},
+		}
 	},
 	beforeMount: function() {
 		Axios.get(OC.generateUrl('apps/bruteforcesettings/ipwhitelist'))
 			.then((response) => {
-			this.items = response.data;
-		});
+				this.items = response.data
+			})
 	},
 	methods: {
 		deleteWhitelist(id) {
-			Axios.delete(OC.generateUrl('apps/bruteforcesettings/ipwhitelist/{id}', {id: id}))
+			Axios.delete(OC.generateUrl('apps/bruteforcesettings/ipwhitelist/{id}', { id: id }))
 				.then((response) => {
-					this.items = this.items.filter(item => item.id !== id);
-				});
+					this.items = this.items.filter(item => item.id !== id)
+				})
 		},
 		addWhitelist() {
 			Axios.post(
 				OC.generateUrl('apps/bruteforcesettings/ipwhitelist'),
 				{
 					ip: this.newWhitelist.ip,
-					mask: this.newWhitelist.mask
+					mask: this.newWhitelist.mask,
 				})
 				.then((response) => {
-					this.items.push(response.data);
+					this.items.push(response.data)
 
-					this.newWhitelist.ip = '';
-					this.newWhitelist.mask = '';
+					this.newWhitelist.ip = ''
+					this.newWhitelist.mask = ''
 				}
-			);
-		}
+				)
+		},
 	},
 }
 </script>
