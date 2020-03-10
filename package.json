@@ -13,9 +13,14 @@
     "dev": "webpack --config webpack.dev.js",
     "watch": "webpack --progress --watch --config webpack.dev.js",
     "build": "webpack --progress --hide-modules --config webpack.prod.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .js,.vue src",
+    "lint:fix": "eslint --ext .js,.vue src --fix",
+    "stylelint": "stylelint src",
+    "stylelint:fix": "stylelint src --fix"
   },
   "dependencies": {
+    "@nextcloud/eslint-plugin": "^1.1.0",
     "css-loader": "^3.4.2",
     "nextcloud-axios": "^0.2.1",
     "vue": "^2.6.11"
