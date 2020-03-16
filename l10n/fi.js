@@ -1,7 +1,7 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Brute-force settings" : "Brute-force-asetukset",
+    "Brute-force settings" : "Väsytyshyökkäyksen asetukset",
     "Whitelist IPs" : "Sallitut IP:t",
     "Brute-force IP whitelist" : "Turvallisten IP-osoitteiden lista",
     "Add new whitelist" : "Lisää uusi sallittujen lista",
