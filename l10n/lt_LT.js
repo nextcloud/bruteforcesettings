@@ -2,7 +2,8 @@ OC.L10N.register(
     "bruteforcesettings",
     {
     "Brute-force settings" : "Slaptažodžių perrinkimo nustatymai",
-    "Brute-force IP whitelist" : "Slaptažodžių perrinkimo leidimų sąrašas",
+    "Brute-force IP whitelist" : "Slaptažodžių perrinkimo IP adresų baltasis sąrašas",
+    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Norėdami įtraukti IP adresų rėžius į baltąjį sąrašą ir išbraukti juos iš apsaugos nuo slaptažodžių perrinkimo, nurodykite IP adresus žemiau. Turėkite omenyje, kad bet kuris baltajame sąraše esantis IP adresas gali vykdyti tapatybės nustatymo bandymus be jokio slopinimo. Saugumo sumetimais, rekomenduojama įtraukti į baltąjį sąrašą kaip įmanoma mažiau serverių arba idealiu atveju, neįtraukti nei vieno.",
     "Add new whitelist" : "Pridėti naują baltąjį sąrašą",
     "Add" : "Pridėti",
     "Delete" : "Ištrinti"
