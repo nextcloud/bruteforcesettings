@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.6.0
+- Made 19 compatible
+- BUmped js dependencies
+- Updated translations
+
 ## 1.5.0
 - Made 18 compatible
 - Bumped js dependencies
