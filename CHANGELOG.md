@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.0.0
+- Made 20 compatible
+- Removed old nextcloud compatibilities
+- Bumped dependencies
+
 ## 1.6.0
 - Made 19 compatible
 - Bumped js dependencies
