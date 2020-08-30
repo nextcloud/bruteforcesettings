@@ -50,7 +50,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 	td span {
 		padding: 10px 15px;
 		display: inline-block;

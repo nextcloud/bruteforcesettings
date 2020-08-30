@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "webpack --config webpack.dev.js",
     "watch": "webpack --progress --watch --config webpack.dev.js",
-    "build": "webpack --progress --hide-modules --config webpack.prod.js",
+    "build": "webpack --progress --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext .js,.vue src",
     "lint:fix": "eslint --ext .js,.vue src --fix",
@@ -24,11 +24,11 @@
     "vue": "^2.6.12"
   },
   "devDependencies": {
+    "@nextcloud/eslint-config": "^1.2.0",
     "@nextcloud/eslint-plugin": "^1.4.0",
     "babel-eslint": "^10.0.3",
     "css-loader": "^4.2.2",
     "eslint": "^5.16.0",
-    "@nextcloud/eslint-config": "^1.2.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-loader": "^3.0.4",
     "eslint-plugin-import": "^2.22.0",
@@ -36,6 +36,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^5.2.3",
+    "style-loader": "^1.2.1",
     "stylelint": "^8.4.0",
     "stylelint-config-recommended-scss": "^3.3.0",
     "stylelint-scss": "^3.18.0",

@@ -103,7 +103,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 	#whitelist-list {
 		min-width: 262px;
 	}
