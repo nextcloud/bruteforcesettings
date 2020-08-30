@@ -5,14 +5,14 @@ module.exports = {
   entry: path.join(__dirname, 'src', 'main.js'),
   output: {
     path: path.resolve(__dirname, './js'),
-    publicPath: '/js',
+    publicPath: '/js/',
     filename: 'bruteforcesettings.js'
   },
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ['vue-style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.vue$/,
@@ -23,10 +23,7 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin()
   ],
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    },
-    extensions: ['*', '.js', '.vue', '.json']
-  }
+	resolve: {
+		extensions: ['*', '.js', '.vue']
+	}
 }
