@@ -1,12 +1,12 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Brute-force settings" : "防暴力攻擊設定",
+    "Brute-force settings" : "Brute-force 設定",
     "Whitelist IPs" : "白名單IP",
-    "Brute Force Protection is meant to protect Nextcloud servers from attempts to\nguess user passwords in various ways. Besides the obvious \"*let's try a big\nlist of commonly used passwords*\" attack, it also makes it harder to use\nslightly more sophisticated attacks via the reset password form or trying to\nfind app password tokens.\n\nIf triggered, brute force protection makes requests coming from an IP on a\nbruteforce protected controller with the same API slower for a 24 hour period.\n\nWith this app, the admin can exempt an IP address or range from this\nprotection which can be useful for testing purposes or when there are false\npositives due to a lot of users on one IP address." : "暴力保護是用來防止Nextcloud伺服器被嘗試\n用各種方式猜測用戶密碼。除了明顯的 \"*嘗試大量\n常用的密碼清單*\"攻擊，它也讓較為複雜的攻擊像是藉由重設填密碼欄位或是試著\n找app密碼字符較為困難。\n\n若啟動暴力保護，將會在24小時的時間內從暴力保護控制器的IP發出一個同樣的API需求。\n\n使用這 app，管理者可以用來解除一個IP或是範圍的保護，因為這對於用來測試或是當有很多用戶在同一個IP位址而誤判的時候可能比較有用。",
-    "Brute-force IP whitelist" : "暴力攻擊 IP 白名單",
+    "Brute Force Protection is meant to protect Nextcloud servers from attempts to\nguess user passwords in various ways. Besides the obvious \"*let's try a big\nlist of commonly used passwords*\" attack, it also makes it harder to use\nslightly more sophisticated attacks via the reset password form or trying to\nfind app password tokens.\n\nIf triggered, brute force protection makes requests coming from an IP on a\nbruteforce protected controller with the same API slower for a 24 hour period.\n\nWith this app, the admin can exempt an IP address or range from this\nprotection which can be useful for testing purposes or when there are false\npositives due to a lot of users on one IP address." : "Brute Force Protection  旨在保護 Nextcloud 伺服器免遭黑客以各種方式猜測用戶密碼的企圖。除了明顯的“ *讓我們嘗試一大堆常用密碼*”攻擊外，它還使得通過重置密碼表格或嘗試查找應用程式密碼權杖的方式使用更複雜的攻擊變得更加困難。\n\n如果被觸發，brute force protection 將使來自具有相同 API 的 brute orce protected  控制器上的 IP 的請求在24小時內變慢。\n\n使用此應用程式，管理員可以從此保護中豁免IP地址或範圍，這對於測試目的或由於一個 IP 地址上的許多用戶而導致誤報時很有用。",
+    "Brute-force IP whitelist" : "Brute-force IP 白名單",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "在下面設定白名單IP\n請注意，在白名單中的IP可以不被限制進行驗證\n基於安全性原因，建議僅設定少數來源IP",
-    "Add new whitelist" : "新增新白名單",
+    "Add new whitelist" : "添加新白名單",
     "Add" : "新增",
     "Delete" : "刪除"
 },
