@@ -27,7 +27,7 @@ Vue.prototype.t = t
 Vue.prototype.OC = OC
 
 const app = new Vue({
-	render: h => h(App),
+  render: h => h(App),
 }).$mount('#bruteforcesettings')
 
 export { app }
