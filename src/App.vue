@@ -95,8 +95,7 @@ export default {
 					this.items.push(response.data)
 					this.newWhitelist.ip = ''
 					this.newWhitelist.mask = ''
-				}
-			)
+				})
 		},
 	},
 }
