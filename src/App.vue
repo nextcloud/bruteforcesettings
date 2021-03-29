@@ -54,15 +54,16 @@
 </template>
 
 <script>
-import Axios from 'nextcloud-axios'
+import axios from '@nextcloud/axios'
 import BruteForceItem from './components/BruteForceItem'
+import { generateUrl } from '@nextcloud/router'
 
 export default {
 	name: 'App',
 	components: {
 		BruteForceItem,
 	},
-	data: function() {
+	data() {
 		return {
 			items: [],
 			newWhitelist: {
@@ -71,33 +72,30 @@ export default {
 			},
 		}
 	},
-	beforeMount: function() {
-		Axios.get(OC.generateUrl('apps/bruteforcesettings/ipwhitelist'))
+	beforeMount() {
+		axios.get(generateUrl('apps/bruteforcesettings/ipwhitelist'))
 			.then((response) => {
 				this.items = response.data
 			})
 	},
 	methods: {
 		deleteWhitelist(id) {
-			Axios.delete(OC.generateUrl('apps/bruteforcesettings/ipwhitelist/{id}', { id: id }))
+			axios.delete(generateUrl('apps/bruteforcesettings/ipwhitelist/{id}', { id: id }))
 				.then((response) => {
 					this.items = this.items.filter(item => item.id !== id)
 				})
 		},
 		addWhitelist() {
-			Axios.post(
-				OC.generateUrl('apps/bruteforcesettings/ipwhitelist'),
+			axios.post(generateUrl('apps/bruteforcesettings/ipwhitelist'),
 				{
 					ip: this.newWhitelist.ip,
 					mask: this.newWhitelist.mask,
 				})
 				.then((response) => {
 					this.items.push(response.data)
-
 					this.newWhitelist.ip = ''
 					this.newWhitelist.mask = ''
-				}
-				)
+				})
 		},
 	},
 }
