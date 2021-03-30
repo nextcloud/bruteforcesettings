@@ -1,16 +1,24 @@
 [package]
 exclude = [
+	"node_modules",
+	"screenshots",
+	"src",
+	"tests",
+	".tx",
+	"*.md",
 	".drone",
 	".git",
 	".github",
 	".gitignore",
 	".scrutinizer.yml",
 	".travis.yml",
-	".tx",
+	".eslintrc.js",
 	"krankerl.toml",
-	"node_modules",
-	"screenshots",
-	"src"
+	"webpack.js",
+	"composer.json",
+	"composer.lock",
+	"package-lock.json",
+	"package.json",
 ]
 
 before_cmds = [

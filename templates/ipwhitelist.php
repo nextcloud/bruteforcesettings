@@ -21,7 +21,7 @@
  *
  */
 
-script('bruteforcesettings', 'bruteforcesettings');
+script('bruteforcesettings', 'bruteforcesettings-main');
 
 ?>
 <div id="bruteforcesettings" class="section">
