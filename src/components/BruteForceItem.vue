@@ -40,7 +40,7 @@ export default {
 			required: true,
 		},
 	},
-	data: function() {
+	data() {
 		return {
 			id: this.item.id,
 			ip: this.item.ip,
