@@ -80,7 +80,7 @@ export default {
 	},
 	methods: {
 		deleteWhitelist(id) {
-			axios.delete(generateUrl('apps/bruteforcesettings/ipwhitelist/{id}', { id: id }))
+			axios.delete(generateUrl('apps/bruteforcesettings/ipwhitelist/{id}', { id }))
 				.then((response) => {
 					this.items = this.items.filter(item => item.id !== id)
 				})
