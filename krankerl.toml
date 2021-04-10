@@ -1,27 +1,5 @@
 [package]
-exclude = [
-	"node_modules",
-	"screenshots",
-	"src",
-	"tests",
-	".tx",
-	"*.md",
-	".drone",
-	".git",
-	".github",
-	".gitignore",
-	".scrutinizer.yml",
-	".travis.yml",
-	".eslintrc.js",
-	"krankerl.toml",
-	"webpack.js",
-	"composer.json",
-	"composer.lock",
-	"package-lock.json",
-	"package.json",
-]
-
 before_cmds = [
 	"npm install --deps",
-	"npm run build",
+	"npm run build"
 ]
