@@ -20,3 +20,5 @@
 /*.md
 /webpack.*
 /vendor/bin
+/babel.config.js
+/stylelint.config.js
