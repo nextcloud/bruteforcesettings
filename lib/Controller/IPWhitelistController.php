@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /**
  * @copyright 2016, Roeland Jago Douma <roeland@famdouma.nl>
  *
@@ -41,7 +44,7 @@ class IPWhitelistController extends Controller {
 	 * @param IRequest $request
 	 * @param IConfig $config
 	 */
-	public function __construct($appName,
+	public function __construct(string $appName,
 								IRequest $request,
 								IConfig $config) {
 		parent::__construct($appName, $request);
@@ -52,7 +55,7 @@ class IPWhitelistController extends Controller {
 	/**
 	 * @return JSONResponse
 	 */
-	public function getAll() {
+	public function getAll(): JSONResponse {
 		$keys = $this->config->getAppKeys('bruteForce');
 		$keys = array_filter($keys, function($key) {
 			$regex = '/^whitelist_/S';
@@ -80,7 +83,7 @@ class IPWhitelistController extends Controller {
 	 * @param int $mask
 	 * @return JSONResponse
 	 */
-	public function add($ip, $mask) {
+	public function add(string $ip, int $mask): JSONResponse {
 		if (!filter_var($ip, FILTER_VALIDATE_IP) ||
 			(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) && ($mask < 0 || $mask > 32)) ||
 			(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) && ($mask < 0 || $mask > 128))) {
@@ -115,7 +118,7 @@ class IPWhitelistController extends Controller {
 	 * @param int $id
 	 * @return JSONResponse
 	 */
-	public function remove($id) {
+	public function remove(int $id): JSONResponse {
 		$this->config->deleteAppValue('bruteForce', 'whitelist_'.$id);
 
 		return new JSONResponse([]);
