@@ -24,7 +24,7 @@
     "vue": "^2.6.12"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.13.14",
+    "@babel/eslint-parser": "^7.14.2",
     "@nextcloud/babel-config": "^1.0.0-beta.1",
     "@nextcloud/eslint-config": "^5.1.0",
     "@nextcloud/eslint-plugin": "^2.0.0",
