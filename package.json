@@ -23,6 +23,10 @@
     "@nextcloud/router": "^1.2.0",
     "vue": "^2.6.12"
   },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=7.0.0"
+  },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.5",
     "@nextcloud/babel-config": "^1.0.0-beta.1",
