@@ -58,13 +58,13 @@ class IPWhitelistControllerTest extends TestCase {
 			]);
 
 		$this->config->method('getAppValue')
-			->will($this->returnCallback(function($app, $key) {
+			->will($this->returnCallback(function ($app, $key) {
 				if ($app !== 'bruteForce') {
 					$this->fail();
 				}
 				if ($key === 'whitelist_0') {
 					return '192.168.2.0/24';
-				} else if ($key === 'whitelist_99') {
+				} elseif ($key === 'whitelist_99') {
 					return 'dead:beef:cafe::/92';
 				}
 				$this->fail();
