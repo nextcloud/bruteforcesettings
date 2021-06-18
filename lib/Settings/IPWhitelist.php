@@ -27,7 +27,6 @@ use OCP\AppFramework\Http\TemplateResponse;
 use OCP\Settings\ISettings;
 
 class IPWhitelist implements ISettings {
-
 	public function getForm() {
 		return new TemplateResponse('bruteforcesettings', 'ipwhitelist');
 	}
