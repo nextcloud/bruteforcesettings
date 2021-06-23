@@ -13,14 +13,15 @@ jobs:
 
     strategy:
       matrix:
-        php-versions: ['7.2', '7.3', '7.4']
-  
+        php-versions: ["7.3", "7.4", "8.0"]
+
     name: php${{ matrix.php-versions }}
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
       - name: Set up php ${{ matrix.php-versions }}
-        uses: shivammathur/setup-php@v1
+        uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-versions }}
           coverage: none
@@ -28,24 +29,70 @@ jobs:
       - name: Lint
         run: composer run lint
 
-  node:
+  php-cs-fixer:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-versions: [12.x]
+        php-versions: ["7.4"]
 
-    name: node${{ matrix.node-versions }}
+    name: cs php${{ matrix.php-versions }}
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-      - name: Set up node ${{ matrix.node-versions }}
-        uses: actions/setup-node@v1
+      - name: Set up php
+        uses: shivammathur/setup-php@v2
         with:
-          node-version: ${{ matrix.node-versions }}
+          php-version: ${{ matrix.php-versions }}
+          coverage: none
+
+      - name: Install dependencies
+        run: composer i
+
+      - name: Run coding standards check
+        run: composer run cs:check || ( echo 'Please run `composer run cs:fix` to format your code' && exit 1 )
+
+  node:
+    runs-on: ubuntu-latest
+
+    name: eslint node
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Set up npm7
+        run: npm i -g npm@7
 
       - name: Install dependencies
         run: npm ci
 
       - name: Lint
         run: npm run lint
+
+  stylelint:
+    runs-on: ubuntu-latest
+
+    name: stylelint node
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Set up npm7
+        run: npm i -g npm@7
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run stylelint

@@ -57,7 +57,7 @@ class IPWhitelistController extends Controller {
 	 */
 	public function getAll(): JSONResponse {
 		$keys = $this->config->getAppKeys('bruteForce');
-		$keys = array_filter($keys, function($key) {
+		$keys = array_filter($keys, function ($key) {
 			$regex = '/^whitelist_/S';
 			return preg_match($regex, $key) === 1;
 		});
@@ -91,7 +91,7 @@ class IPWhitelistController extends Controller {
 		}
 
 		$keys = $this->config->getAppKeys('bruteForce');
-		$keys = array_filter($keys, function($key) {
+		$keys = array_filter($keys, function ($key) {
 			$regex = '/^whitelist_/S';
 			return preg_match($regex, $key) === 1;
 		});

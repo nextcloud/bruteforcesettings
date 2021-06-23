@@ -24,6 +24,4 @@
 script('bruteforcesettings', 'bruteforcesettings-main');
 
 ?>
-<div id="bruteforcesettings" class="section">
-
-</div>
+<div id="bruteforcesettings" class="section"></div>
