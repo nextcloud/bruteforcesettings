@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /**
  * @copyright 2016, Roeland Jago Douma <roeland@famdouma.nl>
  *
@@ -27,15 +30,15 @@ use OCP\AppFramework\Http\TemplateResponse;
 use OCP\Settings\ISettings;
 
 class IPWhitelist implements ISettings {
-	public function getForm() {
+	public function getForm(): TemplateResponse {
 		return new TemplateResponse('bruteforcesettings', 'ipwhitelist');
 	}
 
-	public function getSection() {
+	public function getSection(): string {
 		return 'security';
 	}
 
-	public function getPriority() {
+	public function getPriority(): int {
 		return 50;
 	}
 }
