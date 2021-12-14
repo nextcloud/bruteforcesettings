@@ -14,8 +14,7 @@ env:
 
 jobs:
   build_and_publish:
-    # krankerl not compatible with 20.04
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     # Only allowed to be run on nextcloud-releases repositories
     if: ${{ github.repository_owner == 'nextcloud-releases' }}
@@ -92,10 +91,10 @@ jobs:
           npm ci
           npm run build
 
-      - name: Fetch krankerl
+      - name: Install Krankerl
         run: |
-          wget https://github.com/ChristophWurst/krankerl/releases/download/v0.13.2/krankerl_0.13.2_amd64.deb -O krankerl.deb
-          sudo dpkg -i krankerl.deb
+          wget https://github.com/ChristophWurst/krankerl/releases/download/v0.13.0/krankerl_0.13.0_amd64.deb
+          sudo dpkg -i krankerl_0.13.0_amd64.deb
 
       - name: Package ${{ env.APP_NAME }} ${{ env.APP_VERSION }}
         # Try krankerl, fallback to makefile
