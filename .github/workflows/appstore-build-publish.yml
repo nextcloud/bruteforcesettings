@@ -14,7 +14,8 @@ env:
 
 jobs:
   build_and_publish:
-    runs-on: ubuntu-latest
+    # krankerl not compatible with 20.04
+    runs-on: ubuntu-18.04
 
     # Only allowed to be run on nextcloud-releases repositories
     if: ${{ github.repository_owner == 'nextcloud-releases' }}
@@ -41,7 +42,7 @@ jobs:
         uses: skjnldsv/xpath-action@master
         with:
           filename: ${{ env.APP_NAME }}/appinfo/info.xml
-          expression: '//info//dependencies//nextcloud/@min-version'
+          expression: "//info//dependencies//nextcloud/@min-version"
 
       - name: Read package.json node and npm engines version
         uses: skjnldsv/read-package-engines-version-actions@v1.1
@@ -50,8 +51,8 @@ jobs:
         continue-on-error: true
         with:
           path: ${{ env.APP_NAME }}
-          fallbackNode: '^12'
-          fallbackNpm: '^6'
+          fallbackNode: "^12"
+          fallbackNpm: "^6"
 
       - name: Set up node ${{ steps.versions.outputs.nodeVersion }}
         # Skip if no package.json
@@ -90,6 +91,11 @@ jobs:
           cd ${{ env.APP_NAME }}
           npm ci
           npm run build
+
+      - name: Fetch krankerl
+        run: |
+          wget https://github.com/ChristophWurst/krankerl/releases/download/v0.13.2/krankerl_0.13.2_amd64.deb -O krankerl.deb
+          sudo dpkg -i krankerl.deb
 
       - name: Package ${{ env.APP_NAME }} ${{ env.APP_VERSION }}
         # Try krankerl, fallback to makefile
