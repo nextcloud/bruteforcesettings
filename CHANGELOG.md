@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.4.0
+
+- Made compatible with Nextcloud 24
+- Design and accessibility update (#361)
+- Update dependencies (#359)
+- Set strict_types (#272)
+
+## 2.3.0
+
+- Made compatible with Nextcloud 23
+
+## 2.2.0
+
+- Made compatible with Nextcloud 23
+
 ## 2.1.0
 
 - Made compatible with Nextcloud 21, fixed deprecated warning (#262)
