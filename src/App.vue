@@ -20,12 +20,13 @@
   -
   -->
 <template>
-	<div id="bruteforcesettings" class="section">
-		<h2>{{ t('bruteforcesettings', 'Brute-force IP whitelist') }}</h2>
+	<SettingsSection :title="t('bruteforcesettings', 'Brute-force IP whitelist')"
+		doc-url="https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/bruteforce_configuration.html">
 		<p class="settings-hint">
 			{{ t('bruteforcesettings', 'To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all.') }}
 		</p>
 
+		<!-- Whitelist -->
 		<table id="whitelist-list">
 			<tbody>
 				<BruteForceItem v-for="item in items"
@@ -35,7 +36,6 @@
 			</tbody>
 		</table>
 
-		<br>
 		<h3>{{ t('bruteforcesettings', 'Add new whitelist') }}</h3>
 		<form @submit.prevent="addWhitelist">
 			<input id="ip"
@@ -47,21 +47,36 @@
 				v-model="newWhitelist.mask"
 				type="number"
 				name="mask"
+				min="1"
+				max="128"
+				maxlength="2"
 				placeholder="64">
-			<input type="submit" class="button" :value="t('bruteforcesettings', 'Add')">
+			<Button native-type="submit">
+				<template #icon>
+					<Plus />
+				</template>
+				{{ t('bruteforcesettings', 'Add') }}
+			</Button>
 		</form>
-	</div>
+	</SettingsSection>
 </template>
 
 <script>
-import axios from '@nextcloud/axios'
-import BruteForceItem from './components/BruteForceItem'
 import { generateUrl } from '@nextcloud/router'
+import axios from '@nextcloud/axios'
+import Button from '@nextcloud/vue/dist/Components/Button'
+import SettingsSection from '@nextcloud/vue/dist/Components/SettingsSection'
+import Plus from 'vue-material-design-icons/Plus'
+
+import BruteForceItem from './components/BruteForceItem'
 
 export default {
 	name: 'App',
 	components: {
+		Button,
 		BruteForceItem,
+		Plus,
+		SettingsSection,
 	},
 	data() {
 		return {
@@ -101,8 +116,16 @@ export default {
 }
 </script>
 
-<style scoped>
-	#whitelist-list {
-		min-width: 262px;
+<style lang="scss" scoped>
+#whitelist-list {
+	min-width: 262px;
+}
+
+form {
+	display: flex;
+	align-items: center;
+	input {
+		margin: 8px;
 	}
+}
 </style>
