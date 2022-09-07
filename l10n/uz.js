@@ -1,7 +1,7 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Add" : "Qo'shish",
-    "Delete" : "O'chir"
+    "Add" : "Add",
+    "Delete" : "Delete"
 },
 "nplurals=1; plural=0;");

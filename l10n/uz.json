@@ -1,5 +1,5 @@
 { "translations": {
-    "Add" : "Qo'shish",
-    "Delete" : "O'chir"
+    "Add" : "Add",
+    "Delete" : "Delete"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
