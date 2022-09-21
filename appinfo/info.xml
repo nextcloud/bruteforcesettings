@@ -4,7 +4,7 @@
 	<name>Brute-force settings</name>
 	<summary>Whitelist IPs</summary>
 	<description><![CDATA[Brute Force Protection is meant to protect Nextcloud servers from attempts to
-guess user passwords in various ways. Besides the obvious "*let's try a big
+guess account passwords in various ways. Besides the obvious "*let's try a big
 list of commonly used passwords*" attack, it also makes it harder to use
 slightly more sophisticated attacks via the reset password form or trying to
 find app password tokens.
