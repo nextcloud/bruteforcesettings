@@ -10,7 +10,7 @@ This app provides the possibility to manage some settings of the brute force pro
 
 ## Description
 
-Brute Force Protection is meant to protect Nextcloud servers from attempts to guess account passwords in various ways. Besides the obvious "*let's try a big list of commonly used passwords*" attack, it also makes it harder to use slightly more sophisticated attacks via the reset password form or trying to find app password tokens.
+Brute Force Protection is meant to protect Nextcloud servers from attempts to guess passwords and tokens in various ways. Besides the obvious "*let's try a big list of commonly used passwords*" attack, it also makes it harder to use slightly more sophisticated attacks via the reset password form or trying to find app password tokens.
 
 If triggered, brute force protection makes requests coming from an IP on a bruteforce protected controller with the same API slower for a 24 hour period.
 
