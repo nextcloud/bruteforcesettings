@@ -14,4 +14,4 @@ Brute Force Protection is meant to protect Nextcloud servers from attempts to gu
 
 If triggered, brute force protection makes requests coming from an IP on a bruteforce protected controller with the same API slower for a 24 hour period.
 
-With this app, the admin can exempt an IP address or range from this protection which can be useful for testing purposes or when there are false positives due to a lot of accounts on one IP address.
+With this app, the admin can exempt an IP address or range from this protection which can be useful for testing purposes or when there are false positives due to a lot of people on a single IP address.
