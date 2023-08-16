@@ -24,16 +24,27 @@
 	<tr>
 		<td><span>{{ ip }}/{{ mask }}</span></td>
 		<td class="action-column">
-			<span>
-				<a class="icon-delete has-tooltip" :title="t('bruteforcesettings', 'Delete')" @click="$emit('delete', id)" />
-			</span>
+			<NcButton :title="t('bruteforcesettings', 'Delete entry for {subnet}', { subnet: this.ip + '/' + this.mask })"
+				type="tertiary"
+				@click="$emit('delete', id)">
+				<template #icon>
+					<Delete :size="20" />
+				</template>
+			</NcButton>
 		</td>
 	</tr>
 </template>
 
 <script>
+import Delete from 'vue-material-design-icons/Delete'
+import NcButton from '@nextcloud/vue/dist/Components/NcButton'
+
 export default {
 	name: 'BruteForceItem',
+	components: {
+		Delete,
+		NcButton,
+	},
 	props: {
 		item: {
 			type: Object,
