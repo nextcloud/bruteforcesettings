@@ -20,7 +20,7 @@
   -
   -->
 <template>
-	<SettingsSection :title="t('bruteforcesettings', 'Brute-force IP whitelist')"
+	<NcSettingsSection :title="t('bruteforcesettings', 'Brute-force IP whitelist')"
 		doc-url="https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/bruteforce_configuration.html">
 		<p class="settings-hint">
 			{{ t('bruteforcesettings', 'To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all.') }}
@@ -51,21 +51,21 @@
 				max="128"
 				maxlength="2"
 				placeholder="64">
-			<Button native-type="submit">
+			<NcButton native-type="submit">
 				<template #icon>
 					<Plus />
 				</template>
 				{{ t('bruteforcesettings', 'Add') }}
-			</Button>
+			</NcButton>
 		</form>
-	</SettingsSection>
+	</NcSettingsSection>
 </template>
 
 <script>
 import { generateUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
-import Button from '@nextcloud/vue/dist/Components/Button'
-import SettingsSection from '@nextcloud/vue/dist/Components/SettingsSection'
+import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
+import NcSettingsSection from '@nextcloud/vue/dist/Components/NcSettingsSection.js'
 import Plus from 'vue-material-design-icons/Plus'
 
 import BruteForceItem from './components/BruteForceItem'
@@ -73,10 +73,10 @@ import BruteForceItem from './components/BruteForceItem'
 export default {
 	name: 'App',
 	components: {
-		Button,
+		NcButton,
 		BruteForceItem,
 		Plus,
-		SettingsSection,
+		NcSettingsSection,
 	},
 	data() {
 		return {
