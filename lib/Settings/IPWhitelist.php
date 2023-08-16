@@ -53,6 +53,6 @@ class IPWhitelist implements ISettings {
 	}
 
 	public function getPriority(): int {
-		return 50;
+		return 5;
 	}
 }
