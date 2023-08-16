@@ -26,6 +26,11 @@
 			{{ t('bruteforcesettings', 'To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all.') }}
 		</p>
 
+		<NcNoteCard v-if="noteCardLevel"
+			:type="noteCardLevel">
+			{{ noteCardText }}
+		</NcNoteCard>
+
 		<!-- Whitelist -->
 		<table id="whitelist-list">
 			<tbody>
@@ -63,8 +68,10 @@
 
 <script>
 import { generateUrl } from '@nextcloud/router'
+import { loadState } from '@nextcloud/initial-state'
 import axios from '@nextcloud/axios'
 import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
+import NcNoteCard from '@nextcloud/vue/dist/Components/NcNoteCard.js'
 import NcSettingsSection from '@nextcloud/vue/dist/Components/NcSettingsSection.js'
 import Plus from 'vue-material-design-icons/Plus'
 
@@ -73,10 +80,11 @@ import BruteForceItem from './components/BruteForceItem'
 export default {
 	name: 'App',
 	components: {
-		NcButton,
 		BruteForceItem,
-		Plus,
+		NcButton,
+		NcNoteCard,
 		NcSettingsSection,
+		Plus,
 	},
 	data() {
 		return {
@@ -85,9 +93,37 @@ export default {
 				ip: '',
 				mask: '',
 			},
+			remoteAddress: '',
+			delay: 0,
+			isBypassListed: false,
 		}
 	},
+
+	computed: {
+		noteCardText() {
+			if (this.delay) {
+				return t('bruteforcesettings', 'Your remote address was identified as "{remoteAddress}" and is throttled at the moment by {delay}ms.', { remoteAddress: this.remoteAddress, delay: this.delay })
+			}
+			if (this.isBypassListed) {
+				return t('bruteforcesettings', 'Your remote address was identified as "{remoteAddress}" and is bypassing bruteforce protection.', { remoteAddress: this.remoteAddress })
+			}
+			return t('bruteforcesettings', 'Your remote address was identified as "{remoteAddress}" and is not actively throttled at the moment.', { remoteAddress: this.remoteAddress })
+		},
+		noteCardLevel() {
+			if (this.delay) {
+				return 'error'
+			}
+			if (this.isBypassListed) {
+				return 'warning'
+			}
+			return 'success'
+		},
+	},
 	beforeMount() {
+		this.remoteAddress = loadState('bruteforcesettings', 'remote-address', '127.0.0.1')
+		this.isBypassListed = loadState('bruteforcesettings', 'bypass-listed', false)
+		this.delay = loadState('bruteforcesettings', 'delay', 0)
+
 		axios.get(generateUrl('apps/bruteforcesettings/ipwhitelist'))
 			.then((response) => {
 				this.items = response.data
