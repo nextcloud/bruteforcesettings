@@ -27,10 +27,24 @@ declare(strict_types=1);
 namespace OCA\BruteForceSettings\Settings;
 
 use OCP\AppFramework\Http\TemplateResponse;
+use OCP\AppFramework\Services\IInitialState;
+use OCP\IRequest;
+use OCP\Security\Bruteforce\IThrottler;
 use OCP\Settings\ISettings;
 
 class IPWhitelist implements ISettings {
+	public function __construct(
+		protected IRequest $request,
+		protected IInitialState $initialState,
+		protected IThrottler $throttler,
+	) {
+	}
+
 	public function getForm(): TemplateResponse {
+		$this->initialState->provideInitialState('remote-address', $this->request->getRemoteAddress());
+		$this->initialState->provideInitialState('bypass-listed', $this->throttler->isBypassListed($this->request->getRemoteAddress()));
+		$this->initialState->provideInitialState('delay', $this->throttler->getDelay($this->request->getRemoteAddress()));
+
 		return new TemplateResponse('bruteforcesettings', 'ipwhitelist');
 	}
 
@@ -39,6 +53,6 @@ class IPWhitelist implements ISettings {
 	}
 
 	public function getPriority(): int {
-		return 50;
+		return 5;
 	}
 }
