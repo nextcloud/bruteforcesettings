@@ -8,6 +8,10 @@ OC.L10N.register(
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Испод одредите ИП опсеге које желите да изузмете из заштите од масовних покушаја. Треба да знате да свака од ових, изузетих адреса може да обавља покушаје пријављивања без икаквог успоравања. Препоручује се да, из безбедоносних разлога, овде буде што мањи број адреса или идеално - ниједна.",
     "Add new whitelist" : "Додај нову белу листу",
     "Add" : "Додај",
+    "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Ваша удаљена адреса је идентификована као „{remoteAddress}” и тренутно је пригушена за {delay}ms.",
+    "Your remote address was identified as \"{remoteAddress}\" and is bypassing bruteforce protection." : "Ваша удаљена адреса је идентификована као „{remoteAddress}” и заобилази заштиту од напада масовним покушајима.",
+    "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Ваша удаљена адреса је идентификована као „{remoteAddress}” и тренутно се не пригушује активно.",
+    "Delete entry for {subnet}" : "Обриши ставку за {subnet}",
     "Delete" : "Обриши"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);");

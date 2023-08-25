@@ -8,6 +8,10 @@ OC.L10N.register(
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "在下面設定白名單 IP。請注意，在白名單中的 IP 可以不被限制進行驗證。基於安全性原因，建議僅設定少數來源 IP。",
     "Add new whitelist" : "新增新的白名單",
     "Add" : "新增",
+    "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "您的遠端地址被識別為「{remoteAddress}」，目前受到{delay}毫秒的限制。",
+    "Your remote address was identified as \"{remoteAddress}\" and is bypassing bruteforce protection." : "您的遠端地址被識別為「{remoteAddress}」，並繞過了暴力破解防護。",
+    "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "您的遠端地址被識別為「{remoteAddress}」，目前未受限制。",
+    "Delete entry for {subnet}" : "刪除 {subnet} 的條目",
     "Delete" : "刪除"
 },
 "nplurals=1; plural=0;");
