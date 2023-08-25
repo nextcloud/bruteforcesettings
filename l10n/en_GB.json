@@ -6,6 +6,10 @@
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all.",
     "Add new whitelist" : "Add new whitelist",
     "Add" : "Add",
+    "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms.",
+    "Your remote address was identified as \"{remoteAddress}\" and is bypassing bruteforce protection." : "Your remote address was identified as \"{remoteAddress}\" and is bypassing bruteforce protection.",
+    "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment.",
+    "Delete entry for {subnet}" : "Delete entry for {subnet}",
     "Delete" : "Delete"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
