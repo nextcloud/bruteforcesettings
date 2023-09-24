@@ -8,6 +8,10 @@ OC.L10N.register(
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Pour ajouter des plages d'adresses IP à la protection par brute force, spécifiez-les ci-dessous. Notez que n'importe quelle adresse IP figurant sur la liste blanche peut effectuer des tentatives d'authentification sans aucune limitation. Pour des raisons de sécurité, il est recommandé de mettre en liste blanche le plus petit nombre possible ou idéalement aucun hôte.",
     "Add new whitelist" : "Ajouter une nouvelle liste blanche",
     "Add" : "Ajouter",
+    "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Votre adresse distante a été identifiée comme « {remoteAddress} » et est limitée pour le moment à {delay} ms.",
+    "Your remote address was identified as \"{remoteAddress}\" and is bypassing bruteforce protection." : "Votre adresse distante a été identifiée comme « {remoteAddress} » et contourne la protection brute force.",
+    "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Votre adresse distante a été identifiée comme « {remoteAddress} » et n'est pas limitée pour le moment.",
+    "Delete entry for {subnet}" : "Supprimer l'entrée pour {subnet}",
     "Delete" : "Supprimer"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
