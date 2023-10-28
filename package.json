@@ -23,7 +23,7 @@
     "@nextcloud/initial-state": "^2.1.0",
     "@nextcloud/router": "^2.0.0",
     "@nextcloud/vue": "^7.12.2",
-    "vue": "^2.7.14",
+    "vue": "^3.3.7",
     "vue-material-design-icons": "^5.2.0"
   },
   "engines": {
