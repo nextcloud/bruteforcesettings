@@ -105,7 +105,7 @@ export default {
 				return t('bruteforcesettings', 'Your remote address was identified as "{remoteAddress}" and is throttled at the moment by {delay}ms.', { remoteAddress: this.remoteAddress, delay: this.delay })
 			}
 			if (this.isBypassListed) {
-				return t('bruteforcesettings', 'Your remote address was identified as "{remoteAddress}" and is bypassing bruteforce protection.', { remoteAddress: this.remoteAddress })
+				return t('bruteforcesettings', 'Your remote address was identified as "{remoteAddress}" and is bypassing brute force protection.', { remoteAddress: this.remoteAddress })
 			}
 			return t('bruteforcesettings', 'Your remote address was identified as "{remoteAddress}" and is not actively throttled at the moment.', { remoteAddress: this.remoteAddress })
 		},
