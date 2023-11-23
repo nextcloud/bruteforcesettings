@@ -9,7 +9,7 @@ OC.L10N.register(
     "Add new whitelist" : "Neue Whitelist hinzufügen",
     "Add" : "Hinzufügen",
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Ihre Remote-Adresse wurde als „{remoteAddress}“ identifiziert und ist derzeit um {delay}ms gedrosselt.",
-    "Your remote address was identified as \"{remoteAddress}\" and is bypassing bruteforce protection." : "Ihre Remote-Adresse wurde als „{remoteAddress}“ identifiziert und umgeht den Bruteforce-Schutz.",
+    "Your remote address was identified as \"{remoteAddress}\" and is bypassing bruteforce protection." : "Ihre Remote-Adresse wurde als „{remoteAddress}“ identifiziert und umgeht den Brute-Force-Schutz.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Ihre Remote-Adresse wurde als „{remoteAddress}“ identifiziert und wird derzeit nicht aktiv gedrosselt.",
     "Delete entry for {subnet}" : "Eintrag für {subnet} löschen",
     "Delete" : "Löschen"
