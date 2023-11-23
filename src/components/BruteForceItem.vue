@@ -1,4 +1,3 @@
-
 <!--
   - @copyright Copyright (c) 2018 Roeland Jago Douma <roeland@famdouma.nl>
   -
@@ -24,7 +23,7 @@
 	<tr>
 		<td><span>{{ ip }}/{{ mask }}</span></td>
 		<td class="action-column">
-			<NcButton :title="t('bruteforcesettings', 'Delete entry for {subnet}', { subnet: this.ip + '/' + this.mask })"
+			<NcButton :title="t('bruteforcesettings', 'Delete entry for {subnet}', { subnet: ip + '/' + mask })"
 				type="tertiary"
 				@click="$emit('delete', id)">
 				<template #icon>
@@ -36,8 +35,8 @@
 </template>
 
 <script>
-import Delete from 'vue-material-design-icons/Delete'
-import NcButton from '@nextcloud/vue/dist/Components/NcButton'
+import Delete from 'vue-material-design-icons/Delete.vue'
+import { NcButton } from '@nextcloud/vue'
 
 export default {
 	name: 'BruteForceItem',
