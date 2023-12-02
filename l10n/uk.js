@@ -8,6 +8,7 @@ OC.L10N.register(
     "Add new whitelist" : "Додати новий білий список",
     "Add" : "Додати",
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Вашу віддалену адресу визначено як \"{remoteAddress}\". Наразі уповільнено взаємодію з цією адресою терміном на {delay} мс.",
+    "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Вашу віддалену адресу визначено як \"{remoteAddress}\", до неї не застосовуватиметься захист від брут-форсу.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Вашу віддалену адресу визначено як \"{remoteAddress}\". До цієї адреси наразі не застосовується обмеження.",
     "Delete entry for {subnet}" : "Вилучити запис для {subnet}",
     "Delete" : "Вилучити"
