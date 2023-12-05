@@ -19,6 +19,7 @@
   - along with this program. If not, see <http://www.gnu.org/licenses/>.
   -
   -->
+
 <template>
 	<NcSettingsSection :title="t('bruteforcesettings', 'Brute-force IP whitelist')"
 		doc-url="https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/bruteforce_configuration.html">
@@ -73,12 +74,13 @@ import axios from '@nextcloud/axios'
 import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
 import NcNoteCard from '@nextcloud/vue/dist/Components/NcNoteCard.js'
 import NcSettingsSection from '@nextcloud/vue/dist/Components/NcSettingsSection.js'
-import Plus from 'vue-material-design-icons/Plus'
+import Plus from 'vue-material-design-icons/Plus.vue'
 
-import BruteForceItem from './components/BruteForceItem'
+import BruteForceItem from './components/BruteForceItem.vue'
 
 export default {
 	name: 'App',
+
 	components: {
 		BruteForceItem,
 		NcButton,
