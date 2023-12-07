@@ -1,8 +1,8 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Brute-force settings" : "Налаштування брут-форсу",
-    "Whitelist IPs" : "Білий список IP-адресів",
+    "Brute-force settings" : "Налаштування для спроб грубого підбору паролів",
+    "Whitelist IPs" : "Білий список IP-адрес",
     "Brute-force IP whitelist" : "Білий список IP-адрес брут-форсу",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Зазначте діапазони IP-адрес для додавання до білого списку. Майте на увазі, що користувачі з  білого списку адрес зможуть авторизовуватися без будь-яких обмежень. З міркувань безпеки рекомендовано додавати якнайменше адрес до білого списку чи навіть жодної.",
     "Add new whitelist" : "Додати новий білий список",
