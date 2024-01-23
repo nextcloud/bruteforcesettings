@@ -39,9 +39,9 @@ jobs:
         id: git-path
         run: |
           if ${{ startsWith(steps.command.outputs.arg1, '/') }}; then
-            echo "path=${{ github.workspace }}${{steps.command.outputs.arg1}}" >> $GITHUB_OUTPUT
+            echo "path=${{steps.command.outputs.arg1}}" >> $GITHUB_OUTPUT
           else
-            echo "path=${{ github.workspace }}${{steps.command.outputs.arg2}}" >> $GITHUB_OUTPUT
+            echo "path=${{steps.command.outputs.arg2}}" >> $GITHUB_OUTPUT
           fi
 
       - name: Init branch
@@ -79,7 +79,7 @@ jobs:
           fallbackNpm: '^9'
 
       - name: Set up node ${{ steps.package-engines-versions.outputs.nodeVersion }}
-        uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v3
+        uses: actions/setup-node@b39b52d1213e96004bfcb1c61a8a6fa8ab84f3e8 # v3
         with:
           node-version: ${{ steps.package-engines-versions.outputs.nodeVersion }}
           cache: npm
@@ -98,22 +98,24 @@ jobs:
       - name: Commit and push default
         if: ${{ needs.init.outputs.arg1 != 'fixup' && needs.init.outputs.arg1 != 'amend' }}
         run: |
-          git add ${{ needs.init.outputs.git_path }}
+          git add ${{ github.workspace }}${{ needs.init.outputs.git_path }}
           git commit --signoff -m 'chore(assets): Recompile assets'
           git push origin ${{ needs.init.outputs.head_ref }}
 
       - name: Commit and push fixup
         if: ${{ needs.init.outputs.arg1 == 'fixup' }}
         run: |
-          git add ${{ needs.init.outputs.git_path }}
+          git add ${{ github.workspace }}${{ needs.init.outputs.git_path }}
           git commit --fixup=HEAD --signoff
           git push origin ${{ needs.init.outputs.head_ref }}
 
       - name: Commit and push amend
         if: ${{ needs.init.outputs.arg1 == 'amend' }}
         run: |
-          git add ${{ needs.init.outputs.git_path }}
+          git add ${{ github.workspace }}${{ needs.init.outputs.git_path }}
           git commit --amend --no-edit --signoff
+          # Remove any [skip ci] from the amended commit
+          git commit --amend -m "$(git log -1 --format='%B' | sed '/\[skip ci\]/d')"
           git push --force origin ${{ needs.init.outputs.head_ref }}
 
       - name: Add reaction on failure
