@@ -33,7 +33,6 @@ use OCP\IConfig;
 use OCP\IRequest;
 
 class IPWhitelistController extends Controller {
-
 	/** @var IConfig */
 	private $config;
 
