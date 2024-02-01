@@ -44,8 +44,8 @@ class IPWhitelistController extends Controller {
 	 * @param IConfig $config
 	 */
 	public function __construct(string $appName,
-								IRequest $request,
-								IConfig $config) {
+		IRequest $request,
+		IConfig $config) {
 		parent::__construct($appName, $request);
 
 		$this->config = $config;
