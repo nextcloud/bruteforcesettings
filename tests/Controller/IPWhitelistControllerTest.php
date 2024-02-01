@@ -31,7 +31,6 @@ use OCP\IRequest;
 use Test\TestCase;
 
 class IPWhitelistControllerTest extends TestCase {
-
 	/** @var IConfig|\PHPUnit_Framework_MockObject_MockObject */
 	private $config;
 	/** @var IPWhitelistController */

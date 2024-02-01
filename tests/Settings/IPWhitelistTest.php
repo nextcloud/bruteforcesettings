@@ -7,7 +7,6 @@ use OCP\AppFramework\Http\TemplateResponse;
 use Test\TestCase;
 
 class IPWhitelistTest extends TestCase {
-
 	/** @var IPWhitelist */
 	private $settings;
 
