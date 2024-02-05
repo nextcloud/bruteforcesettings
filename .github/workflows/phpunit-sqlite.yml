@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   matrix:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest-low
     outputs:
       php-max: ${{ steps.versions.outputs.php-max-list }}
       server-max: ${{ steps.versions.outputs.branches-max-list }}
@@ -29,13 +29,13 @@ jobs:
         uses: icewind1991/nextcloud-version-matrix@d594a6929da316b732c53355e52a1ead77ba36c7 # v1.2.0
 
   changes:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest-low
 
     outputs:
       src: ${{ steps.changes.outputs.src}}
 
     steps:
-      - uses: dorny/paths-filter@4512585405083f25c027a35db413c2b3b9006d50 # v2.11.1
+      - uses: dorny/paths-filter@0bc4621a3135347011ad047f9ecf449bf72ce2bd # v3.0.0
         id: changes
         continue-on-error: true
         with:
@@ -94,7 +94,7 @@ jobs:
 
       - name: Check composer file existence
         id: check_composer
-        uses: andstor/file-existence-action@20b4d2e596410855db8f9ca21e96fbe18e12930b # v2
+        uses: andstor/file-existence-action@076e0072799f4942c8bc574a82233e1e4d13e9d6 # v2
         with:
           files: apps/${{ env.APP_NAME }}/composer.json
 
@@ -158,7 +158,7 @@ jobs:
   summary:
     permissions:
       contents: none
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest-low
     needs: [changes, phpunit-sqlite]
 
     if: always()

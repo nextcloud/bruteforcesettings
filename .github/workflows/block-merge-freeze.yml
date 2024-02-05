@@ -22,7 +22,7 @@ jobs:
 
     if: github.event.pull_request.draft == false
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest-low
 
     steps:
       - name: Register server reference to fallback to master branch
