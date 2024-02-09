@@ -21,7 +21,7 @@
   -->
 
 <template>
-	<NcSettingsSection :title="t('bruteforcesettings', 'Brute-force IP whitelist')"
+	<NcSettingsSection :name="t('bruteforcesettings', 'Brute-force IP whitelist')"
 		doc-url="https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/bruteforce_configuration.html">
 		<p class="settings-hint">
 			{{ t('bruteforcesettings', 'To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all.') }}
@@ -42,39 +42,49 @@
 			</tbody>
 		</table>
 
-		<h3>{{ t('bruteforcesettings', 'Add new whitelist') }}</h3>
-		<form @submit.prevent="addWhitelist">
-			<input id="ip"
-				v-model="newWhitelist.ip"
+		<h3>{{ t('bruteforcesettings', 'Add a new whitelist') }}</h3>
+		<div class="whitelist__form">
+			<NcInputField id="ip"
+				class="whitelist__ip"
+				:value.sync="newWhitelist.ip"
 				type="text"
 				name="ip"
-				placeholder="2001:db8::">/
-			<input id="mask"
-				v-model="newWhitelist.mask"
+				label="IP address"
+				placeholder="2001:db8::" />
+			<NcInputField id="mask"
+				class="whitelist__mask"
+				:value.sync="newWhitelist.mask"
 				type="number"
 				name="mask"
 				min="1"
 				max="128"
 				maxlength="2"
-				placeholder="64">
-			<NcButton native-type="submit">
+				label="Mask"
+				placeholder="64" />
+			<NcButton type="secondary"
+				class="whitelist__submit"
+				@click="addWhitelist">
 				<template #icon>
-					<Plus />
+					<PlusIcon />
 				</template>
 				{{ t('bruteforcesettings', 'Add') }}
 			</NcButton>
-		</form>
+		</div>
 	</NcSettingsSection>
 </template>
 
 <script>
 import { generateUrl } from '@nextcloud/router'
+import { showError } from '@nextcloud/dialogs'
 import { loadState } from '@nextcloud/initial-state'
 import axios from '@nextcloud/axios'
+
 import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
 import NcNoteCard from '@nextcloud/vue/dist/Components/NcNoteCard.js'
 import NcSettingsSection from '@nextcloud/vue/dist/Components/NcSettingsSection.js'
-import Plus from 'vue-material-design-icons/Plus.vue'
+import NcInputField from '@nextcloud/vue/dist/Components/NcInputField.js'
+
+import PlusIcon from 'vue-material-design-icons/Plus.vue'
 
 import BruteForceItem from './components/BruteForceItem.vue'
 
@@ -86,7 +96,8 @@ export default {
 		NcButton,
 		NcNoteCard,
 		NcSettingsSection,
-		Plus,
+		NcInputField,
+		PlusIcon,
 	},
 	data() {
 		return {
@@ -138,17 +149,21 @@ export default {
 					this.items = this.items.filter(item => item.id !== id)
 				})
 		},
-		addWhitelist() {
-			axios.post(generateUrl('apps/bruteforcesettings/ipwhitelist'),
-				{
-					ip: this.newWhitelist.ip,
-					mask: this.newWhitelist.mask,
-				})
-				.then((response) => {
-					this.items.push(response.data)
-					this.newWhitelist.ip = ''
-					this.newWhitelist.mask = ''
-				})
+		async addWhitelist() {
+			try {
+				const response = await axios.post(generateUrl('apps/bruteforcesettings/ipwhitelist'),
+					{
+						ip: this.newWhitelist.ip,
+						mask: this.newWhitelist.mask,
+					})
+
+				this.items.push(response.data)
+				this.newWhitelist.ip = ''
+				this.newWhitelist.mask = ''
+
+			} catch (error) {
+				showError(t('spreed', 'There was an error adding the IP to the whitelist.'))
+			}
 		},
 	},
 }
@@ -159,11 +174,22 @@ export default {
 	min-width: 262px;
 }
 
-form {
+.whitelist__form {
 	display: flex;
+	gap: 8px;
 	align-items: center;
-	input {
-		margin: 8px;
-	}
 }
+
+.whitelist__ip {
+	width: 300px;
+}
+
+.whitelist__mask {
+	width: 100px;
+}
+
+.whitelist__submit {
+	margin-top: 6px;
+}
+
 </style>
