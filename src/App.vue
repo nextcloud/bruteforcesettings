@@ -3,7 +3,7 @@
   -
   - @author Roeland Jago Douma <roeland@famdouma.nl>
   -
-  - @license GNU AGPL version 3 or any later version
+  - @license AGPL-3.0-or-later
   -
   - This program is free software: you can redistribute it and/or modify
   - it under the terms of the GNU Affero General Public License as
@@ -36,36 +36,42 @@
 			</tbody>
 		</table>
 
-		<h3>{{ t('bruteforcesettings', 'Add new whitelist') }}</h3>
-		<form @submit.prevent="addWhitelist">
-			<input id="ip"
-				v-model="newWhitelist.ip"
+		<h3>{{ t('bruteforcesettings', 'Add a new whitelist') }}</h3>
+		<div class="whitelist__form">
+			<NcInputField id="ip"
+				class="whitelist__ip"
+				:value.sync="newWhitelist.ip"
 				type="text"
 				name="ip"
-				placeholder="2001:db8::">/
-			<input id="mask"
-				v-model="newWhitelist.mask"
+				placeholder="2001:db8::" />
+			<NcInputField id="mask"
+				class="whitelist__mask"
+				:value.sync="newWhitelist.mask"
 				type="number"
 				name="mask"
 				min="1"
 				max="128"
-				maxlength="2"
-				placeholder="64">
-			<NcButton type="secondary">
+				placeholder="64" />
+			<NcButton type="secondary"
+				@click="addWhitelist">
 				<template #icon>
 					<PlusIcon />
 				</template>
 				{{ t('bruteforcesettings', 'Add') }}
 			</NcButton>
-		</form>
+		</div>
 	</NcSettingsSection>
 </template>
 
 <script>
 import { generateUrl } from '@nextcloud/router'
+import { showError } from '@nextcloud/dialogs'
 import axios from '@nextcloud/axios'
+
 import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
 import NcSettingsSection from '@nextcloud/vue/dist/Components/NcSettingsSection.js'
+import NcInputField from '@nextcloud/vue/dist/Components/NcInputField.js'
+
 import PlusIcon from 'vue-material-design-icons/Plus.vue'
 
 import BruteForceItem from './components/BruteForceItem.vue'
@@ -75,8 +81,10 @@ export default {
 	components: {
 		NcButton,
 		BruteForceItem,
-		PlusIcon,
 		NcSettingsSection,
+		NcInputField,
+		PlusIcon,
+
 	},
 	data() {
 		return {
@@ -100,17 +108,19 @@ export default {
 					this.items = this.items.filter(item => item.id !== id)
 				})
 		},
-		addWhitelist() {
-			axios.post(generateUrl('apps/bruteforcesettings/ipwhitelist'),
-				{
-					ip: this.newWhitelist.ip,
-					mask: this.newWhitelist.mask,
-				})
-				.then((response) => {
-					this.items.push(response.data)
-					this.newWhitelist.ip = ''
-					this.newWhitelist.mask = ''
-				})
+		async addWhitelist() {
+			try {
+				const response = await axios.post(generateUrl('apps/bruteforcesettings/ipwhitelist'),
+					{
+						ip: this.newWhitelist.ip,
+						mask: this.newWhitelist.mask,
+					})
+				this.items.push(response.data)
+				this.newWhitelist.ip = ''
+				this.newWhitelist.mask = ''
+			} catch (error) {
+				showError(t('bruteforcesettings', 'There was an error adding the IP to the whitelist.'))
+			}
 		},
 	},
 }
@@ -121,11 +131,17 @@ export default {
 	min-width: 262px;
 }
 
-form {
+.whitelist__form {
 	display: flex;
+	gap: 8px;
 	align-items: center;
-	input {
-		margin: 8px;
-	}
+}
+
+.whitelist__ip {
+	width: 300px !important;
+}
+
+.whitelist__mask {
+	width: 100px !important;
 }
 </style>

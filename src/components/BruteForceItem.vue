@@ -1,4 +1,3 @@
-
 <!--
   - @copyright Copyright (c) 2018 Roeland Jago Douma <roeland@famdouma.nl>
   -

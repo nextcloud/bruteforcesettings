@@ -13,6 +13,14 @@
  */
 
 /*!
+ * Toastify js 1.12.0
+ * https://github.com/apvarun/toastify-js
+ * @license MIT licensed
+ *
+ * Copyright (C) 2018 Varun A P
+ */
+
+/*!
  * Vue.js v2.7.16
  * (c) 2014-2023 Evan You
  * Released under the MIT License.
@@ -30,16 +38,20 @@
 
 /*! For license information please see NcButton.js.LICENSE.txt */
 
+/*! For license information please see NcInputField.js.LICENSE.txt */
+
 /*! For license information please see NcSettingsSection.js.LICENSE.txt */
 
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
 
 /**
  * @copyright Copyright (c) 2018 Roeland Jago Douma <roeland@famdouma.nl>
  *
  * @author Roeland Jago Douma <roeland@famdouma.nl>
  *
- * @license GNU AGPL version 3 or any later version
+ * @license AGPL-3.0-or-later
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as
