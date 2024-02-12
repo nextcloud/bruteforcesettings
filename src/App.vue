@@ -64,6 +64,7 @@
 				placeholder="64" />
 			<NcButton type="secondary"
 				class="whitelist__submit"
+				:disabled="disabled"
 				@click="addWhitelist">
 				<template #icon>
 					<PlusIcon />
@@ -132,6 +133,10 @@ export default {
 			}
 			return 'success'
 		},
+
+		disabled() {
+			return !this.newWhitelist.ip.length || !this.newWhitelist.mask.length
+		},
 	},
 	beforeMount() {
 		this.remoteAddress = loadState('bruteforcesettings', 'remote-address', '127.0.0.1')
@@ -182,11 +187,11 @@ export default {
 }
 
 .whitelist__ip {
-	width: 300px;
+	width: 300px !important;
 }
 
 .whitelist__mask {
-	width: 100px;
+	width: 100px !important;;
 }
 
 .whitelist__submit {
