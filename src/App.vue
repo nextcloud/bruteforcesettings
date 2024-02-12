@@ -49,8 +49,9 @@
 				:value.sync="newWhitelist.ip"
 				type="text"
 				name="ip"
-				label="IP address"
+				:label="t('bruteforcesettings','IP address')"
 				placeholder="2001:db8::" />
+			<!-- TRANSLATORS : "Mask" is an IP adress mask-->
 			<NcInputField id="mask"
 				class="whitelist__mask"
 				:value.sync="newWhitelist.mask"
@@ -59,7 +60,7 @@
 				min="1"
 				max="128"
 				maxlength="2"
-				label="Mask"
+				:label="t('bruteforcesettings','Mask')"
 				placeholder="64" />
 			<NcButton type="secondary"
 				class="whitelist__submit"
@@ -162,7 +163,7 @@ export default {
 				this.newWhitelist.mask = ''
 
 			} catch (error) {
-				showError(t('spreed', 'There was an error adding the IP to the whitelist.'))
+				showError(t('bruteforcesettings', 'There was an error adding the IP to the whitelist.'))
 			}
 		},
 	},
