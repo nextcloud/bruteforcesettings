@@ -68,20 +68,10 @@ This application merely manages some of the settings associated with brute force
 
 ## Help & Contributing
 
-With how brute force protection functions within Nextcloud Server:
-
-- Bug reports: https://github.com/nextcloud/server/issues (*not* for general troubleshooting assistance)
-- Enhancement ideas: https://github.com/nextcloud/server/issues 
-- Pull requests: https://github.com/nextcloud/server/pulls
-- Troubleshooting assistance: https://help.nextcloud.com
-- Development: https://docs.nextcloud.com/server/latest/developer_manual/basics/controllers.html#brute-force-protection
-- Code: https://github.com/nextcloud/server/tree/master
-
-With this settings app:
-
 - Bug reports: https://github.com/nextcloud/bruteforcesettings/issues (*not* for general troubleshooting assistance)
 - Enhancement ideas: https://github.com/nextcloud/bruteforcesettings/issues
 - Pull requests: https://github.com/nextcloud/bruteforcesettings/pulls
 - Troubleshooting assistance: https://help.nextcloud.com
-- Development: https://docs.nextcloud.com/server/latest/developer_manual/basics/controllers.html#brute-force-protection
 - Code: https://github.com/nextcloud/bruteforcesettings/tree/master
+
+Keep in mind that the brute force protection implementation is primarily within Nextcloud Server itself so for some details it may be more appropriate to look there.
