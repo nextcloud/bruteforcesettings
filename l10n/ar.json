@@ -5,6 +5,8 @@
     "Brute-force IP whitelist" : "القائمة البيضاء لعناوين IP للقوة الكاسحة Brute-force",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "لإدراج نطاقات IP في القائمة البيضاء للحماية من هجمات القوة الكاسحة. حددها أدناه. لاحظ أن أي عنوان IP مدرج في القائمة البيضاء مسموحٌ له بمحاولة المصادقة دون أي تقييد. لأسباب أمنية، يُوصى بإدراج أقل عددٍ ممكنٍ من المضيفين في القائمة البيضاء، أو لا شيء على الإطلاق من الناحية المثالية.",
     "Add a new whitelist" : "إضِف قائمة بيضاء جديدة",
+    "IP address" : "عنوان IP",
+    "Mask" : "القناع",
     "Add" : "إضافة",
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "تم تحديد عنوانك القَصِيّ على أنه \"{remoteAddress}\" و يتم التحكم فيه حاليًا بمقدار {delay} مللي ثانية.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "تمّ التعرُّف على عنونك البعيد كـ \"{remoteAddress}\" و قد تمّ تمكينه من تخطِّي حاجز \"مكافحة هجمات القوة الكاسحة\".",
