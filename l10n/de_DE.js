@@ -7,6 +7,8 @@ OC.L10N.register(
     "Brute-force IP whitelist" : "Brute-Force IP-Whitelist",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Um IP-Bereiche vom Brute-Force-Schutz auszunehmen (whitelisting), die Bereiche unterhalb angeben. Bitte beachten, dass jede IP-Adresse ohne Brute-Force-Schutz Authentifizierungsversuche ohne jegliche Einschränkung vornehmen kann. Aus Sicherheitsgründen ist es empfohlen, so wenig Host-Adressen wie möglich auszunehmen, im Idealfall keine einzige. ",
     "Add a new whitelist" : "Eine neue Whitelist hinzufügen",
+    "IP address" : "IP-Adresse",
+    "Mask" : "Maske",
     "Add" : "Hinzufügen",
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Ihre Remote-Adresse wurde als „{remoteAddress}“ identifiziert und ist derzeit um {delay}ms gedrosselt.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Ihre Remote-Adresse wurde als \"{remoteAddress}“ identifiziert und umgeht den Brute-Force-Schutz.",
