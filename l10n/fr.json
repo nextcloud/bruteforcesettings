@@ -5,6 +5,8 @@
     "Brute-force IP whitelist" : "Liste blanche des IP pour attaque par force brute",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Pour ajouter des plages d'adresses IP à la protection par brute force, spécifiez-les ci-dessous. Notez que n'importe quelle adresse IP figurant sur la liste blanche peut effectuer des tentatives d'authentification sans aucune limitation. Pour des raisons de sécurité, il est recommandé de mettre en liste blanche le plus petit nombre possible ou idéalement aucun hôte.",
     "Add a new whitelist" : "Ajouter une nouvelle liste blanche",
+    "IP address" : "Adresse IP",
+    "Mask" : "Masque de sous-réseau",
     "Add" : "Ajouter",
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Votre adresse distante a été identifiée comme « {remoteAddress} » et est limitée pour le moment à {delay} ms.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Votre adresse distance a été identifiée comme « {remoteAddress} » et contourne la protection anti brute-force.",
