@@ -16,7 +16,7 @@ OC.L10N.register(
     "There was an error adding the IP to the whitelist." : "錯誤：添加 IP 到白名單時出現了錯誤。",
     "Delete entry for {subnet}" : "刪除 {subnet} 的條目",
     "Brute Force Protection is meant to protect Nextcloud servers from attempts to\nguess account passwords in various ways. Besides the obvious \"*let's try a big\nlist of commonly used passwords*\" attack, it also makes it harder to use\nslightly more sophisticated attacks via the reset password form or trying to\nfind app password tokens.\n\nIf triggered, brute force protection makes requests coming from an IP on a\nbruteforce protected controller with the same API slower for a 24 hour period.\n\nWith this app, the admin can exempt an IP address or range from this\nprotection which can be useful for testing purposes or when there are false\npositives due to a lot of accounts on one IP address." : "Brute Force Protection  旨在保護 Nextcloud 伺服器免遭黑客以各種方式猜測賬戶密碼的企圖。除了明顯的“ *讓我們嘗試一大堆常用密碼*”攻擊外，它還使得通過重置密碼表格或嘗試查找應用程式密碼權杖的方式使用更複雜的攻擊變得更加困難。\n\n如果被觸發，brute force protection 將使來自具有相同 API 的 brute orce protected  控制器上的 IP 的請求在24小時內變慢。\n\n使用此應用程式，管理員可以從此保護中豁免IP地址或範圍，這對於測試目的或由於一個 IP 地址上的許多賬戶而導致誤報時很有用。",
-    "Add new whitelist" : "添加新白名單",
-    "Delete" : "刪除"
+    "Delete" : "刪除",
+    "Add new whitelist" : "添加新白名單"
 },
 "nplurals=1; plural=0;");
