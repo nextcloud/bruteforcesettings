@@ -16,7 +16,7 @@ OC.L10N.register(
     "There was an error adding the IP to the whitelist." : "IP adresi beyaz listeye eklenirken bir sorun çıktı.",
     "Delete entry for {subnet}" : "{subnet} kaydını sil",
     "Brute Force Protection is meant to protect Nextcloud servers from attempts to\nguess account passwords in various ways. Besides the obvious \"*let's try a big\nlist of commonly used passwords*\" attack, it also makes it harder to use\nslightly more sophisticated attacks via the reset password form or trying to\nfind app password tokens.\n\nIf triggered, brute force protection makes requests coming from an IP on a\nbruteforce protected controller with the same API slower for a 24 hour period.\n\nWith this app, the admin can exempt an IP address or range from this\nprotection which can be useful for testing purposes or when there are false\npositives due to a lot of accounts on one IP address." : "Kaba kuvvet koruması Nextcloud sunucularını çeşitli hesap parolası bulma yöntemlerine \nkarşı korur. Bilinen **büyük sık kullanılan parola listesini denemek** saldırısının yanında\nparola sıfırlama formunu ya da uygulama parola kodlarını kullanan daha karmaşık \nsaldırı yöntemlerine karşı da koruma sağlar.\n\nKaba kuvvet koruması belirli bir IP adresinden yapılan bir saldırıyı algıladığında\nistekler 24 saat süreyle kaba kuvvet koruması tarafından korunan ve aynı API\nuygulamasını kullanan daha yavaş bir denetçiye yönlendirilir\n\nBu uygulama ile, yöneticiler bir IP adresinin bu koruma tarafından engellenmemesini\nsağlayabilir. Böylece denemeler sırasında ya da aynı adresten gelen çok sayıda \nhesap nedeniyle hatalı algılama durumunda engelleme yapılmaması sağlanır.",
-    "Add new whitelist" : "Yeni beyaz liste ekle",
-    "Delete" : "Sil"
+    "Delete" : "Sil",
+    "Add new whitelist" : "Yeni beyaz liste ekle"
 },
 "nplurals=2; plural=(n > 1);");
