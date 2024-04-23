@@ -1,3 +1,7 @@
+<!--
+ ~ SPDX-FileCopyrightText: 2016 Roeland Jago Douma <roeland@famdouma.nl>
+ ~ SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 # Changelog
 
 All notable changes to this project will be documented in this file.
