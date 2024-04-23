@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+<!--
+SPDX-FileCopyrightText: 2016 Roeland Jago Douma <roeland@famdouma.nl>
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 	<id>bruteforcesettings</id>
 	<name>Brute-force settings</name>
 	<summary>Whitelist IPs</summary>
