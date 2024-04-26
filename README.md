@@ -1,5 +1,7 @@
 # 💪 Nextcloud Brute Force Settings
 
+[![REUSE status](https://api.reuse.software/badge/github.com/nextcloud/bruteforcesettings)](https://api.reuse.software/info/github.com/nextcloud/bruteforcesettings)
+
 This app makes it possible (via the Web UI) to view the status of a connection and modify certain parameters of the [brute force protection](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/bruteforce_configuration.html) built into Nextcloud Server. 
 
 ![Screenshot of configuration](https://raw.githubusercontent.com/nextcloud/bruteforcesettings/master/screenshots/1.png)
