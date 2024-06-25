@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * SPDX-FileCopyrightText: 2017 Roeland Jago Douma <roeland@famdouma.nl>
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
 namespace OCA\BruteForceSettings\Tests\Settings;
 
 use OCA\BruteForceSettings\Settings\IPWhitelist;
