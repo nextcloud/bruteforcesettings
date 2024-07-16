@@ -1,3 +1,11 @@
+# This workflow is provided via the organization template repository
+#
+# https://github.com/nextcloud/.github
+# https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization
+#
+# SPDX-FileCopyrightText: 2023-2024 Nextcloud GmbH and Nextcloud contributors
+# SPDX-License-Identifier: MIT
+
 name: Documentation
 
 on:
@@ -19,10 +27,10 @@ jobs:
           require: admin
 
       - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
 
       - name: Read package.json node and npm engines version
-        uses: skjnldsv/read-package-engines-version-actions@8205673bab74a63eb9b8093402fd9e0e018663a1 # v2.2
+        uses: skjnldsv/read-package-engines-version-actions@06d6baf7d8f41934ab630e97d9e6c0bc9c9ac5e4 # v3
         id: versions
         with:
           fallbackNode: '^20'
@@ -34,7 +42,7 @@ jobs:
           node-version: ${{ steps.versions.outputs.nodeVersion }}
 
       - name: Set up npm ${{ steps.versions.outputs.npmVersion }}
-        run: npm i -g npm@"${{ steps.versions.outputs.npmVersion }}"
+        run: npm i -g 'npm@${{ steps.versions.outputs.npmVersion }}'
 
       - name: Install dependencies & build
         env:
@@ -47,7 +55,7 @@ jobs:
       - name: Deploy
         # Only deploy on release
         if: github.event.release
-        uses: peaceiris/actions-gh-pages@373f7f263a76c20808c831209c920827a82a2847 # v3.9.3
+        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e # v4.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist/doc
