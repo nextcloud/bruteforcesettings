@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2024 Nextcloud GmbH and Nextcloud contributors
+# SPDX-License-Identifier: AGPL-3.0-or-later
+version = 1
+SPDX-PackageName = "bruteforcesettings"
+SPDX-PackageSupplier = "Nextcloud GmbH <info@nextcloud.com>"
+SPDX-PackageDownloadLocation = "https://github.com/nextcloud/bruteforcesettings"
+
+[[annotations]]
+path = [".github/**", ".editorconfig", "babel.config.js", ".php-cs-fixer.dist.php", "package-lock.json", "package.json", "composer.json", "composer.lock", "README.md", "img/app-dark.svg", "img/app.svg", "webpack.js", "stylelint.config.js", ".eslintrc.js", ".gitignore", ".jshintrc", ".l10nignore", "action/.gitignore", "action/package.json", "action/package-lock.json", "action/dist/index.js", "tests/**", "psalm.xml", ".gitattributes", ".nextcloudignore", ".tx/config", "krankerl.toml", "js/**.LICENSE.txt"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = ["l10n/**.js", "l10n/**.json", "screenshots/1.png", "js/**.js.map", "js/**.js"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2017-2024 Nextcloud contributors"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
