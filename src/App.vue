@@ -174,10 +174,14 @@ export default {
 
 .whitelist__ip {
 	width: 300px !important;
+	height: var(--default-clickable-area);
+	line-height: var(--default-clickable-area);
 }
 
 .whitelist__mask {
-	width: 100px !important;;
+	width: 100px !important;
+	height: var(--default-clickable-area);
+	line-height: var(--default-clickable-area);
 }
 
 .whitelist__submit {
