@@ -1,6 +1,5 @@
 { "translations": {
     "Add" : "Apondre",
-    "Delete" : "Suprimir",
     "Add new whitelist" : "Apondre una lista blanca"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }

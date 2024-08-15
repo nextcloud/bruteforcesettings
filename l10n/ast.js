@@ -8,7 +8,6 @@ OC.L10N.register(
     "Add" : "Amestar",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "La to direición remota identificóse como «{remoteAddress}» y ta omitiendo la proteición escontra la fuercia bruta.",
     "There was an error adding the IP to the whitelist." : "Hebo un error al amestar la direición a la llista d'IPs permitíes.",
-    "Delete entry for {subnet}" : "Desaniciar la entrada de {subnet}",
-    "Delete" : "Desaniciar"
+    "Delete entry for {subnet}" : "Desaniciar la entrada de {subnet}"
 },
 "nplurals=2; plural=(n != 1);");

@@ -1,7 +1,6 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Add" : "﻿ಸೇರಿಸಿ",
-    "Delete" : "﻿ಅಳಿಸಿ"
+    "Add" : "﻿ಸೇರಿಸಿ"
 },
 "nplurals=2; plural=(n > 1);");
