@@ -3,7 +3,6 @@ OC.L10N.register(
     {
     "Brute-force settings" : "Brute-force тохиргоо",
     "Brute-force IP whitelist" : "Brute-force IP whitelist",
-    "Add" : "нэмэх",
-    "Delete" : "Устгах"
+    "Add" : "нэмэх"
 },
 "nplurals=2; plural=(n != 1);");

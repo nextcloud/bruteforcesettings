@@ -1,7 +1,6 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Add" : "Derbäimaachen",
-    "Delete" : "Läschen"
+    "Add" : "Derbäimaachen"
 },
 "nplurals=2; plural=(n != 1);");

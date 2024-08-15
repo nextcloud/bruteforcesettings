@@ -1,7 +1,6 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Add" : "Rnu",
-    "Delete" : "Kkes"
+    "Add" : "Rnu"
 },
 "nplurals=2; plural=(n != 1);");

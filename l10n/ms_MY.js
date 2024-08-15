@@ -1,7 +1,6 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Add" : "Tambah",
-    "Delete" : "Padam"
+    "Add" : "Tambah"
 },
 "nplurals=1; plural=0;");

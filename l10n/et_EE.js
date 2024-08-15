@@ -1,7 +1,6 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Add" : "Lisa",
-    "Delete" : "Kustuta"
+    "Add" : "Lisa"
 },
 "nplurals=2; plural=(n != 1);");
