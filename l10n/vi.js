@@ -3,7 +3,6 @@ OC.L10N.register(
     {
     "Brute-force settings" : "Cài đặt Brute-force",
     "Brute-force IP whitelist" : "Brute-force IP whitelist",
-    "Add" : "Thêm",
-    "Delete" : "Xóa"
+    "Add" : "Thêm"
 },
 "nplurals=1; plural=0;");
