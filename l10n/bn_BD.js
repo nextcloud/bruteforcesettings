@@ -1,7 +1,6 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Add" : "যোগ করুন",
-    "Delete" : "মুছে"
+    "Add" : "যোগ করুন"
 },
 "nplurals=2; plural=(n != 1);");

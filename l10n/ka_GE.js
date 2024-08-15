@@ -3,7 +3,6 @@ OC.L10N.register(
     {
     "Brute-force settings" : "Brute-force-ის პარამეტრები",
     "Brute-force IP whitelist" : "Brute-force-ის IP whitelist-ი",
-    "Add" : "დამატება",
-    "Delete" : "წაშლა"
+    "Add" : "დამატება"
 },
 "nplurals=2; plural=(n!=1);");
