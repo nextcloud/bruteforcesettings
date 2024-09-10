@@ -10,7 +10,9 @@ OC.L10N.register(
     "Mask" : "Маска",
     "Add" : "Добавить",
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Ваш удаленный адрес был идентифицирован как «{remoteAddress}» и в данный момент ограничен {delay}ms.",
+    "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Ваш удаленный адрес был идентифицирован как \"{remoteAddress}\" и обходит защиту от перебора.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Ваш удаленный адрес был идентифицирован как «{remoteAddress}» и в данный момент активно не регулируется.",
+    "There was an error adding the IP to the whitelist." : "Произошла ошибка при добавлении IP-адреса в белый список.",
     "Delete entry for {subnet}" : "Удалить записи для {subnet}",
     "Add new whitelist" : "Добавить в белый список"
 },
