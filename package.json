@@ -19,7 +19,7 @@
     "stylelint:fix": "stylelint src --fix"
   },
   "dependencies": {
-    "@nextcloud/axios": "^2.4.0",
+    "@nextcloud/axios": "^2.5.1",
     "@nextcloud/dialogs": "^5.2.1",
     "@nextcloud/initial-state": "^2.1.0",
     "@nextcloud/router": "^3.0.1",
