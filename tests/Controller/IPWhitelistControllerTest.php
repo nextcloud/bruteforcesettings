@@ -111,7 +111,7 @@ class IPWhitelistControllerTest extends TestCase {
 				->with(
 					$this->equalTo('bruteForce'),
 					$this->equalTo('whitelist_100'),
-					$this->equalTo($ip.'/'.$mask)
+					$this->equalTo($ip . '/' . $mask)
 				);
 
 			$expected = new JSONResponse([

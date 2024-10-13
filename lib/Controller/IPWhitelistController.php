@@ -93,7 +93,7 @@ class IPWhitelistController extends Controller {
 		$id++;
 
 		$value = $ip . '/' . $mask;
-		$this->config->setAppValue('bruteForce', 'whitelist_'.$id, $value);
+		$this->config->setAppValue('bruteForce', 'whitelist_' . $id, $value);
 		return new JSONResponse([
 			'id' => $id,
 			'ip' => $ip,
@@ -106,7 +106,7 @@ class IPWhitelistController extends Controller {
 	 * @return JSONResponse
 	 */
 	public function remove(int $id): JSONResponse {
-		$this->config->deleteAppValue('bruteForce', 'whitelist_'.$id);
+		$this->config->deleteAppValue('bruteForce', 'whitelist_' . $id);
 
 		return new JSONResponse([]);
 	}
