@@ -10,11 +10,11 @@ OC.L10N.register(
     "IP address" : "IP ئادرېس",
     "Mask" : "ماسكا",
     "Add" : "قوش",
-    "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "يىراقتىكى ئادرېسىڭىز «{remoteAddress}» دەپ بېكىتىلگەن بولۇپ ، ھازىر {كېچىكتۈرۈش} ms ئارقىلىق بېسىلىدۇ.",
+    "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "يىراقتىكى ئادرېسىڭىز «{remoteAddress}» دەپ بېكىتىلگەن بولۇپ ، ھازىر {delay} ms ئارقىلىق بېسىلىدۇ.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "يىراقتىكى ئادرېسىڭىز «{remoteAddress}» دەپ بېكىتىلدى ۋە رەھىمسىز قوغداشتىن ئايلىنىپ ئۆتتى.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "يىراقتىكى ئادرېسىڭىز «{remoteAddress}» دەپ بېكىتىلدى ، ھازىرچە ئاكتىپلانمىدى.",
     "There was an error adding the IP to the whitelist." : "IP نى ئاق تىزىملىككە قوشۇشتا خاتالىق كۆرۈلدى.",
-    "Delete entry for {subnet}" : "{Subnet for نىڭ يازمىسىنى ئۆچۈرۈڭ",
+    "Delete entry for {subnet}" : "{subnet} for نىڭ يازمىسىنى ئۆچۈرۈڭ",
     "Add new whitelist" : "يېڭى ئاق تىزىملىك قوشۇڭ"
 },
 "nplurals=2; plural=(n != 1);");
