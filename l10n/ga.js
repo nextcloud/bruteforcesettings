@@ -14,7 +14,6 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Aithníodh do sheoladh cianda mar \"{remoteAddress}\" agus tá sé ag seachaint cosaint brúidiúil.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Aithníodh do sheoladh cianda mar \"{remoteAddress}\" agus níl sé faoi sníomh go gníomhach faoi láthair.",
     "There was an error adding the IP to the whitelist." : "Tharla earráid agus an IP á chur leis an liosta bán.",
-    "Delete entry for {subnet}" : "Scrios iontráil le haghaidh {subnet}",
-    "Add new whitelist" : "Cuir liosta bán nua leis"
+    "Delete entry for {subnet}" : "Scrios iontráil le haghaidh {subnet}"
 },
 "nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);");

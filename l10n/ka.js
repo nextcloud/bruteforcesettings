@@ -10,7 +10,6 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment.",
-    "Delete entry for {subnet}" : "Delete entry for {subnet}",
-    "Add new whitelist" : "Add new whitelist"
+    "Delete entry for {subnet}" : "Delete entry for {subnet}"
 },
 "nplurals=2; plural=(n!=1);");

@@ -12,7 +12,6 @@
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Den eksterne adressen din ble identifisert som \"{remoteAddress}\" og omgår beskyttelse mot rå-makt.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Den eksterne adressen ble identifisert som \"{remoteAddress}\" og strupes ikke aktivt for øyeblikket.",
     "There was an error adding the IP to the whitelist." : "Det oppstod en feil ved å legge til IP-adressen i hvitelisten.",
-    "Delete entry for {subnet}" : "Slett oppføring for {subnet}",
-    "Add new whitelist" : "Legg til ny hvitlisting"
+    "Delete entry for {subnet}" : "Slett oppføring for {subnet}"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

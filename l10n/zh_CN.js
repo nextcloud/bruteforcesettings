@@ -14,7 +14,6 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "您的远程地址被识别为 \"{remoteAddress}\" ，并且正在绕过暴力破解保护。",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "您的远程地址被识别为 \"{remoteAddress}\" ，目前并未受到主动限制。",
     "There was an error adding the IP to the whitelist." : "添加 IP 至白名单时发生错误。",
-    "Delete entry for {subnet}" : "删除 {subnet} 的条目",
-    "Add new whitelist" : "添加新的白名单"
+    "Delete entry for {subnet}" : "删除 {subnet} 的条目"
 },
 "nplurals=1; plural=0;");

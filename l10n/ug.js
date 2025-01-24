@@ -14,7 +14,6 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "يىراقتىكى ئادرېسىڭىز «{remoteAddress}» دەپ بېكىتىلدى ۋە رەھىمسىز قوغداشتىن ئايلىنىپ ئۆتتى.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "يىراقتىكى ئادرېسىڭىز «{remoteAddress}» دەپ بېكىتىلدى ، ھازىرچە ئاكتىپلانمىدى.",
     "There was an error adding the IP to the whitelist." : "IP نى ئاق تىزىملىككە قوشۇشتا خاتالىق كۆرۈلدى.",
-    "Delete entry for {subnet}" : "{subnet} for نىڭ يازمىسىنى ئۆچۈرۈڭ",
-    "Add new whitelist" : "يېڭى ئاق تىزىملىك قوشۇڭ"
+    "Delete entry for {subnet}" : "{subnet} for نىڭ يازمىسىنى ئۆچۈرۈڭ"
 },
 "nplurals=2; plural=(n != 1);");
