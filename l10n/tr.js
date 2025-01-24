@@ -14,7 +14,6 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Uzak adresiniz \"{remoteAddress}\" olarak belirlenmiş ve kaba kuvvet saldırısı korumasını atlıyor.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Uzak adresiniz \"{remoteAddress}\" olarak belirlenmiş ve şu anda etkin olarak kısıtlanmıyor.",
     "There was an error adding the IP to the whitelist." : "IP adresi beyaz listeye eklenirken bir sorun çıktı.",
-    "Delete entry for {subnet}" : "{subnet} kaydını sil",
-    "Add new whitelist" : "Yeni beyaz liste ekle"
+    "Delete entry for {subnet}" : "{subnet} kaydını sil"
 },
 "nplurals=2; plural=(n > 1);");

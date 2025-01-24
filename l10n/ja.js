@@ -14,7 +14,6 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "あなたのリモートアドレスは\"{remoteAddress}\"として認識され、ブルートフォース保護をバイパスしています。",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "あなたのリモートアドレスは\"{remoteAddress}\"として認識され、現在アクティブに調整されていません。",
     "There was an error adding the IP to the whitelist." : "ホワイトリストへのIPの追加中にエラーが発生しました。",
-    "Delete entry for {subnet}" : "{subnet} のエントリを削除します",
-    "Add new whitelist" : "新しいホワイトリストを追加する"
+    "Delete entry for {subnet}" : "{subnet} のエントリを削除します"
 },
 "nplurals=1; plural=0;");

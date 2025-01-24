@@ -12,7 +12,6 @@
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "O seu enderezo remoto foi identificado como «{remoteAddress}» e está a eludir a protección da forza bruta.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "O seu enderezo remoto foi identificado como «{remoteAddress}» e non está a ser estrangulada activamente neste momento",
     "There was an error adding the IP to the whitelist." : "Produciuse un erro ao engadir o IP á lista de autorización.",
-    "Delete entry for {subnet}" : "Eliminar a entrada para {subnet}",
-    "Add new whitelist" : "Engadir unha lista de autorización nova"
+    "Delete entry for {subnet}" : "Eliminar a entrada para {subnet}"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

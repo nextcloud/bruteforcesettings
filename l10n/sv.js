@@ -13,7 +13,6 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Din fjärradress identifierades som \"{remoteAddress}\" och kringgår brute-force skyddet.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Din fjärradress identifierades som \"{remoteAddress}\" och är inte aktivt strypt för tillfället.",
     "There was an error adding the IP to the whitelist." : "Det uppstod ett fel när IP-adressen skulle läggas till i vitlistan.",
-    "Delete entry for {subnet}" : "Ta bort post för {subnet}",
-    "Add new whitelist" : "Lägg till ny vitlista"
+    "Delete entry for {subnet}" : "Ta bort post för {subnet}"
 },
 "nplurals=2; plural=(n != 1);");
