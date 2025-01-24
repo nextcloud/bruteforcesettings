@@ -14,7 +14,6 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Вашу віддалену адресу визначено як \"{remoteAddress}\", до неї не застосовуватиметься захист від підбору паролів.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Вашу віддалену адресу визначено як \"{remoteAddress}\". До цієї адреси наразі не застосовується обмеження.",
     "There was an error adding the IP to the whitelist." : "Помилка під час додавання адреси IP до білого списку.",
-    "Delete entry for {subnet}" : "Вилучити запис для {subnet}",
-    "Add new whitelist" : "Додати новий білий список"
+    "Delete entry for {subnet}" : "Вилучити запис для {subnet}"
 },
 "nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);");

@@ -1,7 +1,6 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Add" : "Apondre",
-    "Add new whitelist" : "Apondre una lista blanca"
+    "Add" : "Apondre"
 },
 "nplurals=2; plural=(n > 1);");

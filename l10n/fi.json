@@ -2,7 +2,6 @@
     "Brute-force settings" : "Väsytyshyökkäyksen asetukset",
     "Whitelist IPs" : "Sallitut IP:t",
     "Brute-force IP whitelist" : "Turvallisten IP-osoitteiden lista",
-    "Add" : "Lisää",
-    "Add new whitelist" : "Lisää uusi sallittujen lista"
+    "Add" : "Lisää"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

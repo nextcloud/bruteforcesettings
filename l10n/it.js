@@ -5,7 +5,6 @@ OC.L10N.register(
     "Whitelist IPs" : "Lista bianca IP",
     "Brute-force IP whitelist" : "Lista bianca degli IP di Brute-force",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Per aggiungere intervalli di IP alla lista bianca dalla protezione contro gli attacchi di tipo brute-force, specificali di seguito. Nota che qualsiasi IP nella lista bianca può eseguire tentativi di autenticazione senza alcuna restrizione. Per motivi di sicurezza, è consigliato ridurre al minimo gli host nella lista bianca o preferibilmente non aggiungerne alcuno.",
-    "Add" : "Aggiungi",
-    "Add new whitelist" : "Aggiungi nuova lista bianca"
+    "Add" : "Aggiungi"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
