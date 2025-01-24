@@ -14,7 +14,6 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment.",
     "There was an error adding the IP to the whitelist." : "There was an error adding the IP to the whitelist.",
-    "Delete entry for {subnet}" : "Delete entry for {subnet}",
-    "Add new whitelist" : "Add new whitelist"
+    "Delete entry for {subnet}" : "Delete entry for {subnet}"
 },
 "nplurals=2; plural=(n != 1);");

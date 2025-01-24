@@ -14,7 +14,6 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "تمّ التعرُّف على عنونك البعيد كـ \"{remoteAddress}\" و قد تمّ تمكينه من تخطِّي حاجز \"مكافحة هجمات القوة الكاسحة\".",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "تم تحديد عنوانك القَصِيّ على أنه \"{remoteAddress}\" و لا يتم التحكم فيه بشكل نشط في الوقت الحالي.",
     "There was an error adding the IP to the whitelist." : "حدث خطأ أثناء إضافة عنوان الـ IP إلى القائمة البيضاء",
-    "Delete entry for {subnet}" : "حذف مدخل لـ {subnet}.",
-    "Add new whitelist" : "إضافة إلى القائمة البيضاء"
+    "Delete entry for {subnet}" : "حذف مدخل لـ {subnet}."
 },
 "nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;");
