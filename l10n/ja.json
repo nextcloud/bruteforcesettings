@@ -2,16 +2,16 @@
     "Brute-force settings" : "ブルートフォース設定",
     "Whitelist IPs" : "ホワイトリストのIP",
     "Brute-force protection is meant to protect Nextcloud servers from attempts to\nguess account passwords in various ways. Besides the obvious \"*let's try a big\nlist of commonly used passwords*\" attack, it also makes it harder to use\nslightly more sophisticated attacks via the reset password form or trying to\nfind app password tokens.\n\nIf triggered, brute-force protection makes requests coming from an IP on a\nbrute-force protected controller with the same API slower for a 24 hour period.\n\nWith this app, the admin can exempt an IP address or range from this\nprotection which can be useful for testing purposes or when there are false\npositives due to a lot of accounts on one IP address." : "ブルートフォース保護は、さまざまな方法でアカウントパスワードを推測する試みからNextcloudサーバーを保護することを目的としています。「よく使われるパスワードの大きなリストを試してみよう」という明白な攻撃に加えて、パスワードのリセットフォームやアプリのパスワードトークンを見つけることによる、もう少し洗練された攻撃を使うことを困難にします。\n\nブルートフォース保護がトリガーされると、同じAPIを持つブルートフォース保護されたコントローラー上のIPからの要求が24時間遅くなります。\n\nこのアプリを使用すると、管理者はIPアドレスまたは範囲をこの保護から除外できます。これは、テスト目的や、1つのIPアドレスに多数のアカウントがあるために誤検出がある場合に便利です。",
+    "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "あなたのリモートアドレスは\"{remoteAddress}\"として認識され、現時点では{delay}ミリ秒で調整されています。",
+    "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "あなたのリモートアドレスは\"{remoteAddress}\"として認識され、ブルートフォース保護をバイパスしています。",
+    "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "あなたのリモートアドレスは\"{remoteAddress}\"として認識され、現在アクティブに調整されていません。",
+    "There was an error adding the IP to the whitelist." : "ホワイトリストへのIPの追加中にエラーが発生しました。",
     "Brute-force IP whitelist" : "ブルートフォースIPホワイトリスト",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "ブルートフォース保護からホワイトリストにIP範囲を登録するには、以下を指定します。\nホワイトリストに登録されたIPは、認証試行を無制限に実行できることに注意してください。 セキュリティ上の理由から、できるだけ少ないホストをホワイトリストに登録するか、理想的にはまったく登録しないことをお勧めします。",
     "Add a new whitelist" : "新しいホワイトリストを追加する",
     "IP address" : "IPアドレス",
     "Mask" : "ネットマスク",
     "Add" : "追加",
-    "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "あなたのリモートアドレスは\"{remoteAddress}\"として認識され、現時点では{delay}ミリ秒で調整されています。",
-    "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "あなたのリモートアドレスは\"{remoteAddress}\"として認識され、ブルートフォース保護をバイパスしています。",
-    "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "あなたのリモートアドレスは\"{remoteAddress}\"として認識され、現在アクティブに調整されていません。",
-    "There was an error adding the IP to the whitelist." : "ホワイトリストへのIPの追加中にエラーが発生しました。",
     "Delete entry for {subnet}" : "{subnet} のエントリを削除します"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
