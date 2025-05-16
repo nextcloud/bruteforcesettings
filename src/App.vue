@@ -28,6 +28,13 @@
 			</tbody>
 		</table>
 
+		<NcCheckboxRadioSwitch :model-value="isApplyAllowListToRateLimitEnabled"
+			:disabled="loading"
+			type="switch"
+			@update:model-value="saveApplyAllowListToRateLimit">
+			{{ t('spreed', 'Apply whitelist to rate limit') }}
+		</NcCheckboxRadioSwitch>
+
 		<h3>{{ t('bruteforcesettings', 'Add a new whitelist') }}</h3>
 		<div class="whitelist__form">
 			<NcInputField id="ip"
@@ -71,6 +78,7 @@ import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
 import NcNoteCard from '@nextcloud/vue/dist/Components/NcNoteCard.js'
 import NcSettingsSection from '@nextcloud/vue/dist/Components/NcSettingsSection.js'
 import NcInputField from '@nextcloud/vue/dist/Components/NcInputField.js'
+import NcCheckboxRadioSwitch from '@nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js'
 
 import PlusIcon from 'vue-material-design-icons/Plus.vue'
 
@@ -84,6 +92,7 @@ export default {
 		NcButton,
 		NcNoteCard,
 		NcSettingsSection,
+		NcCheckboxRadioSwitch,
 		NcInputField,
 		PlusIcon,
 	},
@@ -97,6 +106,8 @@ export default {
 			remoteAddress: '',
 			delay: 0,
 			isBypassListed: false,
+			isApplyAllowListToRateLimitEnabled: false,
+			loading: false,
 		}
 	},
 
@@ -128,6 +139,7 @@ export default {
 		this.remoteAddress = loadState('bruteforcesettings', 'remote-address', '127.0.0.1')
 		this.isBypassListed = loadState('bruteforcesettings', 'bypass-listed', false)
 		this.delay = loadState('bruteforcesettings', 'delay', 0)
+		this.isApplyAllowListToRateLimitEnabled = loadState('bruteforcesettings', 'apply_allowlist_to_ratelimit', false)
 
 		axios.get(generateUrl('apps/bruteforcesettings/ipwhitelist'))
 			.then((response) => {
@@ -156,6 +168,16 @@ export default {
 			} catch (error) {
 				showError(t('bruteforcesettings', 'There was an error adding the IP to the whitelist.'))
 			}
+		},
+
+		saveApplyAllowListToRateLimit(value) {
+			this.loading = true
+			OCP.AppConfig.setValue('bruteforcesettings', 'apply_allowlist_to_ratelimit', value ? 1 : 0, {
+				success: () => {
+					this.loading = false
+					this.isApplyAllowListToRateLimitEnabled = value
+				},
+			})
 		},
 	},
 }
