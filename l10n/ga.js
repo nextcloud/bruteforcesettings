@@ -10,6 +10,7 @@ OC.L10N.register(
     "There was an error adding the IP to the whitelist." : "Tharla earráid agus an IP á chur leis an liosta bán.",
     "Brute-force IP whitelist" : "Liosta bán IP brute-force",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Chun raonta IP bán ón gcosaint brúidiúil sonraigh iad thíos. Tabhair faoi deara gur féidir le haon IP bánliosta iarrachtaí fíordheimhnithe a dhéanamh gan aon stró. Ar chúiseanna slándála, moltar líon beag óstach agus is féidir a bhánú nó fiú gan aon duine ar chor ar bith.",
+    "Apply whitelist to rate limit" : "Cuir an liosta bán i bhfeidhm ar an teorainn ráta",
     "Add a new whitelist" : "Cuir liosta bán nua leis",
     "IP address" : "Seoladh IP",
     "Mask" : "Masc",
