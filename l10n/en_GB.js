@@ -10,6 +10,7 @@ OC.L10N.register(
     "There was an error adding the IP to the whitelist." : "There was an error adding the IP to the whitelist.",
     "Brute-force IP whitelist" : "Brute-force IP whitelist",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all.",
+    "Apply whitelist to rate limit" : "Apply whitelist to rate limit",
     "Add a new whitelist" : "Add a new whitelist",
     "IP address" : "IP address",
     "Mask" : "Mask",
