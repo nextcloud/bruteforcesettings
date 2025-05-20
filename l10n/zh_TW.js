@@ -10,6 +10,7 @@ OC.L10N.register(
     "There was an error adding the IP to the whitelist." : "新增 IP 至白名單時發生錯誤。",
     "Brute-force IP whitelist" : "暴力攻擊 IP 白名單",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "在下面設定白名單 IP。請注意，在白名單中的 IP 可以不被限制進行驗證。基於安全性原因，建議僅設定少數來源 IP。",
+    "Apply whitelist to rate limit" : "將白名單套用至速率限制",
     "Add a new whitelist" : "新增白名單",
     "IP address" : "IP 位址",
     "Mask" : "遮罩",
