@@ -10,6 +10,7 @@ OC.L10N.register(
     "There was an error adding the IP to the whitelist." : "Дошло је до грешке приликом додавања IP адресе на белу листу.",
     "Brute-force IP whitelist" : "Бела листа ИП адреса",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Испод одредите ИП опсеге које желите да изузмете из заштите од масовних покушаја. Треба да знате да свака од ових, изузетих адреса може да обавља покушаје пријављивања без икаквог успоравања. Препоручује се да, из безбедоносних разлога, овде буде што мањи број адреса или идеално - ниједна.",
+    "Apply whitelist to rate limit" : "Примени белу листу на ограничење учесталости",
     "Add a new whitelist" : "Додај нову белу листу",
     "IP address" : "IP адреса",
     "Mask" : "Маска",
