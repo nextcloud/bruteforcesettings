@@ -10,6 +10,7 @@ OC.L10N.register(
     "There was an error adding the IP to the whitelist." : "Došlo k chybě při přidávání IP adresy na seznam povolených.",
     "Brute-force IP whitelist" : "Seznam IP adres vyjmutých ze zamezování útokům hrubou silou",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Pro označení rozsahů IP adres jako bezpečných ohledně ochrany proti útoku hrubou silou, zadejte je níže. Uvědomte si ale, že IP adresy z tohoto seznamu mohou provádět pokusy o ověření bez jakéhokoli omezení. Z důvodu zabezpečení je doporučeno mít zde co nejméně strojů nebo ideálně vůbec žádné.",
+    "Apply whitelist to rate limit" : "Uplatnit seznam povolených na limit četnosti",
     "Add a new whitelist" : "Přidat nový seznam povolených",
     "IP address" : "IP adresa",
     "Mask" : "Maska",
