@@ -38,16 +38,16 @@
 		<h3>{{ t('bruteforcesettings', 'Add a new whitelist') }}</h3>
 		<div class="whitelist__form">
 			<NcInputField id="ip"
+				v-model="newWhitelist.ip"
 				class="whitelist__ip"
-				:value.sync="newWhitelist.ip"
 				type="text"
 				name="ip"
 				:label="t('bruteforcesettings','IP address')"
 				placeholder="2001:db8::" />
 			<!-- TRANSLATORS : "Mask" is an IP adress mask-->
 			<NcInputField id="mask"
+				v-model="newWhitelist.mask"
 				class="whitelist__mask"
-				:value.sync="newWhitelist.mask"
 				type="number"
 				name="mask"
 				min="1"
@@ -73,12 +73,13 @@ import { generateUrl } from '@nextcloud/router'
 import { showError } from '@nextcloud/dialogs'
 import { loadState } from '@nextcloud/initial-state'
 import axios from '@nextcloud/axios'
+import { t } from '@nextcloud/l10n'
 
-import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
-import NcNoteCard from '@nextcloud/vue/dist/Components/NcNoteCard.js'
-import NcSettingsSection from '@nextcloud/vue/dist/Components/NcSettingsSection.js'
-import NcInputField from '@nextcloud/vue/dist/Components/NcInputField.js'
-import NcCheckboxRadioSwitch from '@nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js'
+import NcButton from '@nextcloud/vue/components/NcButton'
+import NcNoteCard from '@nextcloud/vue/components/NcNoteCard'
+import NcSettingsSection from '@nextcloud/vue/components/NcSettingsSection'
+import NcInputField from '@nextcloud/vue/components/NcInputField'
+import NcCheckboxRadioSwitch from '@nextcloud/vue/components/NcCheckboxRadioSwitch'
 
 import PlusIcon from 'vue-material-design-icons/Plus.vue'
 
@@ -147,6 +148,7 @@ export default {
 			})
 	},
 	methods: {
+		t,
 		deleteWhitelist(id) {
 			axios.delete(generateUrl('apps/bruteforcesettings/ipwhitelist/{id}', { id }))
 				.then((response) => {

@@ -11,7 +11,7 @@
 		<td><span>{{ ip }}/{{ mask }}</span></td>
 		<td class="action-column">
 			<NcButton :title="t('bruteforcesettings', 'Delete entry for {subnet}', { subnet: ip + '/' + mask })"
-				type="tertiary"
+				variant="tertiary"
 				@click="$emit('delete', id)">
 				<template #icon>
 					<Delete :size="20" />
@@ -23,7 +23,8 @@
 
 <script>
 import Delete from 'vue-material-design-icons/Delete.vue'
-import { NcButton } from '@nextcloud/vue'
+import NcButton from '@nextcloud/vue/components/NcButton'
+import { t } from '@nextcloud/l10n'
 
 export default {
 	name: 'BruteForceItem',
@@ -37,12 +38,19 @@ export default {
 			required: true,
 		},
 	},
+
+	emits: ['delete'],
+
 	data() {
 		return {
 			id: this.item.id,
 			ip: this.item.ip,
 			mask: this.item.mask,
 		}
+	},
+
+	methods: {
+		t,
 	},
 }
 </script>
