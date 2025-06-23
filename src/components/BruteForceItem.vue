@@ -7,29 +7,32 @@
   - SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 <template>
-	<tr>
-		<td><span>{{ ip }}/{{ mask }}</span></td>
-		<td class="action-column">
+	<NcListItem class="whitelist-item"
+		:name="`${ip}/${mask}`">
+		<template #extra-actions>
 			<NcButton :title="t('bruteforcesettings', 'Delete entry for {subnet}', { subnet: ip + '/' + mask })"
-				type="tertiary"
+				variant="tertiary"
 				@click="$emit('delete', id)">
 				<template #icon>
 					<Delete :size="20" />
 				</template>
 			</NcButton>
-		</td>
-	</tr>
+		</template>
+	</NcListItem>
 </template>
 
 <script>
 import Delete from 'vue-material-design-icons/Delete.vue'
-import { NcButton } from '@nextcloud/vue'
+import NcButton from '@nextcloud/vue/components/NcButton'
+import NcListItem from '@nextcloud/vue/components/NcListItem'
+import { t } from '@nextcloud/l10n'
 
 export default {
 	name: 'BruteForceItem',
 	components: {
 		Delete,
 		NcButton,
+		NcListItem,
 	},
 	props: {
 		item: {
@@ -37,6 +40,9 @@ export default {
 			required: true,
 		},
 	},
+
+	emits: ['delete'],
+
 	data() {
 		return {
 			id: this.item.id,
@@ -44,20 +50,9 @@ export default {
 			mask: this.item.mask,
 		}
 	},
+
+	methods: {
+		t,
+	},
 }
 </script>
-
-<style scoped>
-	td span {
-		padding: 10px 15px;
-		display: inline-block;
-	}
-
-	.action-column {
-		width: 46px;
-	}
-
-	.action-column a {
-		display: inline-block;
-	}
-</style>
