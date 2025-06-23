@@ -7,14 +7,9 @@
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 
-Vue.prototype.t = t
-Vue.prototype.OC = OC
-
-const app = new Vue({
-	render: h => h(App),
-}).$mount('#bruteforcesettings')
-
+const app = createApp(App)
+	.mount('#bruteforcesettings')
 export { app }
