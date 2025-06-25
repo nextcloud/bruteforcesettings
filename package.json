@@ -2,8 +2,8 @@
   "name": "bruteforcesettings",
   "version": "5.0.0-dev.0",
   "description": "Bruteforce settings app",
-  "author": "Roeland Jago Douma <roeland@famdouma.nl>",
   "license": "AGPL-3.0-or-later",
+  "author": "Roeland Jago Douma <roeland@famdouma.nl>",
   "main": "main.js",
   "directories": {
     "lib": "lib",
@@ -12,11 +12,11 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --progress --config webpack.js",
     "dev": "NODE_ENV=development webpack --progress --config webpack.js",
-    "watch": "NODE_ENV=development webpack --progress --watch --config webpack.js",
-    "lint": "eslint --ext .js,.vue src",
-    "lint:fix": "eslint --ext .js,.vue src --fix",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "stylelint": "stylelint src",
-    "stylelint:fix": "stylelint src --fix"
+    "stylelint:fix": "stylelint src --fix",
+    "watch": "NODE_ENV=development webpack --progress --watch --config webpack.js"
   },
   "dependencies": {
     "@nextcloud/axios": "^2.5.1",
@@ -28,15 +28,15 @@
     "vue": "^2.7.14",
     "vue-material-design-icons": "^5.3.1"
   },
-  "engines": {
-    "node": "^20.0.0",
-    "npm": "^10.0.0"
-  },
   "devDependencies": {
     "@nextcloud/babel-config": "^1.2.0",
     "@nextcloud/browserslist-config": "^3.0.1",
-    "@nextcloud/eslint-config": "^8.4.2",
+    "@nextcloud/eslint-config": "^9.0.0-rc.2",
     "@nextcloud/stylelint-config": "^3.1.0",
     "@nextcloud/webpack-vue-config": "^6.3.0"
+  },
+  "engines": {
+    "node": "^20.0.0",
+    "npm": "^10.0.0"
   }
 }

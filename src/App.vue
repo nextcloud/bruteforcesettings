@@ -7,26 +7,30 @@
   - SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 <template>
-	<NcSettingsSection :name="t('bruteforcesettings', 'Brute-force IP whitelist')"
+	<NcSettingsSection
+		:name="t('bruteforcesettings', 'Brute-force IP whitelist')"
 		doc-url="https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/bruteforce_configuration.html">
 		<p class="settings-hint">
 			{{ t('bruteforcesettings', 'To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all.') }}
 		</p>
 
-		<NcNoteCard v-if="noteCardLevel"
+		<NcNoteCard
+			v-if="noteCardLevel"
 			:type="noteCardLevel">
 			{{ noteCardText }}
 		</NcNoteCard>
 
 		<!-- Whitelist -->
 		<ul class="whitelist-list">
-			<BruteForceItem v-for="item in items"
+			<BruteForceItem
+				v-for="item in items"
 				:key="item.id"
 				:item="item"
 				@delete="deleteWhitelist" />
 		</ul>
 
-		<NcCheckboxRadioSwitch :model-value="isApplyAllowListToRateLimitEnabled"
+		<NcCheckboxRadioSwitch
+			:model-value="isApplyAllowListToRateLimitEnabled"
 			:disabled="loading"
 			type="switch"
 			@update:model-value="saveApplyAllowListToRateLimit">
@@ -35,15 +39,17 @@
 
 		<h3>{{ t('bruteforcesettings', 'Add a new whitelist') }}</h3>
 		<div class="whitelist__form">
-			<NcInputField id="ip"
+			<NcInputField
+				id="ip"
 				class="whitelist__ip"
 				:value.sync="newWhitelist.ip"
 				type="text"
 				name="ip"
-				:label="t('bruteforcesettings','IP address')"
+				:label="t('bruteforcesettings', 'IP address')"
 				placeholder="2001:db8::" />
 			<!-- TRANSLATORS : "Mask" is an IP address mask-->
-			<NcInputField id="mask"
+			<NcInputField
+				id="mask"
 				class="whitelist__mask"
 				:value.sync="newWhitelist.mask"
 				type="number"
@@ -51,9 +57,10 @@
 				min="1"
 				max="128"
 				maxlength="2"
-				:label="t('bruteforcesettings','Mask')"
+				:label="t('bruteforcesettings', 'Mask')"
 				placeholder="64" />
-			<NcButton type="secondary"
+			<NcButton
+				variant="secondary"
 				class="whitelist__submit"
 				:disabled="disabled"
 				@click="addWhitelist">
@@ -67,20 +74,17 @@
 </template>
 
 <script>
-import { generateUrl } from '@nextcloud/router'
+import axios from '@nextcloud/axios'
 import { showError } from '@nextcloud/dialogs'
 import { loadState } from '@nextcloud/initial-state'
-import axios from '@nextcloud/axios'
 import { t } from '@nextcloud/l10n'
-
+import { generateUrl } from '@nextcloud/router'
 import NcButton from '@nextcloud/vue/components/NcButton'
+import NcCheckboxRadioSwitch from '@nextcloud/vue/components/NcCheckboxRadioSwitch'
+import NcInputField from '@nextcloud/vue/components/NcInputField'
 import NcNoteCard from '@nextcloud/vue/components/NcNoteCard'
 import NcSettingsSection from '@nextcloud/vue/components/NcSettingsSection'
-import NcInputField from '@nextcloud/vue/components/NcInputField'
-import NcCheckboxRadioSwitch from '@nextcloud/vue/components/NcCheckboxRadioSwitch'
-
 import PlusIcon from 'vue-material-design-icons/Plus.vue'
-
 import BruteForceItem from './components/BruteForceItem.vue'
 
 export default {
@@ -95,6 +99,7 @@ export default {
 		NcInputField,
 		PlusIcon,
 	},
+
 	data() {
 		return {
 			items: [],
@@ -102,6 +107,7 @@ export default {
 				ip: '',
 				mask: '',
 			},
+
 			remoteAddress: '',
 			delay: 0,
 			isBypassListed: false,
@@ -120,6 +126,7 @@ export default {
 			}
 			return t('bruteforcesettings', 'Your remote address was identified as "{remoteAddress}" and is not actively throttled at the moment.', { remoteAddress: this.remoteAddress })
 		},
+
 		noteCardLevel() {
 			if (this.delay) {
 				return 'error'
@@ -134,6 +141,7 @@ export default {
 			return !this.newWhitelist.ip.length || !this.newWhitelist.mask.length
 		},
 	},
+
 	beforeMount() {
 		this.remoteAddress = loadState('bruteforcesettings', 'remote-address', '127.0.0.1')
 		this.isBypassListed = loadState('bruteforcesettings', 'bypass-listed', false)
@@ -145,27 +153,30 @@ export default {
 				this.items = response.data
 			})
 	},
+
 	methods: {
 		t,
 		deleteWhitelist(id) {
 			axios.delete(generateUrl('apps/bruteforcesettings/ipwhitelist/{id}', { id }))
-				.then((response) => {
-					this.items = this.items.filter(item => item.id !== id)
+				.then(() => {
+					this.items = this.items.filter((item) => item.id !== id)
 				})
 		},
+
 		async addWhitelist() {
 			try {
-				const response = await axios.post(generateUrl('apps/bruteforcesettings/ipwhitelist'),
+				const response = await axios.post(
+					generateUrl('apps/bruteforcesettings/ipwhitelist'),
 					{
 						ip: this.newWhitelist.ip,
 						mask: this.newWhitelist.mask,
-					})
+					},
+				)
 
 				this.items.push(response.data)
 				this.newWhitelist.ip = ''
 				this.newWhitelist.mask = ''
-
-			} catch (error) {
+			} catch {
 				showError(t('bruteforcesettings', 'There was an error adding the IP to the whitelist.'))
 			}
 		},
