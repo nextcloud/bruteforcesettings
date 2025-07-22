@@ -10,7 +10,7 @@ OC.L10N.register(
     "There was an error adding the IP to the whitelist." : "Il y a eu une erreur lors de l'ajout de l'adresse IP à la liste blanche.",
     "Brute-force IP whitelist" : "Liste blanche des IP pour attaque par force brute",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Pour ajouter des plages d'adresses IP à la protection par brute force, spécifiez-les ci-dessous. Notez que n'importe quelle adresse IP figurant sur la liste blanche peut effectuer des tentatives d'authentification sans aucune limitation. Pour des raisons de sécurité, il est recommandé de mettre en liste blanche le plus petit nombre possible ou idéalement aucun hôte.",
-    "Apply whitelist to rate limit" : "Appliquer une liste blanche à la limitation du débit",
+    "Apply whitelist to rate limit" : "Appliquer une liste blanche à la limitation de tentative",
     "Add a new whitelist" : "Ajouter une nouvelle liste blanche",
     "IP address" : "Adresse IP",
     "Mask" : "Masque de sous-réseau",
