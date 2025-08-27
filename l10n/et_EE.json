@@ -1,5 +1,15 @@
 { "translations": {
+    "Brute-force settings" : "Jõuründe piiramise meetmete seadistused",
+    "Whitelist IPs" : "Lubatud IP-aadressid",
+    "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Sinu arvuti või seadme aadress on tuvastatud kui „{remoteAddress}“ ja selle puhul on hetkel jõuründe piiramise meetmena kasutusel {delay}-millisekundiline viivitus.",
+    "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Sinu arvuti või seadme aadress on tuvastatud kui „{remoteAddress}“ ja selle puhul on hetkel ei kehti jõuründe piiramise meetmed.",
+    "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Sinu arvuti või seadme aadress on tuvastatud kui „{remoteAddress}“ ja selle puhul on hetkel ei kasutada jõuründe piiramise meetmena päringute viivitamist.",
+    "There was an error adding the IP to the whitelist." : "IP-aadressi lisamisel lubatud aadresside loendisse tekkis viga.",
+    "Brute-force IP whitelist" : "Lubatud IP-aadresside loend, kus jõuründe piiramise meetmed ei kehti",
+    "Apply whitelist to rate limit" : "Kasuta lubatud aadresside loendit päringute sageduse piiramisel",
+    "Add a new whitelist" : "Koosta uus lubatud aadresside loend, kus jõuründe piiramise meetmed ei kehti",
     "IP address" : "IP-address",
+    "Mask" : "Aadressi mask",
     "Add" : "Lisa",
     "Delete entry for {subnet}" : "Kustuta „{subnet}“ kirje"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
