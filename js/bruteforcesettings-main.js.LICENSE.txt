@@ -1,4 +1,10 @@
 /*!
+  * vue-router v4.5.1
+  * (c) 2025 Eduardo San Martin Morote
+  * @license MIT
+  */
+
+/*!
  * SPDX-FileCopyrightText: 2019 Nextcloud GmbH and Nextcloud contributors
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
@@ -9,8 +15,18 @@
  */
 
 /*!
+ * SPDX-FileCopyrightText: 2024 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+/*!
  * SPDX-FileCopyrightText: 2025 Nextcloud GmbH and Nextcloud contributors
  * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+/*!
+ * SPDX-FileCopyrightText: Nextcloud GmbH and Nextcloud contributors
+ * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
 /*!
@@ -29,12 +45,6 @@
  */
 
 /*!
- * Vue.js v2.7.16
- * (c) 2014-2023 Evan You
- * Released under the MIT License.
- */
-
-/*!
  * escape-html
  * Copyright(c) 2012-2013 TJ Holowaychuk
  * Copyright(c) 2015 Andreas Lubbe
@@ -43,7 +53,7 @@
  */
 
 /*!
-* focus-trap 7.5.4
+* focus-trap 7.6.5
 * @license MIT, https://github.com/focus-trap/focus-trap/blob/master/LICENSE
 */
 
@@ -51,6 +61,8 @@
 * tabbable 6.2.0
 * @license MIT, https://github.com/focus-trap/tabbable/blob/master/LICENSE
 */
+
+/*! #__NO_SIDE_EFFECTS__ */
 
 /*! @license DOMPurify 3.2.6 | (c) Cure53 and other contributors | Released under the Apache license 2.0 and Mozilla Public License 2.0 | github.com/cure53/DOMPurify/blob/3.2.6/LICENSE */
 
@@ -66,3 +78,21 @@
  * SPDX-FileCopyrightText: 2018 Roeland Jago Douma <roeland@famdouma.nl>
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
+
+/**
+* @vue/reactivity v3.5.20
+* (c) 2018-present Yuxi (Evan) You and Vue contributors
+* @license MIT
+**/
+
+/**
+* @vue/runtime-dom v3.5.20
+* (c) 2018-present Yuxi (Evan) You and Vue contributors
+* @license MIT
+**/
+
+/**
+* @vue/shared v3.5.20
+* (c) 2018-present Yuxi (Evan) You and Vue contributors
+* @license MIT
+**/

@@ -41,8 +41,8 @@
 		<div class="whitelist__form">
 			<NcInputField
 				id="ip"
+				v-model="newWhitelist.ip"
 				class="whitelist__ip"
-				:value.sync="newWhitelist.ip"
 				type="text"
 				name="ip"
 				:label="t('bruteforcesettings', 'IP address')"
@@ -50,8 +50,8 @@
 			<!-- TRANSLATORS : "Mask" is an IP address mask-->
 			<NcInputField
 				id="mask"
+				v-model="newWhitelist.mask"
 				class="whitelist__mask"
-				:value.sync="newWhitelist.mask"
 				type="number"
 				name="mask"
 				min="1"
