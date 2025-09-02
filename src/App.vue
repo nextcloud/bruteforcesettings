@@ -74,11 +74,9 @@
 </template>
 
 <script>
-import axios from '@nextcloud/axios'
 import { showError } from '@nextcloud/dialogs'
 import { loadState } from '@nextcloud/initial-state'
 import { t } from '@nextcloud/l10n'
-import { generateUrl } from '@nextcloud/router'
 import NcButton from '@nextcloud/vue/components/NcButton'
 import NcCheckboxRadioSwitch from '@nextcloud/vue/components/NcCheckboxRadioSwitch'
 import NcInputField from '@nextcloud/vue/components/NcInputField'
@@ -86,6 +84,11 @@ import NcNoteCard from '@nextcloud/vue/components/NcNoteCard'
 import NcSettingsSection from '@nextcloud/vue/components/NcSettingsSection'
 import PlusIcon from 'vue-material-design-icons/Plus.vue'
 import BruteForceItem from './components/BruteForceItem.vue'
+import {
+	addWhitelist,
+	deleteWhitelist,
+	getWhitelist,
+} from './services/bruteforceSettingsServices.js'
 
 export default {
 	name: 'App',
@@ -147,31 +150,24 @@ export default {
 		this.isBypassListed = loadState('bruteforcesettings', 'bypass-listed', false)
 		this.delay = loadState('bruteforcesettings', 'delay', 0)
 		this.isApplyAllowListToRateLimitEnabled = loadState('bruteforcesettings', 'apply_allowlist_to_ratelimit', false)
-
-		axios.get(generateUrl('apps/bruteforcesettings/ipwhitelist'))
-			.then((response) => {
-				this.items = response.data
-			})
+		this.loadWhitelist()
 	},
 
 	methods: {
 		t,
-		deleteWhitelist(id) {
-			axios.delete(generateUrl('apps/bruteforcesettings/ipwhitelist/{id}', { id }))
-				.then(() => {
-					this.items = this.items.filter((item) => item.id !== id)
-				})
+		async loadWhitelist() {
+			const response = await getWhitelist()
+			this.items = response.data
+		},
+
+		async deleteWhitelist(id) {
+			await deleteWhitelist(id)
+			this.items = this.items.filter((item) => item.id !== id)
 		},
 
 		async addWhitelist() {
 			try {
-				const response = await axios.post(
-					generateUrl('apps/bruteforcesettings/ipwhitelist'),
-					{
-						ip: this.newWhitelist.ip,
-						mask: this.newWhitelist.mask,
-					},
-				)
+				const response = await addWhitelist(this.newWhitelist.ip, this.newWhitelist.mask)
 
 				this.items.push(response.data)
 				this.newWhitelist.ip = ''
