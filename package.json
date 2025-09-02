@@ -16,6 +16,8 @@
     "lint:fix": "eslint --fix",
     "stylelint": "stylelint src",
     "stylelint:fix": "stylelint src --fix",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
     "watch": "NODE_ENV=development webpack --progress --watch --config webpack.js"
   },
   "dependencies": {
