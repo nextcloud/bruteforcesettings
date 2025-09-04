@@ -1,6 +1,6 @@
 {
   "name": "bruteforcesettings",
-  "version": "5.0.0-dev.0",
+  "version": "6.0.0-dev.0",
   "description": "Bruteforce settings app",
   "license": "AGPL-3.0-or-later",
   "author": "Roeland Jago Douma <roeland@famdouma.nl>",
