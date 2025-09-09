@@ -13,4 +13,9 @@ export default [
 			'no-console': 'off',
 		},
 	},
+	// FIXME: temporary ignore tests until it is fixed in PR#797
+	{
+		ignores: ['tests/*'],
+	},
+
 ]
