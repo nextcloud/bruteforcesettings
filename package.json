@@ -21,7 +21,7 @@
     "watch": "NODE_ENV=development webpack --progress --watch --config webpack.js"
   },
   "dependencies": {
-    "@nextcloud/axios": "^2.5.1",
+    "@nextcloud/axios": "^2.5.2",
     "@nextcloud/dialogs": "^7.0.0-rc.3",
     "@nextcloud/initial-state": "^3.0.0",
     "@nextcloud/l10n": "^3.3.0",
