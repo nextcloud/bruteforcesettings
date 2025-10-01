@@ -16,6 +16,8 @@
     "lint:fix": "eslint --fix",
     "stylelint": "stylelint src",
     "stylelint:fix": "stylelint src --fix",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
     "watch": "NODE_ENV=development webpack --progress --watch --config webpack.js"
   },
   "dependencies": {
@@ -25,6 +27,7 @@
     "@nextcloud/l10n": "^3.3.0",
     "@nextcloud/router": "^3.0.1",
     "@nextcloud/vue": "^9.0.0-rc.8",
+    "@vue/test-utils": "^2.4.6",
     "vue": "^3.5.17",
     "vue-material-design-icons": "^5.3.1"
   },
@@ -33,7 +36,11 @@
     "@nextcloud/browserslist-config": "^3.0.1",
     "@nextcloud/eslint-config": "^9.0.0-rc.5",
     "@nextcloud/stylelint-config": "^3.1.0",
-    "@nextcloud/webpack-vue-config": "^6.3.0"
+    "@nextcloud/webpack-vue-config": "^6.3.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vitest/coverage-v8": "^3.2.4",
+    "jsdom": "^26.1.0",
+    "vitest": "^3.2.4"
   },
   "engines": {
     "node": "^22.0.0",
