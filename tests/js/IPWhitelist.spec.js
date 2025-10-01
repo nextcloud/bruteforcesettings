@@ -3,34 +3,34 @@
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-import { expect, describe, test, vi } from 'vitest'
 import { flushPromises, mount } from '@vue/test-utils'
-import App from '../../src/App.vue'
+import { afterEach, describe, expect, test, vi } from 'vitest'
 import { nextTick } from 'vue'
+import App from '../../src/App.vue'
 import {
-	getWhitelist,
 	addWhitelist,
-	deleteWhitelist
+	deleteWhitelist,
+	getWhitelist,
 } from '../../src/services/bruteforceSettingsServices.js'
 
 vi.mock('../../src/services/bruteforceSettingsServices.js', () => ({
 	getWhitelist: vi.fn(),
 	addWhitelist: vi.fn(),
-	deleteWhitelist: vi.fn()
+	deleteWhitelist: vi.fn(),
 }))
 
 describe('App', () => {
 	afterEach(() => {
-		vi.clearAllMocks()		
+		vi.clearAllMocks()
 	})
-    test('renders properly a list of IPs', async () => {
+	test('renders properly a list of IPs', async () => {
 		getWhitelist.mockResolvedValue({
 			data: [
 				{ id: 1, ip: '192.168.1.1', mask: '24' },
-				{ id: 2, ip: '192.168.1.2', mask: '24' }
-			]
+				{ id: 2, ip: '192.168.1.2', mask: '24' },
+			],
 		})
-        const wrapper = mount(App)
+		const wrapper = mount(App)
 		expect(getWhitelist).toHaveBeenCalled()
 		await nextTick()
 
@@ -47,8 +47,8 @@ describe('App', () => {
 			data: {
 				id: 3,
 				ip: '192.168.1.1',
-				mask: '0'
-			}
+				mask: '0',
+			},
 		})
 		const wrapper = mount(App)
 
@@ -56,7 +56,7 @@ describe('App', () => {
 		input.setValue('192.168.1.1')
 		const maskInput = wrapper.find('input[name="mask"]')
 		maskInput.setValue('0')
-		
+
 		await nextTick()
 		const button = wrapper.find('.whitelist__submit')
 		button.trigger('click')
@@ -71,14 +71,14 @@ describe('App', () => {
 	test('can delete IP addresses', async () => {
 		getWhitelist.mockResolvedValue({
 			data: [
-				{ id: 1, ip: '192.168.1.1', mask: '24' }
-			]
+				{ id: 1, ip: '192.168.1.1', mask: '24' },
+			],
 		})
 		deleteWhitelist.mockResolvedValue({})
 
 		const wrapper = mount(App)
 		await nextTick()
-	
+
 		const listItems = wrapper.findAll('li')
 		expect(listItems).toHaveLength(1)
 		const button = listItems[0].find('button[title="Delete entry for 192.168.1.1/24"]')
