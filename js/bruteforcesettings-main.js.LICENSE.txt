@@ -72,37 +72,24 @@
 * @license MIT, https://github.com/focus-trap/tabbable/blob/master/LICENSE
 */
 
-/*! #__NO_SIDE_EFFECTS__ */
-
 /*! @license DOMPurify 3.2.7 | (c) Cure53 and other contributors | Released under the Apache license 2.0 and Mozilla Public License 2.0 | github.com/cure53/DOMPurify/blob/3.2.7/LICENSE */
 
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
 
-/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
-
 /**
- * @copyright Copyright (c) 2018 Roeland Jago Douma <roeland@famdouma.nl>
- * @author Roeland Jago Douma <roeland@famdouma.nl>
- * @license AGPL-3.0-or-later
- *
- * SPDX-FileCopyrightText: 2018 Roeland Jago Douma <roeland@famdouma.nl>
- * SPDX-License-Identifier: AGPL-3.0-or-later
- */
-
-/**
-* @vue/reactivity v3.5.20
+* @vue/reactivity v3.5.22
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
 
 /**
-* @vue/runtime-dom v3.5.20
+* @vue/runtime-dom v3.5.22
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
 
 /**
-* @vue/shared v3.5.20
+* @vue/shared v3.5.22
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
