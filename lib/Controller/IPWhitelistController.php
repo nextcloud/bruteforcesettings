@@ -71,9 +71,9 @@ class IPWhitelistController extends Controller {
 	 * @return JSONResponse
 	 */
 	public function add(string $ip, int $mask): JSONResponse {
-		if (!filter_var($ip, FILTER_VALIDATE_IP) ||
-			(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) && ($mask < 0 || $mask > 32)) ||
-			(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) && ($mask < 0 || $mask > 128))) {
+		if (!filter_var($ip, FILTER_VALIDATE_IP)
+			|| (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) && ($mask < 0 || $mask > 32))
+			|| (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) && ($mask < 0 || $mask > 128))) {
 			return new JSONResponse([], Http::STATUS_BAD_REQUEST);
 		}
 
