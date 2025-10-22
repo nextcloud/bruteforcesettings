@@ -23,7 +23,7 @@
     "psalm": "psalm --no-cache --threads=$(nproc)",
     "psalm:dev": "@psalm",
     "psalm:update-baseline": "psalm --threads=1 --update-baseline",
-    "test:unit": "echo 'Only testing installation of the app'"
+    "test:unit": "phpunit --color -c tests/phpunit.xml"
   },
   "require-dev": {
     "bamarni/composer-bin-plugin": "^1.8",
