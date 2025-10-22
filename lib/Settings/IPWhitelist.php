@@ -26,6 +26,7 @@ class IPWhitelist implements ISettings {
 	) {
 	}
 
+	#[\Override]
 	public function getForm(): TemplateResponse {
 		$this->initialState->provideInitialState('remote-address', $this->request->getRemoteAddress());
 		$this->initialState->provideInitialState('bypass-listed', $this->throttler->isBypassListed($this->request->getRemoteAddress()));
@@ -35,10 +36,12 @@ class IPWhitelist implements ISettings {
 		return new TemplateResponse('bruteforcesettings', 'ipwhitelist');
 	}
 
+	#[\Override]
 	public function getSection(): string {
 		return 'security';
 	}
 
+	#[\Override]
 	public function getPriority(): int {
 		return 5;
 	}
