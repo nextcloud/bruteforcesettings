@@ -12,5 +12,6 @@ namespace OCA\BruteForceSettings;
 class Config {
 	public const APPID = 'bruteForce';
 	public const ALLOWLIST_PREFIX = 'whitelist_';
+	public const COMMENT_SUFFIX = '_comment';
 
 }
