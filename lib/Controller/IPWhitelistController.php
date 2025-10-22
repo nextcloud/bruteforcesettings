@@ -33,31 +33,35 @@ class IPWhitelistController extends Controller {
 	public function getAll(): JSONResponse {
 		$keys = $this->appConfig->getKeys(Config::APPID);
 		$keys = array_filter($keys, static function (string $key) {
-			return str_starts_with($key, Config::ALLOWLIST_PREFIX);
+			return str_starts_with($key, Config::ALLOWLIST_PREFIX) && !str_ends_with($key, Config::COMMENT_SUFFIX);
 		});
 
 		$result = [];
-
 		foreach ($keys as $key) {
+			$id = (int)substr($key, strlen(Config::ALLOWLIST_PREFIX));
+
 			$value = $this->appConfig->getValueString(Config::APPID, $key);
 			$values = explode('/', $value);
+			$comment = $this->appConfig->getValueString(Config::APPID, $key . Config::COMMENT_SUFFIX);
 
-			$result[] = [
-				'id' => (int)substr($key, 10),
+			$result[$id] = [
+				'id' => $id,
 				'ip' => $values[0],
 				'mask' => $values[1],
+				'comment' => $comment,
 			];
 		}
 
-		return new JSONResponse($result);
+		return new JSONResponse(array_values($result));
 	}
 
 	/**
 	 * @param string $ip
 	 * @param int $mask
+	 * @param string $comment
 	 * @return JSONResponse
 	 */
-	public function add(string $ip, int $mask): JSONResponse {
+	public function add(string $ip, int $mask, string $comment = ''): JSONResponse {
 		if (!filter_var($ip, FILTER_VALIDATE_IP)
 			|| (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) && ($mask < 0 || $mask > 32))
 			|| (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) && ($mask < 0 || $mask > 128))) {
@@ -66,12 +70,12 @@ class IPWhitelistController extends Controller {
 
 		$keys = $this->appConfig->getKeys(Config::APPID);
 		$keys = array_filter($keys, static function (string $key) {
-			return str_starts_with($key, Config::ALLOWLIST_PREFIX);
+			return str_starts_with($key, Config::ALLOWLIST_PREFIX) && !str_ends_with($key, Config::COMMENT_SUFFIX);
 		});
 
 		$id = 0;
 		foreach ($keys as $key) {
-			$tmp = (int)substr($key, 10);
+			$tmp = (int)substr($key, strlen(Config::ALLOWLIST_PREFIX));
 			if ($tmp > $id) {
 				$id = $tmp;
 			}
@@ -80,10 +84,16 @@ class IPWhitelistController extends Controller {
 
 		$value = $ip . '/' . $mask;
 		$this->appConfig->setValueString(Config::APPID, Config::ALLOWLIST_PREFIX . $id, $value);
+		$comment = trim($comment);
+		if ($comment !== '') {
+			$this->appConfig->setValueString(Config::APPID, Config::ALLOWLIST_PREFIX . $id . Config::COMMENT_SUFFIX, $comment);
+		}
+
 		return new JSONResponse([
 			'id' => $id,
 			'ip' => $ip,
 			'mask' => $mask,
+			'comment' => $comment,
 		]);
 	}
 
@@ -93,6 +103,7 @@ class IPWhitelistController extends Controller {
 	 */
 	public function remove(int $id): JSONResponse {
 		$this->appConfig->deleteKey(Config::APPID, Config::ALLOWLIST_PREFIX . $id);
+		$this->appConfig->deleteKey(Config::APPID, Config::ALLOWLIST_PREFIX . $id . Config::COMMENT_SUFFIX);
 
 		return new JSONResponse([]);
 	}
