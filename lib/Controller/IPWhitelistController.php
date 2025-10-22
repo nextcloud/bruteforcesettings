@@ -3,56 +3,43 @@
 declare(strict_types=1);
 
 /**
- * @copyright 2016, Roeland Jago Douma <roeland@famdouma.nl>
- * @author Roeland Jago Douma <roeland@famdouma.nl>
- * @license GNU AGPL version 3 or any later version
- *
+ * SPDX-FileCopyrightText: 2016-2025 Nextcloud GmbH and Nextcloud contributors
  * SPDX-FileCopyrightText: 2016 Roeland Jago Douma <roeland@famdouma.nl>
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
 namespace OCA\BruteForceSettings\Controller;
 
+use OCA\BruteForceSettings\Config;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\JSONResponse;
-use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\IRequest;
 
 class IPWhitelistController extends Controller {
 
-	/** @var IConfig */
-	private $config;
-
-	/**
-	 * IPWhitelistController constructor.
-	 *
-	 * @param string $appName
-	 * @param IRequest $request
-	 * @param IConfig $config
-	 */
-	public function __construct(string $appName,
+	public function __construct(
+		string $appName,
 		IRequest $request,
-		IConfig $config) {
+		private readonly IAppConfig $appConfig,
+	) {
 		parent::__construct($appName, $request);
-
-		$this->config = $config;
 	}
 
 	/**
 	 * @return JSONResponse
 	 */
 	public function getAll(): JSONResponse {
-		$keys = $this->config->getAppKeys('bruteForce');
-		$keys = array_filter($keys, function ($key) {
-			$regex = '/^whitelist_/S';
-			return preg_match($regex, $key) === 1;
+		$keys = $this->appConfig->getKeys(Config::APPID);
+		$keys = array_filter($keys, static function (string $key) {
+			return str_starts_with($key, Config::ALLOWLIST_PREFIX);
 		});
 
 		$result = [];
 
 		foreach ($keys as $key) {
-			$value = $this->config->getAppValue('bruteForce', $key);
+			$value = $this->appConfig->getValueString(Config::APPID, $key);
 			$values = explode('/', $value);
 
 			$result[] = [
@@ -77,10 +64,9 @@ class IPWhitelistController extends Controller {
 			return new JSONResponse([], Http::STATUS_BAD_REQUEST);
 		}
 
-		$keys = $this->config->getAppKeys('bruteForce');
-		$keys = array_filter($keys, function ($key) {
-			$regex = '/^whitelist_/S';
-			return preg_match($regex, $key) === 1;
+		$keys = $this->appConfig->getKeys(Config::APPID);
+		$keys = array_filter($keys, static function (string $key) {
+			return str_starts_with($key, Config::ALLOWLIST_PREFIX);
 		});
 
 		$id = 0;
@@ -93,7 +79,7 @@ class IPWhitelistController extends Controller {
 		$id++;
 
 		$value = $ip . '/' . $mask;
-		$this->config->setAppValue('bruteForce', 'whitelist_' . $id, $value);
+		$this->appConfig->setValueString(Config::APPID, Config::ALLOWLIST_PREFIX . $id, $value);
 		return new JSONResponse([
 			'id' => $id,
 			'ip' => $ip,
@@ -106,7 +92,7 @@ class IPWhitelistController extends Controller {
 	 * @return JSONResponse
 	 */
 	public function remove(int $id): JSONResponse {
-		$this->config->deleteAppValue('bruteForce', 'whitelist_' . $id);
+		$this->appConfig->deleteKey(Config::APPID, Config::ALLOWLIST_PREFIX . $id);
 
 		return new JSONResponse([]);
 	}
