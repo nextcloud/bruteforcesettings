@@ -6,16 +6,27 @@
     "optimize-autoloader": true,
     "classmap-authoritative": true,
     "platform": {
-      "php": "8.0.2"
+      "php": "8.2"
+    },
+    "allow-plugins": {
+      "bamarni/composer-bin-plugin": true
     }
   },
   "scripts": {
-    "cs:fix": "php-cs-fixer fix",
+    "post-install-cmd": [
+      "[ $COMPOSER_DEV_MODE -eq 0 ] || composer bin all install",
+      "composer dump-autoload"
+    ],
+    "lint": "find . -name \\*.php -not -path './vendor/*' -not -path './build/*' -print0 | xargs -0 -n1 php -l",
     "cs:check": "php-cs-fixer fix --dry-run --diff",
-    "lint": "find . -name \\*.php -not -path './vendor/*' -print0 | xargs -0 -n1 php -l",
+    "cs:fix": "php-cs-fixer fix",
+    "psalm": "psalm --no-cache --threads=$(nproc)",
+    "psalm:dev": "@psalm",
+    "psalm:update-baseline": "psalm --threads=1 --update-baseline",
     "test:unit": "echo 'Only testing installation of the app'"
   },
   "require-dev": {
-    "nextcloud/coding-standard": "^1.1.1"
+    "bamarni/composer-bin-plugin": "^1.8",
+    "nextcloud/ocp": "dev-master"
   }
 }
