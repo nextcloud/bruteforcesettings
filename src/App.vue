@@ -38,27 +38,35 @@
 		</NcCheckboxRadioSwitch>
 
 		<h3>{{ t('bruteforcesettings', 'Add a new whitelist') }}</h3>
-		<div class="whitelist__form">
-			<NcInputField
-				id="ip"
-				v-model="newWhitelist.ip"
-				class="whitelist__ip"
-				type="text"
-				name="ip"
-				:label="t('bruteforcesettings', 'IP address')"
-				placeholder="2001:db8::" />
-			<!-- TRANSLATORS : "Mask" is an IP address mask-->
-			<NcInputField
-				id="mask"
-				v-model="newWhitelist.mask"
-				class="whitelist__mask"
-				type="number"
-				name="mask"
-				min="1"
-				max="128"
-				maxlength="2"
-				:label="t('bruteforcesettings', 'Mask')"
-				placeholder="64" />
+		<div class="whitelist-form">
+			<div class="whitelist-form__ip-mask">
+				<NcInputField
+					id="ip"
+					v-model="newWhitelist.ip"
+					class="whitelist__ip"
+					type="text"
+					name="ip"
+					:label="t('bruteforcesettings', 'IP address')"
+					placeholder="2001:db8::" />
+				<!-- TRANSLATORS : "Mask" is an IP address mask-->
+				<NcInputField
+					id="mask"
+					v-model="newWhitelist.mask"
+					class="whitelist__mask"
+					type="number"
+					name="mask"
+					min="1"
+					max="128"
+					maxlength="2"
+					:label="t('bruteforcesettings', 'Mask')"
+					placeholder="64" />
+			</div>
+			<NcTextArea
+				id="comment"
+				v-model="newWhitelist.comment"
+				class="whitelist__comment"
+				:label="t('bruteforcesettings', 'Comment')"
+				:placeholder="t('bruteforcesettings', 'Explain why this IP must bypass brute-force protection')" />
 			<NcButton
 				variant="secondary"
 				class="whitelist__submit"
@@ -82,6 +90,7 @@ import NcCheckboxRadioSwitch from '@nextcloud/vue/components/NcCheckboxRadioSwit
 import NcInputField from '@nextcloud/vue/components/NcInputField'
 import NcNoteCard from '@nextcloud/vue/components/NcNoteCard'
 import NcSettingsSection from '@nextcloud/vue/components/NcSettingsSection'
+import NcTextArea from '@nextcloud/vue/components/NcTextArea'
 import PlusIcon from 'vue-material-design-icons/Plus.vue'
 import BruteForceItem from './components/BruteForceItem.vue'
 import {
@@ -100,6 +109,7 @@ export default {
 		NcSettingsSection,
 		NcCheckboxRadioSwitch,
 		NcInputField,
+		NcTextArea,
 		PlusIcon,
 	},
 
@@ -109,6 +119,7 @@ export default {
 			newWhitelist: {
 				ip: '',
 				mask: '',
+				comment: '',
 			},
 
 			remoteAddress: '',
@@ -167,11 +178,12 @@ export default {
 
 		async addWhitelist() {
 			try {
-				const response = await addWhitelist(this.newWhitelist.ip, this.newWhitelist.mask)
+				const response = await addWhitelist(this.newWhitelist)
 
 				this.items.push(response.data)
 				this.newWhitelist.ip = ''
 				this.newWhitelist.mask = ''
+				this.newWhitelist.comment = ''
 			} catch {
 				showError(t('bruteforcesettings', 'There was an error adding the IP to the whitelist.'))
 			}
@@ -201,7 +213,13 @@ export default {
 	overflow-y: auto;
 }
 
-.whitelist__form {
+.whitelist-form {
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--default-grid-baseline) * 2);
+}
+
+.whitelist-form__ip-mask {
 	display: flex;
 	gap: calc(var(--default-grid-baseline) * 2);
 	align-items: center;
@@ -217,6 +235,10 @@ export default {
 	width: 100px !important;
 	height: var(--default-clickable-area);
 	line-height: var(--default-clickable-area);
+}
+
+.whitelist__comment {
+	width: calc(400px + var(--default-grid-baseline) * 2) !important; // to align with ip + mask fields
 }
 
 .whitelist__submit {
