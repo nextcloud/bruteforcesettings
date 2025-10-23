@@ -13,5 +13,6 @@ class Config {
 	public const APPID = 'bruteForce';
 	public const ALLOWLIST_PREFIX = 'whitelist_';
 	public const COMMENT_SUFFIX = '_comment';
+	public const MAX_COMMENT_LENGTH = 1000;
 
 }
