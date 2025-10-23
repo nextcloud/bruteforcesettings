@@ -26,12 +26,13 @@
 				v-for="item in items"
 				:key="item.id"
 				:item="item"
-				@delete="deleteWhitelist" />
+				@delete="deleteWhitelist"
+				@edit="editWhitelist" />
 		</ul>
 
 		<NcCheckboxRadioSwitch
 			:model-value="isApplyAllowListToRateLimitEnabled"
-			:disabled="loading"
+			:disabled="loadingRateLimit"
 			type="switch"
 			@update:model-value="saveApplyAllowListToRateLimit">
 			{{ t('spreed', 'Apply whitelist to rate limit') }}
@@ -66,7 +67,9 @@
 				v-model="newWhitelist.comment"
 				class="whitelist__comment"
 				:label="t('bruteforcesettings', 'Comment')"
-				:placeholder="t('bruteforcesettings', 'Explain why this IP must bypass brute-force protection')" />
+				:placeholder="t('bruteforcesettings', 'Explain why this IP must bypass brute-force protection')"
+				:helper-text="hasExceededTextLimit && !openEditDialog ? helperText : ''"
+				:error="hasExceededTextLimit && !openEditDialog" />
 			<NcButton
 				variant="secondary"
 				class="whitelist__submit"
@@ -78,6 +81,30 @@
 				{{ t('bruteforcesettings', 'Add') }}
 			</NcButton>
 		</div>
+		<NcModal v-if="openEditDialog" @close="clearEditing">
+			<div class="whitelist-edit__content">
+				<h2>{{ t('bruteforcesettings', 'Edit comment for {subnet}', { subnet: editingItem.ip + '/' + editingItem.mask }) }}</h2>
+				<NcTextArea
+					v-model="editingItem.comment"
+					id="edit-comment"
+					resize="none"
+					:label="t('bruteforcesettings', 'Comment')"
+					:placeholder="t('bruteforcesettings', 'Explain why this IP must bypass brute-force protection')"
+					:helper-text="hasExceededTextLimit && openEditDialog ? helperText : ''"
+					:error="hasExceededTextLimit && openEditDialog" />
+				<NcButton
+					class="whitelist-edit__submit"
+					variant="primary"
+					:disabled="loadingEdit"
+					@click="saveEdit">
+					<template #icon>
+						<PlusIcon v-if="!loadingEdit" />
+						<NcLoadingIcon v-else />
+					</template>
+					{{ t('bruteforcesettings', 'Save') }}
+				</NcButton>
+			</div>
+		</NcModal>
 	</NcSettingsSection>
 </template>
 
@@ -88,6 +115,8 @@ import { t } from '@nextcloud/l10n'
 import NcButton from '@nextcloud/vue/components/NcButton'
 import NcCheckboxRadioSwitch from '@nextcloud/vue/components/NcCheckboxRadioSwitch'
 import NcInputField from '@nextcloud/vue/components/NcInputField'
+import NcLoadingIcon from '@nextcloud/vue/components/NcLoadingIcon'
+import NcModal from '@nextcloud/vue/components/NcModal'
 import NcNoteCard from '@nextcloud/vue/components/NcNoteCard'
 import NcSettingsSection from '@nextcloud/vue/components/NcSettingsSection'
 import NcTextArea from '@nextcloud/vue/components/NcTextArea'
@@ -98,6 +127,8 @@ import {
 	deleteWhitelist,
 	getWhitelist,
 } from './services/bruteforceSettingsServices.js'
+
+const COMMENT_MAX_LENGTH = 1000
 
 export default {
 	name: 'App',
@@ -111,6 +142,8 @@ export default {
 		NcInputField,
 		NcTextArea,
 		PlusIcon,
+		NcModal,
+		NcLoadingIcon,
 	},
 
 	data() {
@@ -126,7 +159,12 @@ export default {
 			delay: 0,
 			isBypassListed: false,
 			isApplyAllowListToRateLimitEnabled: false,
-			loading: false,
+			loadingRateLimit: false,
+			loadingEdit: false,
+			openEditDialog: false,
+			editingItem: null,
+			hasExceededTextLimit: false,
+			helperText: t('bruteforcesettings', 'Comment cannot exceed {max} characters.', { max: COMMENT_MAX_LENGTH }),
 		}
 	},
 
@@ -168,7 +206,10 @@ export default {
 		t,
 		async loadWhitelist() {
 			const response = await getWhitelist()
-			this.items = response.data
+			// sort by ip address
+			this.items = response.data.sort((a, b) => {
+				return a.ip.localeCompare(b.ip)
+			})
 		},
 
 		async deleteWhitelist(id) {
@@ -177,6 +218,10 @@ export default {
 		},
 
 		async addWhitelist() {
+			this.hasExceededTextLimit = this.newWhitelist?.comment && this.newWhitelist?.comment?.length > COMMENT_MAX_LENGTH
+			if (this.hasExceededTextLimit) {
+				return
+			}
 			try {
 				const response = await addWhitelist(this.newWhitelist)
 
@@ -190,13 +235,46 @@ export default {
 		},
 
 		saveApplyAllowListToRateLimit(value) {
-			this.loading = true
+			this.loadingRateLimit = true
 			OCP.AppConfig.setValue('bruteforcesettings', 'apply_allowlist_to_ratelimit', value ? 1 : 0, {
 				success: () => {
-					this.loading = false
+					this.loadingRateLimit = false
 					this.isApplyAllowListToRateLimitEnabled = value
 				},
 			})
+		},
+
+		editWhitelist(item) {
+			this.openEditDialog = true
+			this.editingItem = { ...item }
+			this.hasExceededTextLimit = false
+		},
+
+		async saveEdit() {
+			this.hasExceededTextLimit = this.editingItem?.comment && this.editingItem?.comment?.length > COMMENT_MAX_LENGTH
+			if (this.hasExceededTextLimit) {
+				return
+			}
+			this.loadingEdit = true
+			try {
+				const response = await addWhitelist(this.editingItem)
+				this.clearEditing()
+				// Update the item in the list
+				const index = this.items.findIndex((i) => i.id === response.data.id)
+				if (index !== -1) {
+					this.items.splice(index, 1, response.data)
+				}
+			} catch {
+				showError(t('bruteforcesettings', 'There was an error updating the whitelist entry.'))
+			} finally {
+				this.loadingEdit = false
+			}
+		},
+
+		clearEditing() {
+			this.openEditDialog = false
+			this.editingItem = null
+			this.hasExceededTextLimit = false
 		},
 	},
 }
@@ -208,7 +286,7 @@ export default {
 	flex-direction: column;
 	gap: var(--default-grid-baseline);
 	margin-block: calc(var(--default-grid-baseline) * 2);
-	width: 250px;
+	width: calc(400px + var(--default-grid-baseline) * 2);
 	max-height: 400px;
 	overflow-y: auto;
 }
@@ -243,6 +321,22 @@ export default {
 
 .whitelist__submit {
 	margin-top: 6px;
+}
+
+.whitelist-edit__content {
+	padding: calc(var(--default-grid-baseline) * 2);
+
+	& > h2 {
+		text-align: center;
+		font-size: 1.2em;
+		line-break: anywhere;
+	}
+}
+
+.whitelist-edit__submit {
+	margin-top: calc(var(--default-grid-baseline) * 2);
+	display: block;
+	margin-inline: auto;
 }
 
 </style>
