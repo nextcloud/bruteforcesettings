@@ -14,6 +14,14 @@
 			{{ t('bruteforcesettings', 'To allow list IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to include in the allow list as few hosts as possible or ideally even none at all.') }}
 		</p>
 
+		<NcCheckboxRadioSwitch
+			:model-value="isApplyAllowListToRateLimitEnabled"
+			:disabled="loadingRateLimit"
+			type="switch"
+			@update:model-value="saveApplyAllowListToRateLimit">
+			{{ t('spreed', 'Bypass rate limiting for allowed IPs') }}
+		</NcCheckboxRadioSwitch>
+
 		<NcNoteCard
 			v-if="noteCardLevel"
 			:type="noteCardLevel">
@@ -29,14 +37,6 @@
 				@delete="deleteWhitelist"
 				@edit="editWhitelist" />
 		</ul>
-
-		<NcCheckboxRadioSwitch
-			:model-value="isApplyAllowListToRateLimitEnabled"
-			:disabled="loadingRateLimit"
-			type="switch"
-			@update:model-value="saveApplyAllowListToRateLimit">
-			{{ t('spreed', 'Bypass rate limiting for allowed IPs') }}
-		</NcCheckboxRadioSwitch>
 
 		<h3>{{ t('bruteforcesettings', 'Add new IP address') }}</h3>
 		<div class="whitelist-form">
