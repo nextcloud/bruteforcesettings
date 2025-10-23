@@ -12,12 +12,12 @@
 		:title="`${item.ip}/${item.mask}`"
 		:name="`${item.ip}/${item.mask}`"
 		force-display-actions>
-		<template v-if="comment" #subname>
-			<span>{{ comment }}</span>
+		<template v-if="item.comment" #subname>
+			<span :title="item.comment">{{ item.comment }}</span>
 		</template>
 		<template #extra-actions>
 			<NcButton
-				:title="t('bruteforcesettings', 'edit comment for {subnet}', { subnet: ip + '/' + mask })"
+				:title="t('bruteforcesettings', 'edit comment for {subnet}', { subnet: item.ip + '/' + item.mask })"
 				variant="tertiary"
 				@click="$emit('edit', item)">
 				<template #icon>
@@ -27,9 +27,9 @@
 		</template>
 		<template #actions>
 			<NcActionButton
-				:title="t('bruteforcesettings', 'Delete entry for {subnet}', { subnet: ip + '/' + mask })"
+				:title="t('bruteforcesettings', 'Delete entry for {subnet}', { subnet: item.ip + '/' + item.mask })"
 				variant="tertiary"
-				@click="$emit('delete', id)">
+				@click="$emit('delete', item.id)">
 				<template #icon>
 					<IconDelete :size="20" />
 				</template>
@@ -63,16 +63,7 @@ export default {
 		},
 	},
 
-	emits: ['delete'],
-
-	data() {
-		return {
-			id: this.item.id,
-			ip: this.item.ip,
-			mask: this.item.mask,
-			comment: this.item.comment,
-		}
-	},
+	emits: ['delete', 'edit'],
 
 	methods: {
 		t,
