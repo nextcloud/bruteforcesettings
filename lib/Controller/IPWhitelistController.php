@@ -62,28 +62,37 @@ class IPWhitelistController extends Controller {
 	 * @return JSONResponse
 	 */
 	public function add(string $ip, int $mask, string $comment = ''): JSONResponse {
+		// Make IPv6 lowercase for consistency
+		$ip = strtolower($ip);
+
 		if (!filter_var($ip, FILTER_VALIDATE_IP)
 			|| (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) && ($mask < 0 || $mask > 32))
 			|| (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) && ($mask < 0 || $mask > 128))) {
 			return new JSONResponse([], Http::STATUS_BAD_REQUEST);
 		}
 
-		$keys = $this->appConfig->getKeys(Config::APPID);
-		$keys = array_filter($keys, static function (string $key) {
-			return str_starts_with($key, Config::ALLOWLIST_PREFIX) && !str_ends_with($key, Config::COMMENT_SUFFIX);
-		});
+		$newValue = $ip . '/' . $mask;
+		$configMap = $this->appConfig->getAllValues(Config::APPID, Config::ALLOWLIST_PREFIX);
 
 		$id = 0;
-		foreach ($keys as $key) {
-			$tmp = (int)substr($key, strlen(Config::ALLOWLIST_PREFIX));
-			if ($tmp > $id) {
-				$id = $tmp;
+		$maxId = 0;
+		foreach ($configMap as $key => $value) {
+			$tmpId = (int)substr($key, strlen(Config::ALLOWLIST_PREFIX));
+			if ($value === $newValue && !str_ends_with($key, Config::COMMENT_SUFFIX)) {
+				$id = $tmpId;
+				break;
+			}
+
+			if ($tmpId > $maxId) {
+				$maxId = $tmpId;
 			}
 		}
-		$id++;
 
-		$value = $ip . '/' . $mask;
-		$this->appConfig->setValueString(Config::APPID, Config::ALLOWLIST_PREFIX . $id, $value);
+		if ($id === 0) {
+			$id = $maxId + 1;
+		}
+
+		$this->appConfig->setValueString(Config::APPID, Config::ALLOWLIST_PREFIX . $id, $newValue);
 		$comment = trim($comment);
 		if ($comment !== '') {
 			$this->appConfig->setValueString(Config::APPID, Config::ALLOWLIST_PREFIX . $id . Config::COMMENT_SUFFIX, $comment);

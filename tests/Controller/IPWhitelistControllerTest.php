@@ -88,35 +88,39 @@ class IPWhitelistControllerTest extends TestCase {
 
 			['dead:nope::8', 24, false],
 			['1234:567:abef::1a2b', 24, true],
+			['1234:567:ABEF::1A2B', 24, true, '1234:567:abef::1a2b'],
+			['::1', 64, true, null, 1],
 			['1234:567:abef::1a2b', -1, false],
 			['1234:567:abef::1a2b', 129, false],
 		];
 	}
 
 	#[DataProvider('dataAdd')]
-	public function testAdd(string $ip, int $mask, bool $valid): void {
+	public function testAdd(string $ip, int $mask, bool $valid, ?string $expectedIp = null, int $expectedId = 100): void {
+		$expectedIp = $expectedIp ?? $ip;
+
 		if (!$valid) {
 			$expected = new JSONResponse([], Http::STATUS_BAD_REQUEST);
 		} else {
-			$this->config->method('getKeys')
-				->with($this->equalTo('bruteForce'))
+			$this->config->method('getAllValues')
+				->with(Config::APPID, Config::ALLOWLIST_PREFIX)
 				->willReturn([
-					'foobar',
-					'whitelist_0',
-					'whitelist_99',
+					'foobar' => 'No entry',
+					'whitelist_1' => '::1/64',
+					'whitelist_99' => '::2/64',
 				]);
 
 			$this->config->expects($this->once())
 				->method('setValueString')
 				->with(
 					$this->equalTo('bruteForce'),
-					$this->equalTo('whitelist_100'),
-					$this->equalTo($ip . '/' . $mask)
+					$this->equalTo('whitelist_' . $expectedId),
+					$this->equalTo($expectedIp . '/' . $mask)
 				);
 
 			$expected = new JSONResponse([
-				'id' => 100,
-				'ip' => $ip,
+				'id' => $expectedId,
+				'ip' => $expectedIp,
 				'mask' => $mask,
 				'comment' => '',
 			]);
