@@ -17,7 +17,7 @@
 		</template>
 		<template #extra-actions>
 			<NcButton
-				:title="t('bruteforcesettings', 'edit comment for {subnet}', { subnet: item.ip + '/' + item.mask })"
+				:title="t('bruteforcesettings', 'Edit comment for {subnet}', { subnet: item.ip + '/' + item.mask })"
 				variant="tertiary"
 				@click="$emit('edit', item)">
 				<template #icon>
