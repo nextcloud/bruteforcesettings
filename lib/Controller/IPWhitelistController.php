@@ -93,9 +93,9 @@ class IPWhitelistController extends Controller {
 		}
 
 		$this->appConfig->setValueString(Config::APPID, Config::ALLOWLIST_PREFIX . $id, $newValue);
-		$comment = trim($comment);
+		$comment = trim(substr($comment, 0, Config::MAX_COMMENT_LENGTH));
 		if ($comment !== '') {
-			$this->appConfig->setValueString(Config::APPID, Config::ALLOWLIST_PREFIX . $id . Config::COMMENT_SUFFIX, $comment);
+			$this->appConfig->setValueString(Config::APPID, Config::ALLOWLIST_PREFIX . $id . Config::COMMENT_SUFFIX, $comment, lazy: true);
 		}
 
 		return new JSONResponse([
