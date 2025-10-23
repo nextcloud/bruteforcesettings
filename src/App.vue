@@ -8,10 +8,10 @@
 -->
 <template>
 	<NcSettingsSection
-		:name="t('bruteforcesettings', 'Brute-force IP whitelist')"
+		:name="t('bruteforcesettings', 'Brute-force IP allow list')"
 		doc-url="https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/bruteforce_configuration.html">
 		<p class="settings-hint">
-			{{ t('bruteforcesettings', 'To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all.') }}
+			{{ t('bruteforcesettings', 'To allow list IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to include in the allow list as few hosts as possible or ideally even none at all.') }}
 		</p>
 
 		<NcNoteCard
@@ -35,10 +35,10 @@
 			:disabled="loadingRateLimit"
 			type="switch"
 			@update:model-value="saveApplyAllowListToRateLimit">
-			{{ t('spreed', 'Apply whitelist to rate limit') }}
+			{{ t('spreed', 'Bypass rate limiting for allowed IPs') }}
 		</NcCheckboxRadioSwitch>
 
-		<h3>{{ t('bruteforcesettings', 'Add a new whitelist') }}</h3>
+		<h3>{{ t('bruteforcesettings', 'Add new IP address') }}</h3>
 		<div class="whitelist-form">
 			<div class="whitelist-form__ip-mask">
 				<NcInputField
@@ -233,7 +233,7 @@ export default {
 				this.newWhitelist.mask = ''
 				this.newWhitelist.comment = ''
 			} catch {
-				showError(t('bruteforcesettings', 'There was an error adding the IP to the whitelist.'))
+				showError(t('bruteforcesettings', 'There was an error adding the IP to the allow list.'))
 			}
 		},
 
@@ -268,7 +268,7 @@ export default {
 					this.items.splice(index, 1, response.data)
 				}
 			} catch {
-				showError(t('bruteforcesettings', 'There was an error updating the whitelist entry.'))
+				showError(t('bruteforcesettings', 'There was an error updating the allow list entry.'))
 			} finally {
 				this.loadingEdit = false
 			}
