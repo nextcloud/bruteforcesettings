@@ -23,7 +23,7 @@
 		<!-- Whitelist -->
 		<ul class="whitelist-list">
 			<BruteForceItem
-				v-for="item in items"
+				v-for="item in sortedItems"
 				:key="item.id"
 				:item="item"
 				@delete="deleteWhitelist"
@@ -85,8 +85,8 @@
 			<div class="whitelist-edit__content">
 				<h2>{{ t('bruteforcesettings', 'Edit comment for {subnet}', { subnet: editingItem.ip + '/' + editingItem.mask }) }}</h2>
 				<NcTextArea
-					v-model="editingItem.comment"
 					id="edit-comment"
+					v-model="editingItem.comment"
 					resize="none"
 					:label="t('bruteforcesettings', 'Comment')"
 					:placeholder="t('bruteforcesettings', 'Explain why this IP must bypass brute-force protection')"
@@ -169,6 +169,12 @@ export default {
 	},
 
 	computed: {
+		sortedItems() {
+			return [...this.items].sort((a, b) => {
+				return a.ip.localeCompare(b.ip)
+			})
+		},
+
 		noteCardText() {
 			if (this.delay) {
 				return t('bruteforcesettings', 'Your remote address was identified as "{remoteAddress}" and is throttled at the moment by {delay}ms.', { remoteAddress: this.remoteAddress, delay: this.delay })
@@ -206,10 +212,7 @@ export default {
 		t,
 		async loadWhitelist() {
 			const response = await getWhitelist()
-			// sort by ip address
-			this.items = response.data.sort((a, b) => {
-				return a.ip.localeCompare(b.ip)
-			})
+			this.items = response.data
 		},
 
 		async deleteWhitelist(id) {
