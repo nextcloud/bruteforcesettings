@@ -8,10 +8,10 @@
 -->
 <template>
 	<NcSettingsSection
-		:name="t('bruteforcesettings', 'Brute-force IP allow list')"
+		:name="t('bruteforcesettings', 'Brute-force allow list')"
 		doc-url="https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/bruteforce_configuration.html">
 		<p class="settings-hint">
-			{{ t('bruteforcesettings', 'To allow list IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to include in the allow list as few hosts as possible or ideally even none at all.') }}
+			{{ t('bruteforcesettings', 'To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all.') }}
 		</p>
 
 		<NcCheckboxRadioSwitch
@@ -65,9 +65,10 @@
 			<NcTextArea
 				id="comment"
 				v-model="newWhitelist.comment"
+				resize="none"
 				class="whitelist__comment"
 				:label="t('bruteforcesettings', 'Comment')"
-				:placeholder="t('bruteforcesettings', 'Explain why this IP must bypass brute-force protection')"
+				:placeholder="t('bruteforcesettings', 'Explain why this IP is bypassing brute-force protection')"
 				:helper-text="hasExceededTextLimit && !openEditDialog ? helperText : ''"
 				:error="hasExceededTextLimit && !openEditDialog" />
 			<NcButton
@@ -89,7 +90,7 @@
 					v-model="editingItem.comment"
 					resize="none"
 					:label="t('bruteforcesettings', 'Comment')"
-					:placeholder="t('bruteforcesettings', 'Explain why this IP must bypass brute-force protection')"
+					:placeholder="t('bruteforcesettings', 'Explain why this IP is bypassing brute-force protection')"
 					:helper-text="hasExceededTextLimit && openEditDialog ? helperText : ''"
 					:error="hasExceededTextLimit && openEditDialog" />
 				<NcButton
@@ -289,7 +290,7 @@ export default {
 	flex-direction: column;
 	gap: var(--default-grid-baseline);
 	margin-block: calc(var(--default-grid-baseline) * 2);
-	width: calc(400px + var(--default-grid-baseline) * 2);
+	width: calc(500px + var(--default-grid-baseline) * 2);
 	max-height: 400px;
 	overflow-y: auto;
 }
@@ -307,19 +308,19 @@ export default {
 }
 
 .whitelist__ip {
-	width: 300px !important;
+	width: 350px !important;
 	height: var(--default-clickable-area);
 	line-height: var(--default-clickable-area);
 }
 
 .whitelist__mask {
-	width: 100px !important;
+	width: 150px !important;
 	height: var(--default-clickable-area);
 	line-height: var(--default-clickable-area);
 }
 
 .whitelist__comment {
-	width: calc(400px + var(--default-grid-baseline) * 2) !important; // to align with ip + mask fields
+	width: calc(500px + var(--default-grid-baseline) * 2) !important; // to align with ip + mask fields
 }
 
 .whitelist__submit {
