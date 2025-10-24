@@ -9,32 +9,51 @@
 <template>
 	<NcListItem
 		class="whitelist-item"
-		:name="`${ip}/${mask}`">
+		:title="`${item.ip}/${item.mask}`"
+		:name="`${item.ip}/${item.mask}`"
+		force-display-actions>
+		<template v-if="item.comment" #subname>
+			<span :title="item.comment">{{ item.comment }}</span>
+		</template>
 		<template #extra-actions>
 			<NcButton
-				:title="t('bruteforcesettings', 'Delete entry for {subnet}', { subnet: ip + '/' + mask })"
+				:title="t('bruteforcesettings', 'Edit comment for {subnet}', { subnet: item.ip + '/' + item.mask })"
 				variant="tertiary"
-				@click="$emit('delete', id)">
+				@click="$emit('edit', item)">
 				<template #icon>
-					<Delete :size="20" />
+					<IconPencilOutline :size="20" />
 				</template>
 			</NcButton>
+		</template>
+		<template #actions>
+			<NcActionButton
+				:title="t('bruteforcesettings', 'Delete entry for {subnet}', { subnet: item.ip + '/' + item.mask })"
+				variant="tertiary"
+				@click="$emit('delete', item.id)">
+				<template #icon>
+					<IconDelete :size="20" />
+				</template>
+			</NcActionButton>
 		</template>
 	</NcListItem>
 </template>
 
 <script>
 import { t } from '@nextcloud/l10n'
+import NcActionButton from '@nextcloud/vue/components/NcActionButton'
 import NcButton from '@nextcloud/vue/components/NcButton'
 import NcListItem from '@nextcloud/vue/components/NcListItem'
-import Delete from 'vue-material-design-icons/TrashCanOutline.vue'
+import IconPencilOutline from 'vue-material-design-icons/PencilOutline.vue'
+import IconDelete from 'vue-material-design-icons/TrashCanOutline.vue'
 
 export default {
 	name: 'BruteForceItem',
 	components: {
-		Delete,
+		IconDelete,
+		NcActionButton,
 		NcButton,
 		NcListItem,
+		IconPencilOutline,
 	},
 
 	props: {
@@ -44,15 +63,7 @@ export default {
 		},
 	},
 
-	emits: ['delete'],
-
-	data() {
-		return {
-			id: this.item.id,
-			ip: this.item.ip,
-			mask: this.item.mask,
-		}
-	},
+	emits: ['delete', 'edit'],
 
 	methods: {
 		t,

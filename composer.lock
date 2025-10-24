@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e716b97ebbbff36ece3317f2ba21122",
+    "content-hash": "e4868d74fe6c2639299517660a5b1dad",
     "packages": [],
     "packages-dev": [
         {
@@ -22,31 +22,30 @@
                 "shasum": ""
             },
             "require": {
-                "ext-filter": "*",
-                "ext-tokenizer": "*",
-                "friendsofphp/php-cs-fixer": "^3.61.1",
-                "php": "^7.4 || ^8.0"
+                "composer-plugin-api": "^2.0",
+                "php": "^7.2.5 || ^8.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^9.6.4 || ^10.5.29"
             },
-            "type": "library",
             "autoload": {
                 "psr-4": {
-                    "PhpCsFixerCustomFixers\\": "src"
+                    "Bamarni\\Composer\\Bin\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Kuba Werłos",
-                    "email": "werlos@gmail.com"
-                }
+            "description": "No conflicts for your bin dependencies",
+            "keywords": [
+                "composer",
+                "conflict",
+                "dependency",
+                "executable",
+                "isolation",
+                "tool"
             ],
-            "description": "A set of custom fixers for PHP CS Fixer",
             "support": {
                 "issues": "https://github.com/kubawerlos/php-cs-fixer-custom-fixers/issues",
                 "source": "https://github.com/kubawerlos/php-cs-fixer-custom-fixers/tree/v3.22.0"
@@ -72,20 +71,25 @@
                 "php": "^7.3|^8.0",
                 "php-cs-fixer/shim": "^3.17"
             },
+            "default-branch": true,
             "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Nextcloud\\CodingStandard\\": "src"
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "33.0.0-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "AGPL-3.0-or-later"
             ],
             "authors": [
                 {
                     "name": "Christoph Wurst",
                     "email": "christoph@winzerhof-wurst.at"
+                },
+                {
+                    "name": "Joas Schilling",
+                    "email": "coding@schilljs.com"
                 }
             ],
             "description": "Nextcloud coding standards for the php cs fixer",
@@ -110,37 +114,33 @@
                 "shasum": ""
             },
             "require": {
-                "ext-json": "*",
-                "ext-tokenizer": "*",
-                "php": "^7.4 || ^8.0"
+                "php": "^7.0 || ^8.0"
             },
-            "replace": {
-                "friendsofphp/php-cs-fixer": "self.version"
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Clock\\": "src/"
+                }
             },
-            "suggest": {
-                "ext-dom": "For handling output formats in XML",
-                "ext-mbstring": "For handling non-UTF8 characters."
-            },
-            "bin": [
-                "php-cs-fixer",
-                "php-cs-fixer.phar"
-            ],
-            "type": "application",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Dariusz Rumiński",
-                    "email": "dariusz.ruminski@gmail.com"
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
-            "description": "A tool to automatically fix PHP code style",
+            "description": "Common interface for reading the clock.",
+            "homepage": "https://github.com/php-fig/clock",
+            "keywords": [
+                "clock",
+                "now",
+                "psr",
+                "psr-20",
+                "time"
+            ],
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/shim/issues",
                 "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.64.0"
@@ -150,13 +150,15 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "nextcloud/ocp": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "platform-overrides": {
-        "php": "8.0.2"
+        "php": "8.2"
     },
     "plugin-api-version": "2.6.0"
 }

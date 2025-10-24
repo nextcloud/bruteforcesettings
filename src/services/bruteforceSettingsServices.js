@@ -16,16 +16,15 @@ export async function getWhitelist() {
 /**
  * Add a new IP to the whitelist
  *
- * @param {string} ip IP to add
- * @param {number} mask Mask to add
+ * @param {object} item Item to add
+ * @param {string} item.ip IP to add
+ * @param {number} item.mask Mask to add
+ * @param {string} item.comment Comment
  */
-export async function addWhitelist(ip, mask) {
+export async function addWhitelist(item) {
 	return axios.post(
 		generateUrl('apps/bruteforcesettings/ipwhitelist'),
-		{
-			ip,
-			mask,
-		},
+		item,
 	)
 }
 

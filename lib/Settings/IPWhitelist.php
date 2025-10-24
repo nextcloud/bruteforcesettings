@@ -3,10 +3,7 @@
 declare(strict_types=1);
 
 /**
- * @copyright 2016, Roeland Jago Douma <roeland@famdouma.nl>
- * @author Roeland Jago Douma <roeland@famdouma.nl>
- * @license GNU AGPL version 3 or any later version
- *
+ * SPDX-FileCopyrightText: 2016-2025 Nextcloud GmbH and Nextcloud contributors
  * SPDX-FileCopyrightText: 2016 Roeland Jago Douma <roeland@famdouma.nl>
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
@@ -29,6 +26,7 @@ class IPWhitelist implements ISettings {
 	) {
 	}
 
+	#[\Override]
 	public function getForm(): TemplateResponse {
 		$this->initialState->provideInitialState('remote-address', $this->request->getRemoteAddress());
 		$this->initialState->provideInitialState('bypass-listed', $this->throttler->isBypassListed($this->request->getRemoteAddress()));
@@ -38,10 +36,12 @@ class IPWhitelist implements ISettings {
 		return new TemplateResponse('bruteforcesettings', 'ipwhitelist');
 	}
 
+	#[\Override]
 	public function getSection(): string {
 		return 'security';
 	}
 
+	#[\Override]
 	public function getPriority(): int {
 		return 5;
 	}
