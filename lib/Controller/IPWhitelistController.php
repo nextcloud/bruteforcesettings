@@ -42,7 +42,7 @@ class IPWhitelistController extends Controller {
 
 			$value = $this->appConfig->getValueString(Config::APPID, $key);
 			$values = explode('/', $value);
-			$comment = $this->appConfig->getValueString(Config::APPID, $key . Config::COMMENT_SUFFIX);
+			$comment = $this->appConfig->getValueString(Config::APPID, $key . Config::COMMENT_SUFFIX, lazy: true);
 
 			$result[$id] = [
 				'id' => $id,
