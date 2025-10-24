@@ -11,24 +11,25 @@
 
 namespace OCA\BruteForceSettings\Tests\Controller;
 
+use OCA\BruteForceSettings\Config;
 use OCA\BruteForceSettings\Controller\IPWhitelistController;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\JSONResponse;
-use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\IRequest;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\MockObject\MockObject;
 use Test\TestCase;
 
 class IPWhitelistControllerTest extends TestCase {
 
-	/** @var IConfig|\PHPUnit_Framework_MockObject_MockObject */
-	private $config;
-	/** @var IPWhitelistController */
-	private $controller;
+	private IAppConfig&MockObject $config;
+	private IPWhitelistController $controller;
 
-	public function setUp() {
+	public function setUp(): void {
 		parent::setUp();
 
-		$this->config = $this->createMock(IConfig::class);
+		$this->config = $this->createMock(IAppConfig::class);
 		$this->controller = new IPWhitelistController(
 			'bruteforce',
 			$this->createMock(IRequest::class),
@@ -36,45 +37,49 @@ class IPWhitelistControllerTest extends TestCase {
 		);
 	}
 
-	public function testGetAll() {
-		$this->config->method('getAppKeys')
-			->with($this->equalTo('bruteForce'))
+	public function testGetAll(): void {
+		$this->config->method('getKeys')
+			->with($this->equalTo(Config::APPID))
 			->willReturn([
 				'foobar',
-				'whitelist_0',
+				'whitelist_1',
+				'whitelist_2_comment',
 				'whitelist_99',
 			]);
 
-		$this->config->method('getAppValue')
-			->will($this->returnCallback(function ($app, $key) {
-				if ($app !== 'bruteForce') {
-					$this->fail();
-				}
-				if ($key === 'whitelist_0') {
+		$this->config->method('getValueString')
+			->willReturnCallback(function ($app, $key) {
+				if ($key === 'whitelist_1') {
 					return '192.168.2.0/24';
+				} elseif ($key === 'whitelist_1_comment') {
+					return '';
 				} elseif ($key === 'whitelist_99') {
 					return 'dead:beef:cafe::/92';
+				} elseif ($key === 'whitelist_99_comment') {
+					return '99 problems';
 				}
 				$this->fail();
-			}));
+			});
 
 		$expected = new JSONResponse([
 			[
-				'id' => 0,
+				'id' => 1,
 				'ip' => '192.168.2.0',
 				'mask' => '24',
+				'comment' => '',
 			],
 			[
 				'id' => 99,
 				'ip' => 'dead:beef:cafe::',
 				'mask' => '92',
+				'comment' => '99 problems',
 			]
 		]);
 
 		$this->assertEquals($expected, $this->controller->getAll());
 	}
 
-	public function dataAdd() {
+	public static function dataAdd(): array {
 		return [
 			['8.500.2.3', 24, false],
 			['1.2.3.4', 24, true],
@@ -83,42 +88,41 @@ class IPWhitelistControllerTest extends TestCase {
 
 			['dead:nope::8', 24, false],
 			['1234:567:abef::1a2b', 24, true],
+			['1234:567:ABEF::1A2B', 24, true, '1234:567:abef::1a2b'],
+			['::1', 64, true, null, 1],
 			['1234:567:abef::1a2b', -1, false],
 			['1234:567:abef::1a2b', 129, false],
 		];
 	}
 
-	/**
-	 * @dataProvider dataAdd
-	 *
-	 * @param string $ip
-	 * @param int $mask
-	 * @param bool $valid
-	 */
-	public function testAdd($ip, $mask, $valid) {
+	#[DataProvider('dataAdd')]
+	public function testAdd(string $ip, int $mask, bool $valid, ?string $expectedIp = null, int $expectedId = 100): void {
+		$expectedIp = $expectedIp ?? $ip;
+
 		if (!$valid) {
 			$expected = new JSONResponse([], Http::STATUS_BAD_REQUEST);
 		} else {
-			$this->config->method('getAppKeys')
-				->with($this->equalTo('bruteForce'))
+			$this->config->method('getAllValues')
+				->with(Config::APPID, Config::ALLOWLIST_PREFIX)
 				->willReturn([
-					'foobar',
-					'whitelist_0',
-					'whitelist_99',
+					'foobar' => 'No entry',
+					'whitelist_1' => '::1/64',
+					'whitelist_99' => '::2/64',
 				]);
 
 			$this->config->expects($this->once())
-				->method('setAppValue')
+				->method('setValueString')
 				->with(
 					$this->equalTo('bruteForce'),
-					$this->equalTo('whitelist_100'),
-					$this->equalTo($ip . '/' . $mask)
+					$this->equalTo('whitelist_' . $expectedId),
+					$this->equalTo($expectedIp . '/' . $mask)
 				);
 
 			$expected = new JSONResponse([
-				'id' => 100,
-				'ip' => $ip,
+				'id' => $expectedId,
+				'ip' => $expectedIp,
 				'mask' => $mask,
+				'comment' => '',
 			]);
 		}
 
@@ -126,11 +130,11 @@ class IPWhitelistControllerTest extends TestCase {
 	}
 
 	public function testRemove() {
-		$this->config->expects($this->once())
-			->method('deleteAppValue')
+		$this->config->expects($this->exactly(2))
+			->method('deleteKey')
 			->with(
 				$this->equalTo('bruteForce'),
-				$this->equalTo('whitelist_42')
+				$this->stringStartsWith('whitelist_42')
 			);
 
 		$expected = new JSONResponse([]);

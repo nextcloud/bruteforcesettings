@@ -9,17 +9,33 @@ namespace OCA\BruteForceSettings\Tests\Settings;
 
 use OCA\BruteForceSettings\Settings\IPWhitelist;
 use OCP\AppFramework\Http\TemplateResponse;
+use OCP\AppFramework\Services\IAppConfig;
+use OCP\AppFramework\Services\IInitialState;
+use OCP\IRequest;
+use OCP\Security\Bruteforce\IThrottler;
+use PHPUnit\Framework\MockObject\MockObject;
 use Test\TestCase;
 
 class IPWhitelistTest extends TestCase {
+	private IRequest&MockObject $request;
+	private IInitialState&MockObject $initialState;
+	private IThrottler&MockObject $throttler;
+	private IAppConfig&MockObject $appConfig;
+	private IPWhitelist $settings;
 
-	/** @var IPWhitelist */
-	private $settings;
-
-	public function setUp() {
+	public function setUp(): void {
 		parent::setUp();
 
-		$this->settings = new IPWhitelist();
+		$this->request = $this->createMock(IRequest::class);
+		$this->initialState = $this->createMock(IInitialState::class);
+		$this->throttler = $this->createMock(IThrottler::class);
+		$this->appConfig = $this->createMock(IAppConfig::class);
+		$this->settings = new IPWhitelist(
+			$this->request,
+			$this->initialState,
+			$this->throttler,
+			$this->appConfig,
+		);
 	}
 
 	public function testGetForm() {
@@ -28,11 +44,11 @@ class IPWhitelistTest extends TestCase {
 		$this->assertEquals($expected, $this->settings->getForm());
 	}
 
-	public function testGetSection() {
+	public function testGetSection(): void {
 		$this->assertSame('security', $this->settings->getSection());
 	}
 
-	public function testGetPriority() {
-		$this->assertSame(50, $this->settings->getPriority());
+	public function testGetPriority(): void {
+		$this->assertSame(5, $this->settings->getPriority());
 	}
 }
