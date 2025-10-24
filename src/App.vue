@@ -68,7 +68,7 @@
 				resize="none"
 				class="whitelist__comment"
 				:label="t('bruteforcesettings', 'Comment')"
-				:placeholder="t('bruteforcesettings', 'Explain why this IP is bypassing brute-force protection')"
+				:placeholder="commentHint"
 				:helper-text="hasExceededTextLimit && !openEditDialog ? helperText : ''"
 				:error="hasExceededTextLimit && !openEditDialog" />
 			<NcButton
@@ -90,7 +90,7 @@
 					v-model="editingItem.comment"
 					resize="none"
 					:label="t('bruteforcesettings', 'Comment')"
-					:placeholder="t('bruteforcesettings', 'Explain why this IP is bypassing brute-force protection')"
+					:placeholder="commentHint"
 					:helper-text="hasExceededTextLimit && openEditDialog ? helperText : ''"
 					:error="hasExceededTextLimit && openEditDialog" />
 				<NcButton
@@ -166,6 +166,7 @@ export default {
 			editingItem: null,
 			hasExceededTextLimit: false,
 			helperText: t('bruteforcesettings', 'Comment cannot exceed {max} characters.', { max: COMMENT_MAX_LENGTH }),
+			commentHint: t('bruteforcesettings', 'Leave an internal comment, why this IP is allowed, e.g. the  location, so it can be revoked, when it is no longer needed.'),
 		}
 	},
 
