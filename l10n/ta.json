@@ -1,4 +1,5 @@
 { "translations": {
-    "Add" : "சேர்க்க"
+    "Add" : "சேர்க்க",
+    "Save" : "சேமிக்க "
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -3,7 +3,9 @@ OC.L10N.register(
     {
     "Brute-force settings" : "Väsytyshyökkäyksen asetukset",
     "Whitelist IPs" : "Sallitut IP:t",
-    "Brute-force IP whitelist" : "Turvallisten IP-osoitteiden lista",
-    "Add" : "Lisää"
+    "Comment" : "Kommentti",
+    "Add" : "Lisää",
+    "Save" : "Tallenna",
+    "Brute-force IP whitelist" : "Turvallisten IP-osoitteiden lista"
 },
 "nplurals=2; plural=(n != 1);");

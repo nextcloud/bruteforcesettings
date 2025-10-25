@@ -5,14 +5,16 @@
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Ваша удаљена адреса је идентификована као „{remoteAddress}” и тренутно је пригушена за {delay}ms.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Ваша удаљена адреса је идентификована као „{remoteAddress}” и заобилази заштиту од напада масовним покушајима.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Ваша удаљена адреса је идентификована као „{remoteAddress}” и тренутно се не пригушује активно.",
+    "IP address" : "IP адреса",
+    "Mask" : "Маска",
+    "Comment" : "Коментар",
+    "Add" : "Додај",
+    "Save" : "Сачувај",
+    "Delete entry for {subnet}" : "Обриши ставку за {subnet}",
     "There was an error adding the IP to the whitelist." : "Дошло је до грешке приликом додавања IP адресе на белу листу.",
     "Brute-force IP whitelist" : "Бела листа ИП адреса",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Испод одредите ИП опсеге које желите да изузмете из заштите од масовних покушаја. Треба да знате да свака од ових, изузетих адреса може да обавља покушаје пријављивања без икаквог успоравања. Препоручује се да, из безбедоносних разлога, овде буде што мањи број адреса или идеално - ниједна.",
     "Apply whitelist to rate limit" : "Примени белу листу на ограничење учесталости",
-    "Add a new whitelist" : "Додај нову белу листу",
-    "IP address" : "IP адреса",
-    "Mask" : "Маска",
-    "Add" : "Додај",
-    "Delete entry for {subnet}" : "Обриши ставку за {subnet}"
+    "Add a new whitelist" : "Додај нову белу листу"
 },"pluralForm" :"nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);"
 }

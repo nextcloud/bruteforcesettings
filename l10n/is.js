@@ -3,7 +3,9 @@ OC.L10N.register(
     {
     "Brute-force settings" : "Stillingar þvingunar",
     "Whitelist IPs" : "Listi með leyfðum IP-tölum",
-    "Brute-force IP whitelist" : "Þvinga fram lista með leyfðum IP-tölum (hvítlista)",
-    "Add" : "Bæta við"
+    "Comment" : "Athugasemd",
+    "Add" : "Bæta við",
+    "Save" : "Vista",
+    "Brute-force IP whitelist" : "Þvinga fram lista með leyfðum IP-tölum (hvítlista)"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");

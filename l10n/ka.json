@@ -5,9 +5,11 @@
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment.",
-    "Brute-force IP whitelist" : "Brute-force IP whitelist",
-    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all.",
+    "Comment" : "Comment",
     "Add" : "Add",
-    "Delete entry for {subnet}" : "Delete entry for {subnet}"
+    "Save" : "დამახსოვრება",
+    "Delete entry for {subnet}" : "Delete entry for {subnet}",
+    "Brute-force IP whitelist" : "Brute-force IP whitelist",
+    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all."
 },"pluralForm" :"nplurals=2; plural=(n!=1);"
 }

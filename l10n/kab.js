@@ -1,6 +1,8 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Add" : "Rnu"
+    "Comment" : "Awennit",
+    "Add" : "Rnu",
+    "Save" : "Sekles"
 },
 "nplurals=2; plural=(n != 1);");

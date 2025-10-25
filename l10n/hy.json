@@ -1,4 +1,6 @@
 { "translations": {
-    "Add" : "Ավելացնել"
+    "Comment" : "Մեկնաբանել",
+    "Add" : "Ավելացնել",
+    "Save" : "Պահպանել"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

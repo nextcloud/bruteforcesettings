@@ -5,13 +5,15 @@
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "يىراقتىكى ئادرېسىڭىز «{remoteAddress}» دەپ بېكىتىلگەن بولۇپ ، ھازىر {delay} ms ئارقىلىق بېسىلىدۇ.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "يىراقتىكى ئادرېسىڭىز «{remoteAddress}» دەپ بېكىتىلدى ۋە رەھىمسىز قوغداشتىن ئايلىنىپ ئۆتتى.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "يىراقتىكى ئادرېسىڭىز «{remoteAddress}» دەپ بېكىتىلدى ، ھازىرچە ئاكتىپلانمىدى.",
+    "IP address" : "IP ئادرېس",
+    "Mask" : "ماسكا",
+    "Comment" : "باھا",
+    "Add" : "قوش",
+    "Save" : "ساقلاش",
+    "Delete entry for {subnet}" : "{subnet} for نىڭ يازمىسىنى ئۆچۈرۈڭ",
     "There was an error adding the IP to the whitelist." : "IP نى ئاق تىزىملىككە قوشۇشتا خاتالىق كۆرۈلدى.",
     "Brute-force IP whitelist" : "رەھىمسىز IP ئاق تىزىملىك",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "ئاق تىزىملىك IP غا رەھىمسىزلىكتىن قوغداش دائىرىسى تۆۋەندە كۆرسىتىڭ. شۇنىڭغا دىققەت قىلىڭكى ، ئاق تىزىملىكتىكى ھەر قانداق IP دەلىللەش سىنىقى ئېلىپ بارالايدۇ. بىخەتەرلىكنى كۆزدە تۇتۇپ ، ئىمكانقەدەر ئاز ساھىبجاماللارنى ئاقلاش تەۋسىيە قىلىنىدۇ ، ئەڭ ياخشىسى ھەتتا ھېچقايسىسى يوق.",
-    "Add a new whitelist" : "يېڭى ئاق تىزىملىك قوشۇڭ",
-    "IP address" : "IP ئادرېس",
-    "Mask" : "ماسكا",
-    "Add" : "قوش",
-    "Delete entry for {subnet}" : "{subnet} for نىڭ يازمىسىنى ئۆچۈرۈڭ"
+    "Add a new whitelist" : "يېڭى ئاق تىزىملىك قوشۇڭ"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

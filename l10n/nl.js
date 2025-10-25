@@ -7,14 +7,16 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Jouw adres op afstand werd geïdentificeerd als \"{remoteAddress}\" en wordt momenteel gereguleerd met een vertraging van {delay}ms.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Jouw adres op afstand werd geïdentificeerd als \"{remoteAddress}\" en omzeilt brute-force bescherming.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Jouw adres op afstand werd geïdentificeerd als \"{remoteAddress}\" en wordt momenteel niet actief gereguleerd.",
+    "IP address" : "IP-adres",
+    "Mask" : "Masker",
+    "Comment" : "Notitie",
+    "Add" : "Toevoegen",
+    "Save" : "Opslaan",
+    "Delete entry for {subnet}" : "Invoer verwijderen voor {subnet}",
     "There was an error adding the IP to the whitelist." : "Er is een fout opgetreden bij het toevoegen van het IP-adres aan de whitelist.",
     "Brute-force IP whitelist" : "Bruteforce IP toegangslijst",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Om IP ranges op een toegangslijst te zetten om uit te sluiten van de brute-force bescherming, kun je ze hieronder opgeven. Let op: vanaf elk IP adres op de IP toegangslijst, kunnen onbeperkt inlogacties plaatsvinden. Vanuit de optiek van beveiliging, wordt geadviseerd om geen, of anders zo min mogelijk servers op de IP toegangslijst te zetten.",
     "Apply whitelist to rate limit" : "Whitelist op snelheidsbegrenzing toepassen",
-    "Add a new whitelist" : "Een nieuwe whitelist toevoegen",
-    "IP address" : "IP-adres",
-    "Mask" : "Masker",
-    "Add" : "Toevoegen",
-    "Delete entry for {subnet}" : "Invoer verwijderen voor {subnet}"
+    "Add a new whitelist" : "Een nieuwe whitelist toevoegen"
 },
 "nplurals=2; plural=(n != 1);");

@@ -1,4 +1,6 @@
 { "translations": {
-    "Add" : "បញ្ចូល"
+    "Comment" : "មតិ",
+    "Add" : "បញ្ចូល",
+    "Save" : "រក្សាទុក"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
