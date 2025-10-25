@@ -5,13 +5,15 @@
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Váša vzdialená adresa bola identifikovaná ako \"{remoteAddress}\" a momentálne je obmedzená na {delay} ms.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Váša vzdialená adresa bola identifikovaná ako \"{remoteAddress}\" a obchádza ochranu pred hrubou silou.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Váša vzdialená adresa bol identifikovaná ako \"{remoteAddress}\" a momentálne nie je aktívne obmedzená.",
+    "IP address" : "IP adresa",
+    "Mask" : "Maska",
+    "Comment" : "Komentár",
+    "Add" : "Pridať",
+    "Save" : "Uložiť",
+    "Delete entry for {subnet}" : "Vymažte záznam pre {subnet}",
     "There was an error adding the IP to the whitelist." : "Vyskytla sa chyba pri pridávaní IP adresy do zoznamu povolených.",
     "Brute-force IP whitelist" : "Zoznam povolených IP adries pre útok hrubou silou",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Zadať rozsahy adries IP ako dôveryhodné v rámci ochrany proti útoku hrubou silou môžete nižšie. Je potrebné si uvedomiť, že adresy z tohto zoznamu môžu uskutočňovať pokusy o overenie bez akéhokoľvek obmedzenia. Z bezpečnostných dôvodov odporúčame mať uvedených čo najmenej adries, ideálne žiadne.",
-    "Add a new whitelist" : "Pridať nový zoznam povolených adries",
-    "IP address" : "IP adresa",
-    "Mask" : "Maska",
-    "Add" : "Pridať",
-    "Delete entry for {subnet}" : "Vymažte záznam pre {subnet}"
+    "Add a new whitelist" : "Pridať nový zoznam povolených adries"
 },"pluralForm" :"nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);"
 }

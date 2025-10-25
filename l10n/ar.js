@@ -7,13 +7,13 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "تم تحديد عنوانك القَصِيّ على أنه \"{remoteAddress}\" و يتم التحكم فيه حاليًا بمقدار {delay} مللي ثانية.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "تمّ التعرُّف على عنونك البعيد كـ \"{remoteAddress}\" و قد تمّ تمكينه من تخطِّي حاجز \"مكافحة هجمات القوة الكاسحة\".",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "تم تحديد عنوانك القَصِيّ على أنه \"{remoteAddress}\" و لا يتم التحكم فيه بشكل نشط في الوقت الحالي.",
-    "There was an error adding the IP to the whitelist." : "حدث خطأ أثناء إضافة عنوان الـ IP إلى القائمة البيضاء",
-    "Brute-force IP whitelist" : "القائمة البيضاء لعناوين IP للقوة الكاسحة Brute-force",
-    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "لإدراج نطاقات IP في القائمة البيضاء للحماية من هجمات القوة الكاسحة. حددها أدناه. لاحظ أن أي عنوان IP مدرج في القائمة البيضاء مسموحٌ له بمحاولة المصادقة دون أي تقييد. لأسباب أمنية، يُوصى بإدراج أقل عددٍ ممكنٍ من المضيفين في القائمة البيضاء، أو لا شيء على الإطلاق من الناحية المثالية.",
-    "Add a new whitelist" : "إضِف قائمة بيضاء جديدة",
     "IP address" : "عنوان IP",
     "Mask" : "القناع",
     "Add" : "إضافة",
-    "Delete entry for {subnet}" : "حذف مدخل لـ {subnet}."
+    "Delete entry for {subnet}" : "حذف مدخل لـ {subnet}.",
+    "There was an error adding the IP to the whitelist." : "حدث خطأ أثناء إضافة عنوان الـ IP إلى القائمة البيضاء",
+    "Brute-force IP whitelist" : "القائمة البيضاء لعناوين IP للقوة الكاسحة Brute-force",
+    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "لإدراج نطاقات IP في القائمة البيضاء للحماية من هجمات القوة الكاسحة. حددها أدناه. لاحظ أن أي عنوان IP مدرج في القائمة البيضاء مسموحٌ له بمحاولة المصادقة دون أي تقييد. لأسباب أمنية، يُوصى بإدراج أقل عددٍ ممكنٍ من المضيفين في القائمة البيضاء، أو لا شيء على الإطلاق من الناحية المثالية.",
+    "Add a new whitelist" : "إضِف قائمة بيضاء جديدة"
 },
 "nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;");

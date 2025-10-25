@@ -7,13 +7,15 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "您的远程地址被标识为 \"{remoteAddress}\" ，目前被限制 {delay}毫秒.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "您的远程地址被识别为 \"{remoteAddress}\" ，并且正在绕过暴力破解保护。",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "您的远程地址被识别为 \"{remoteAddress}\" ，目前并未受到主动限制。",
+    "IP address" : "IP 地址",
+    "Mask" : "掩码",
+    "Comment" : "备注",
+    "Add" : "添加",
+    "Save" : "保存",
+    "Delete entry for {subnet}" : "删除 {subnet} 的条目",
     "There was an error adding the IP to the whitelist." : "添加 IP 至白名单时发生错误。",
     "Brute-force IP whitelist" : "暴力破解 IP 白名单",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "要从暴力破解保护中将 IP 范围列入白名单，请在下面指定它们。注意在白名单之中的 IP 可以绕过任何限制而尝试验证。出于安全原因，推荐在白名单列表中尽量少添加甚至不添加主机。",
-    "Add a new whitelist" : "添加新的白名单",
-    "IP address" : "IP 地址",
-    "Mask" : "掩码",
-    "Add" : "添加",
-    "Delete entry for {subnet}" : "删除 {subnet} 的条目"
+    "Add a new whitelist" : "添加新的白名单"
 },
 "nplurals=1; plural=0;");

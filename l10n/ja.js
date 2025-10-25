@@ -7,14 +7,16 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "あなたのリモートアドレスは\"{remoteAddress}\"として認識され、現時点では{delay}ミリ秒で調整されています。",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "あなたのリモートアドレスは\"{remoteAddress}\"として認識され、ブルートフォース保護をバイパスしています。",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "あなたのリモートアドレスは\"{remoteAddress}\"として認識され、現在アクティブに調整されていません。",
+    "IP address" : "IPアドレス",
+    "Mask" : "ネットマスク",
+    "Comment" : "コメント",
+    "Add" : "追加",
+    "Save" : "保存する",
+    "Delete entry for {subnet}" : "{subnet} のエントリを削除します",
     "There was an error adding the IP to the whitelist." : "ホワイトリストへのIPの追加中にエラーが発生しました。",
     "Brute-force IP whitelist" : "ブルートフォースIPホワイトリスト",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "ブルートフォース保護からホワイトリストにIP範囲を登録するには、以下を指定します。\nホワイトリストに登録されたIPは、認証試行を無制限に実行できることに注意してください。 セキュリティ上の理由から、できるだけ少ないホストをホワイトリストに登録するか、理想的にはまったく登録しないことをお勧めします。",
     "Apply whitelist to rate limit" : "レート制限にホワイトリストを適用する",
-    "Add a new whitelist" : "新しいホワイトリストを追加する",
-    "IP address" : "IPアドレス",
-    "Mask" : "ネットマスク",
-    "Add" : "追加",
-    "Delete entry for {subnet}" : "{subnet} のエントリを削除します"
+    "Add a new whitelist" : "新しいホワイトリストを追加する"
 },
 "nplurals=1; plural=0;");

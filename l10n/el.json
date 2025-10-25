@@ -5,14 +5,14 @@
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Η απομακρυσμένη διεύθυνσή σας αναγνωρίστηκε ως \"{remoteAddress}\" και περιορίζεται προς το παρόν κατά {delay}ms.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Η απομακρυσμένη διεύθυνσή σας αναγνωρίστηκε ως \"{remoteAddress}\" και παρακάμπτει την προστασία brute-force.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Η απομακρυσμένη διεύθυνσή σας αναγνωρίστηκε ως \"{remoteAddress}\" και δεν περιορίζεται ενεργά προς το παρόν.",
+    "IP address" : "Διεύθυνση IP",
+    "Mask" : "Μάσκα",
+    "Add" : "Προσθήκη",
+    "Delete entry for {subnet}" : "Διαγραφή καταχώρησης για {subnet}",
     "There was an error adding the IP to the whitelist." : "Προέκυψε σφάλμα κατά την προσθήκη της IP στη λευκή λίστα.",
     "Brute-force IP whitelist" : "Brute-force IP λευκή λίστα",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Για την εξαίρεση εύρους IP από την προστασία brute-force καθορίστε τα παρακάτω.\nΛάβετε υπόψη ότι οποιαδήποτε εξαιρούμενη IP μπορεί να πραγματοποιήσει\nαπόπειρες εξακρίβωσης της ταυτότητας χωρίς περιορισμό. Για λόγους ασφαλείας,\nσυνιστάται η εξαίρεση όσο το δυνατόν λιγότερων φορέων ή ιδανικά ακόμη και καθόλου.",
     "Apply whitelist to rate limit" : "Εφαρμογή λευκής λίστας στον περιορισμό ρυθμού",
-    "Add a new whitelist" : "Προσθήκη νέας λευκής λίστας",
-    "IP address" : "Διεύθυνση IP",
-    "Mask" : "Μάσκα",
-    "Add" : "Προσθήκη",
-    "Delete entry for {subnet}" : "Διαγραφή καταχώρησης για {subnet}"
+    "Add a new whitelist" : "Προσθήκη νέας λευκής λίστας"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

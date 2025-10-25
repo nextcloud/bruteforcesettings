@@ -1,6 +1,8 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Add" : "Derbäimaachen"
+    "Comment" : "Kommentar",
+    "Add" : "Derbäimaachen",
+    "Save" : "Späicheren"
 },
 "nplurals=2; plural=(n != 1);");
