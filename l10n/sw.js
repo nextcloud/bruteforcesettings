@@ -7,14 +7,16 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Anwani yako ya mbali ilitambuliwa kama \"{remoteAddress}\" na inabanwa kwa sasa na {delay}ms.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Anwani yako ya mbali imetambuliwa kama \"{remoteAddress}\" na inakwepa ulinzi wa kutumia nguvu za kikatili.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Anwani yako ya mbali imetambuliwa kama \"{remoteAddress}\" na haijasongwa kikamilifu kwa sasa",
+    "IP address" : "Anwani ya IP",
+    "Mask" : "Maski",
+    "Comment" : "Maoni",
+    "Add" : "Ongeza",
+    "Save" : "Hifadhi",
+    "Delete entry for {subnet}" : "Futa uingiaji kwa {subnet}",
     "There was an error adding the IP to the whitelist." : " Kulikuwa na hitilafu katika kuongeza IP kwenye orodha iliyoidhinishwa.",
     "Brute-force IP whitelist" : "Brute-force IP whitelist",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Ili kuorodhesha safu za IP kutoka kwa ulinzi wa nguvu-katili zieleze hapa chini. Kumbuka kuwa IP yoyote iliyoidhinishwa inaweza kufanya majaribio ya uthibitishaji bila kutetemeka. Kwa sababu za kiusalama, inashauriwa kuorodhesha wapangishi wachache iwezekanavyo au hata usiwepo kabisa.",
     "Apply whitelist to rate limit" : "Tekeleza orodha iliyoidhinishwa ili kuongeza kiwango",
-    "Add a new whitelist" : "Ongeza orodha nyeupe mpya",
-    "IP address" : "Anwani ya IP",
-    "Mask" : "Maski",
-    "Add" : "Ongeza",
-    "Delete entry for {subnet}" : "Futa uingiaji kwa {subnet}"
+    "Add a new whitelist" : "Ongeza orodha nyeupe mpya"
 },
 "nplurals=2; plural=(n != 1);");

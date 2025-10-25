@@ -1,4 +1,5 @@
 { "translations": {
-    "Add" : "شامل کریں"
+    "Add" : "شامل کریں",
+    "Save" : "حفظ"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

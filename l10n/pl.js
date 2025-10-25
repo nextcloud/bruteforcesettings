@@ -7,14 +7,16 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Twój adres zdalny został rozpoznany jako \"{remoteAddress}\" i jest obecnie ograniczany przez {delay} ms.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Twój adres zdalny został rozpoznany jako \"{remoteAddress}\" i omija ochronę przed atakami brute-force.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Twój adres zdalny został rozpoznany jako \"{remoteAddress}\" i obecnie nie jest ograniczany.",
+    "IP address" : "Adres IP",
+    "Mask" : "Maska",
+    "Comment" : "Komentarz",
+    "Add" : "Dodaj",
+    "Save" : "Zapisz",
+    "Delete entry for {subnet}" : "Usuń wpis dla {subnet}",
     "There was an error adding the IP to the whitelist." : "Wystąpił błąd podczas dodawania adresu IP do białej listy.",
     "Brute-force IP whitelist" : "Biała lista IP brute-force",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Aby dodać do białej listy zakresy adresów IP, które będą wykluczone z ochrony przed brutalną siłą, określ je poniżej. Pamiętaj, że każdy z adresu IP z białej listy może wykonać próby uwierzytelnienia bez ograniczania przepustowości. Ze względów bezpieczeństwa zaleca się umieszczenie na białej liście jak najmniejszej liczby hostów, a najlepiej wcale.",
     "Apply whitelist to rate limit" : "Zastosuj białą listę do limitu zapytań",
-    "Add a new whitelist" : "Dodaj nową białą listę",
-    "IP address" : "Adres IP",
-    "Mask" : "Maska",
-    "Add" : "Dodaj",
-    "Delete entry for {subnet}" : "Usuń wpis dla {subnet}"
+    "Add a new whitelist" : "Dodaj nową białą listę"
 },
 "nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);");

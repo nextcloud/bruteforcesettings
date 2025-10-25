@@ -1,4 +1,6 @@
 { "translations": {
-    "Add" : "เพิ่ม"
+    "Comment" : "ความคิดเห็น",
+    "Add" : "เพิ่ม",
+    "Save" : "บันทึก"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

@@ -5,14 +5,14 @@
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Ihre Remote-Adresse wurde als \"{remoteAddress}\" identifiziert und ist derzeit um {delay}ms gedrosselt.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Ihre Remote-Adresse wurde als \"{remoteAddress}\" identifiziert und umgeht den Brute-Force-Schutz.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Ihre Remote-Adresse wurde als \"{remoteAddress}\" identifiziert und wird derzeit nicht aktiv gedrosselt.",
+    "IP address" : "IP-Adresse",
+    "Mask" : "Maske",
+    "Add" : "Hinzufügen",
+    "Delete entry for {subnet}" : "Eintrag für {subnet} löschen",
     "There was an error adding the IP to the whitelist." : "Es gab einen Fehler beim Hinzufügen der IP zur Whitelist.",
     "Brute-force IP whitelist" : "Brute-Force IP-Whitelist",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Um IP-Bereiche vom Brute-Force-Schutz auszunehmen (whitelisting), die Bereiche unterhalb angeben. Bitte beachten, dass jede IP-Adresse ohne Brute-Force-Schutz Authentifizierungsversuche ohne jegliche Einschränkung vornehmen kann. Aus Sicherheitsgründen ist es empfohlen, so wenig Host-Adressen wie möglich auszunehmen, im Idealfall keine einzige. ",
     "Apply whitelist to rate limit" : "Whitelist auf Ratenbegrenzung anwenden",
-    "Add a new whitelist" : "Eine neue Whitelist hinzufügen",
-    "IP address" : "IP-Adresse",
-    "Mask" : "Maske",
-    "Add" : "Hinzufügen",
-    "Delete entry for {subnet}" : "Eintrag für {subnet} löschen"
+    "Add a new whitelist" : "Eine neue Whitelist hinzufügen"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

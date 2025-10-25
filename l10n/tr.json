@@ -5,14 +5,16 @@
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Uzak adresiniz \"{remoteAddress}\" olarak belirlenmiş ve şu anda {delay}ms süreyle kısıtlanıyor.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Uzak adresiniz \"{remoteAddress}\" olarak belirlenmiş ve kaba kuvvet saldırısı korumasını atlıyor.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Uzak adresiniz \"{remoteAddress}\" olarak belirlenmiş ve şu anda etkin olarak kısıtlanmıyor.",
+    "IP address" : "IP adresi",
+    "Mask" : "Maske",
+    "Comment" : "Yorum",
+    "Add" : "Ekle",
+    "Save" : "Kaydet",
+    "Delete entry for {subnet}" : "{subnet} kaydını sil",
     "There was an error adding the IP to the whitelist." : "IP adresi izin verilenler listesine eklenirken bir sorun çıktı.",
     "Brute-force IP whitelist" : "Kaba kuvvet saldırısı korumasında izin verilen IP adresleri listesi",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "İzin verilenler listesine eklenerek kaba kuvvet saldırısı korumasına katılmayacak IP aralıklarını aşağıda belirtebilirsiniz. İzin verilenler listesine alınan IP adreslerinin sınırsız sayıda kimlik doğrulama isteğinde bulunabileceğini unutmayın. Güvenlik nedeniyle olabildiğince ideal olarak hiç ya da olabildiğince az sayıda adres belirtmeniz önerilir.",
     "Apply whitelist to rate limit" : "Hız sınırlamasında izin verilenler listesi kullanılsın",
-    "Add a new whitelist" : "Yeni bir izin verilenler listesi ekle",
-    "IP address" : "IP adresi",
-    "Mask" : "Maske",
-    "Add" : "Ekle",
-    "Delete entry for {subnet}" : "{subnet} kaydını sil"
+    "Add a new whitelist" : "Yeni bir izin verilenler listesi ekle"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }

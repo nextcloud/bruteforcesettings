@@ -3,10 +3,11 @@
     "Whitelist IPs" : "Senarai putih IP",
     "Brute-force protection is meant to protect Nextcloud servers from attempts to\nguess account passwords in various ways. Besides the obvious \"*let's try a big\nlist of commonly used passwords*\" attack, it also makes it harder to use\nslightly more sophisticated attacks via the reset password form or trying to\nfind app password tokens.\n\nIf triggered, brute-force protection makes requests coming from an IP on a\nbrute-force protected controller with the same API slower for a 24 hour period.\n\nWith this app, the admin can exempt an IP address or range from this\nprotection which can be useful for testing purposes or when there are false\npositives due to a lot of accounts on one IP address." : "Perlindungan brute-force bertujuan untuk melindungi pelayan Nextcloud daripada percubaan untukmeneka kata laluan akaun dalam pelbagai cara. Selain serangan \"*mari cuba senarai besar kata laluan yang biasa digunakan*\", ia juga menjadikannya lebih sukar untuk menggunakanserangan yang lebih canggih melalui borang tetapan semula kata laluan atau cubamencari token kata laluan apl.Jika dicetuskan, perlindungan brute-force membuat permintaan yang datang daripada IP pada pengawal yang dilindungi brute-force dengan API yang sama lebih perlahan selama 24 jam tempoh.Dengan apl ini, pentadbir boleh mengecualikan alamat IP atau julat daripadaperlindungan ini yang boleh berguna untuk tujuan ujian atau apabila terdapatpositif palsu disebabkan oleh banyak akaun pada satu alamat IP.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Alamat jauh anda telah dikenalpasti sebagai \"{remoteAddress}\" dan tidak sedang disekat pada masa ini.",
+    "IP address" : "Alamat IP",
+    "Add" : "Tambah",
+    "Save" : "Simpan",
     "There was an error adding the IP to the whitelist." : "Terdapat ralat ketika menambahkan IP pada senarai putih.",
     "Brute-force IP whitelist" : "Senarai putih IP Brute-force",
-    "Add a new whitelist" : "Tambah senarai putih baharu",
-    "IP address" : "Alamat IP",
-    "Add" : "Tambah"
+    "Add a new whitelist" : "Tambah senarai putih baharu"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

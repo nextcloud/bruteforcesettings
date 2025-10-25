@@ -7,14 +7,16 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Aithníodh do sheoladh cianda mar \"{remoteAddress}\" agus tá {moill}ms mar gheall air faoi láthair.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Aithníodh do sheoladh cianda mar \"{remoteAddress}\" agus tá sé ag seachaint cosaint brúidiúil.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Aithníodh do sheoladh cianda mar \"{remoteAddress}\" agus níl sé faoi sníomh go gníomhach faoi láthair.",
+    "IP address" : "Seoladh IP",
+    "Mask" : "Masc",
+    "Comment" : "Trácht",
+    "Add" : "Cuir",
+    "Save" : "Sábháil",
+    "Delete entry for {subnet}" : "Scrios iontráil le haghaidh {subnet}",
     "There was an error adding the IP to the whitelist." : "Tharla earráid agus an IP á chur leis an liosta bán.",
     "Brute-force IP whitelist" : "Liosta bán IP brute-force",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Chun raonta IP bán ón gcosaint brúidiúil sonraigh iad thíos. Tabhair faoi deara gur féidir le haon IP bánliosta iarrachtaí fíordheimhnithe a dhéanamh gan aon stró. Ar chúiseanna slándála, moltar líon beag óstach agus is féidir a bhánú nó fiú gan aon duine ar chor ar bith.",
     "Apply whitelist to rate limit" : "Cuir an liosta bán i bhfeidhm ar an teorainn ráta",
-    "Add a new whitelist" : "Cuir liosta bán nua leis",
-    "IP address" : "Seoladh IP",
-    "Mask" : "Masc",
-    "Add" : "Cuir",
-    "Delete entry for {subnet}" : "Scrios iontráil le haghaidh {subnet}"
+    "Add a new whitelist" : "Cuir liosta bán nua leis"
 },
 "nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);");

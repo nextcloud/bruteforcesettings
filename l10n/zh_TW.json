@@ -5,14 +5,16 @@
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "您的遠端地址被識別為「{remoteAddress}」，目前受到{delay}毫秒的限制。",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "您的遠端地址被識別為「{remoteAddress}」，並繞過了暴力攻擊防護。",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "您的遠端地址被識別為「{remoteAddress}」，目前未受限制。",
+    "IP address" : "IP 位址",
+    "Mask" : "遮罩",
+    "Comment" : "留言",
+    "Add" : "新增",
+    "Save" : "儲存",
+    "Delete entry for {subnet}" : "刪除 {subnet} 的條目",
     "There was an error adding the IP to the whitelist." : "新增 IP 至白名單時發生錯誤。",
     "Brute-force IP whitelist" : "暴力攻擊 IP 白名單",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "在下面設定白名單 IP。請注意，在白名單中的 IP 可以不被限制進行驗證。基於安全性原因，建議僅設定少數來源 IP。",
     "Apply whitelist to rate limit" : "將白名單套用至速率限制",
-    "Add a new whitelist" : "新增白名單",
-    "IP address" : "IP 位址",
-    "Mask" : "遮罩",
-    "Add" : "新增",
-    "Delete entry for {subnet}" : "刪除 {subnet} 的條目"
+    "Add a new whitelist" : "新增白名單"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

@@ -1,6 +1,8 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Add" : "បញ្ចូល"
+    "Comment" : "មតិ",
+    "Add" : "បញ្ចូល",
+    "Save" : "រក្សាទុក"
 },
 "nplurals=1; plural=0;");

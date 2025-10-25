@@ -1,4 +1,6 @@
 { "translations": {
-    "Add" : "Derbäimaachen"
+    "Comment" : "Kommentar",
+    "Add" : "Derbäimaachen",
+    "Save" : "Späicheren"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

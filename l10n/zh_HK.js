@@ -7,14 +7,16 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "您的遠端地址被識別為「{remoteAddress}」，目前受到 {delay}ms 的節流限制。",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "您的遠端地址被識別為「{remoteAddress}」，並繞過了暴力攻擊防護。",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "您的遠端地址被識別為「{remoteAddress}」，目前未受節流限制。",
+    "IP address" : "IP 地址",
+    "Mask" : "掩碼",
+    "Comment" : "留言",
+    "Add" : "添加",
+    "Save" : "保存",
+    "Delete entry for {subnet}" : "刪除 {subnet} 的條目",
     "There was an error adding the IP to the whitelist." : "錯誤：添加 IP 到白名單時出現了錯誤。",
     "Brute-force IP whitelist" : "Brute-force IP 白名單",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "在下面設定白名單IP\n請注意，在白名單中的IP可以不被限制進行驗證\n基於安全性原因，建議僅設定少數來源IP",
     "Apply whitelist to rate limit" : "將白名單套用至速率限制",
-    "Add a new whitelist" : "添加新白名單",
-    "IP address" : "IP 地址",
-    "Mask" : "掩碼",
-    "Add" : "添加",
-    "Delete entry for {subnet}" : "刪除 {subnet} 的條目"
+    "Add a new whitelist" : "添加新白名單"
 },
 "nplurals=1; plural=0;");

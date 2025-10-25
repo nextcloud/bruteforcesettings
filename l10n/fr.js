@@ -7,14 +7,16 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Votre adresse distante a été identifiée comme « {remoteAddress} » et est limitée pour le moment à {delay} ms.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Votre adresse distance a été identifiée comme « {remoteAddress} » et contourne la protection anti brute-force.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Votre adresse distante a été identifiée comme « {remoteAddress} » et n'est pas limitée pour le moment.",
+    "IP address" : "Adresse IP",
+    "Mask" : "Masque de sous-réseau",
+    "Comment" : "Commentaire",
+    "Add" : "Ajouter",
+    "Save" : "Enregistrer",
+    "Delete entry for {subnet}" : "Supprimer l'entrée pour {subnet}",
     "There was an error adding the IP to the whitelist." : "Il y a eu une erreur lors de l'ajout de l'adresse IP à la liste blanche.",
     "Brute-force IP whitelist" : "Liste blanche des IP pour attaque par force brute",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Pour ajouter des plages d'adresses IP à la protection par brute force, spécifiez-les ci-dessous. Notez que n'importe quelle adresse IP figurant sur la liste blanche peut effectuer des tentatives d'authentification sans aucune limitation. Pour des raisons de sécurité, il est recommandé de mettre en liste blanche le plus petit nombre possible ou idéalement aucun hôte.",
     "Apply whitelist to rate limit" : "Appliquer une liste blanche à la limitation de tentative",
-    "Add a new whitelist" : "Ajouter une nouvelle liste blanche",
-    "IP address" : "Adresse IP",
-    "Mask" : "Masque de sous-réseau",
-    "Add" : "Ajouter",
-    "Delete entry for {subnet}" : "Supprimer l'entrée pour {subnet}"
+    "Add a new whitelist" : "Ajouter une nouvelle liste blanche"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

@@ -1,4 +1,6 @@
 { "translations": {
-    "Add" : "Adder"
+    "Comment" : "Commentario",
+    "Add" : "Adder",
+    "Save" : "Salveguardar"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
