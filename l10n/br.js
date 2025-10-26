@@ -3,7 +3,9 @@ OC.L10N.register(
     {
     "Brute-force settings" : "Rediañ stumm",
     "Whitelist IPs" : "Whitelist IPs",
+    "Comment" : "Displegadenn",
     "Add" : "Ouzhpennañ",
+    "Save" : "Enrollañ",
     "Brute-force IP whitelist" : "Rediañ IP whitelist",
     "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Evit lakaat ur strollad IP war ar whitelist adalek ar brute-force protection, lakit pere dindan. Pep IP war ar whitelist a hel klask gwiriekañ hep strizhadur. Blam d'ar surentez, gweloc'h eo lakaat war ar whitelist an neubetañ à implijourienn posuple, memes implijour ebet."
 },
