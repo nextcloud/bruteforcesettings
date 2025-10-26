@@ -1,6 +1,8 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Add" : "Voeg by"
+    "Comment" : "Kommentaar",
+    "Add" : "Voeg by",
+    "Save" : "Stoor"
 },
 "nplurals=2; plural=(n != 1);");

@@ -1,4 +1,6 @@
 { "translations": {
-    "Add" : "যোগ করুন"
+    "Comment" : "মন্তব্য",
+    "Add" : "যোগ করুন",
+    "Save" : "সংরক্ষণ"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
