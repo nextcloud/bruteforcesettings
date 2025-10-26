@@ -1,6 +1,8 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Add" : "যোগ করুন"
+    "Comment" : "মন্তব্য",
+    "Add" : "যোগ করুন",
+    "Save" : "সংরক্ষণ"
 },
 "nplurals=2; plural=(n != 1);");

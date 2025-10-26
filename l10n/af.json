@@ -1,4 +1,6 @@
 { "translations": {
-    "Add" : "Voeg by"
+    "Comment" : "Kommentaar",
+    "Add" : "Voeg by",
+    "Save" : "Stoor"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

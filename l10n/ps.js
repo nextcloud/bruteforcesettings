@@ -1,8 +1,7 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
-    "Comment" : "Komentariya",
-    "Add" : "Əlavə etmək",
-    "Save" : "Saxla"
+    "Comment" : "تبصره",
+    "Save" : "ساتل"
 },
 "nplurals=2; plural=(n != 1);");
