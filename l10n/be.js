@@ -1,6 +1,7 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
+    "Add new IP address" : "Дадаць новы IP-адрас",
     "Comment" : "Каментарый",
     "Add" : "Дадаць",
     "Save" : "Захаваць"
