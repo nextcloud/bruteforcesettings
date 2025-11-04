@@ -13,7 +13,7 @@ OC.L10N.register(
     "There was an error updating the allow list entry." : "Ocorreu um erro ao atualizar a entrada da lista de permissões.",
     "Brute-force allow list" : "Lista de permissões de força bruta",
     "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all." : "Para excluir intervalos de IP da proteção contra força bruta, especifique-os abaixo. Observe que qualquer IP permitido pode realizar tentativas de autenticação sem qualquer limitação. Por motivos de segurança, recomenda-se listar o menor número possível de endereços remotos ou, idealmente, nenhum.",
-    "Bypass rate limiting for allowed IPs" : "Ignorar limitação de taxa para IPs permitidos",
+    "Bypass rate limiting for allowed IPs" : "Ignorar limitação de taxa para endereços IP permitidos",
     "Add new IP address" : "Adicionar um novo endereço IP",
     "IP address" : "Endereço IP",
     "Mask" : "Máscara",
