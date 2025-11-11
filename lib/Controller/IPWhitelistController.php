@@ -61,7 +61,10 @@ class IPWhitelistController extends Controller {
 	 * @param string $comment
 	 * @return JSONResponse
 	 */
-	public function add(string $ip, int $mask): JSONResponse {
+	public function add(string $ip, int $mask, string $comment = ''): JSONResponse {
+		// Make IPv6 lowercase for consistency
+		$ip = strtolower($ip);
+
 		if (!filter_var($ip, FILTER_VALIDATE_IP)
 			|| (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) && ($mask < 0 || $mask > 32))
 			|| (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) && ($mask < 0 || $mask > 128))) {
