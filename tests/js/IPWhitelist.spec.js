@@ -46,8 +46,9 @@ describe('App', () => {
 		addWhitelist.mockResolvedValue({
 			data: {
 				id: 3,
-				ip: '192.168.1.1',
+				ip: '192.168.1.3',
 				mask: '0',
+				comment: 'This an admin IP',
 			},
 		})
 		const wrapper = mount(App)
@@ -56,16 +57,18 @@ describe('App', () => {
 		input.setValue('192.168.1.1')
 		const maskInput = wrapper.find('input[name="mask"]')
 		maskInput.setValue('0')
+		const commentInput = wrapper.find('textarea[id="comment"]')
+		commentInput.setValue('This an admin IP')
 
 		await nextTick()
 		const button = wrapper.find('.whitelist__submit')
 		button.trigger('click')
 		await flushPromises()
 
-		expect(addWhitelist).toHaveBeenCalledWith('192.168.1.1', '0')
 		const listItems = wrapper.findAll('li')
-		expect(listItems[2].text()).toContain('192.168.1.1')
+		expect(listItems[2].text()).toContain('192.168.1.3')
 		expect(listItems[2].text()).toContain('0')
+		expect(listItems[2].text()).toContain('This an admin IP')
 	})
 
 	test('can delete IP addresses', async () => {

@@ -3,101 +3,106 @@
 declare(strict_types=1);
 
 /**
- * @copyright 2016, Roeland Jago Douma <roeland@famdouma.nl>
- * @author Roeland Jago Douma <roeland@famdouma.nl>
- * @license GNU AGPL version 3 or any later version
- *
+ * SPDX-FileCopyrightText: 2016-2025 Nextcloud GmbH and Nextcloud contributors
  * SPDX-FileCopyrightText: 2016 Roeland Jago Douma <roeland@famdouma.nl>
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
 namespace OCA\BruteForceSettings\Controller;
 
+use OCA\BruteForceSettings\Config;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\JSONResponse;
-use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\IRequest;
 
 class IPWhitelistController extends Controller {
 
-	/** @var IConfig */
-	private $config;
-
-	/**
-	 * IPWhitelistController constructor.
-	 *
-	 * @param string $appName
-	 * @param IRequest $request
-	 * @param IConfig $config
-	 */
-	public function __construct(string $appName,
+	public function __construct(
+		string $appName,
 		IRequest $request,
-		IConfig $config) {
+		private readonly IAppConfig $appConfig,
+	) {
 		parent::__construct($appName, $request);
-
-		$this->config = $config;
 	}
 
 	/**
 	 * @return JSONResponse
 	 */
 	public function getAll(): JSONResponse {
-		$keys = $this->config->getAppKeys('bruteForce');
-		$keys = array_filter($keys, function ($key) {
-			$regex = '/^whitelist_/S';
-			return preg_match($regex, $key) === 1;
+		$keys = $this->appConfig->getKeys(Config::APPID);
+		$keys = array_filter($keys, static function (string $key) {
+			return str_starts_with($key, Config::ALLOWLIST_PREFIX) && !str_ends_with($key, Config::COMMENT_SUFFIX);
 		});
 
 		$result = [];
-
 		foreach ($keys as $key) {
-			$value = $this->config->getAppValue('bruteForce', $key);
-			$values = explode('/', $value);
+			$id = (int)substr($key, strlen(Config::ALLOWLIST_PREFIX));
 
-			$result[] = [
-				'id' => (int)substr($key, 10),
+			$value = $this->appConfig->getValueString(Config::APPID, $key);
+			$values = explode('/', $value);
+			$comment = $this->appConfig->getValueString(Config::APPID, $key . Config::COMMENT_SUFFIX, lazy: true);
+
+			$result[$id] = [
+				'id' => $id,
 				'ip' => $values[0],
 				'mask' => $values[1],
+				'comment' => $comment,
 			];
 		}
 
-		return new JSONResponse($result);
+		return new JSONResponse(array_values($result));
 	}
 
 	/**
 	 * @param string $ip
 	 * @param int $mask
+	 * @param string $comment
 	 * @return JSONResponse
 	 */
-	public function add(string $ip, int $mask): JSONResponse {
-		if (!filter_var($ip, FILTER_VALIDATE_IP) ||
-			(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) && ($mask < 0 || $mask > 32)) ||
-			(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) && ($mask < 0 || $mask > 128))) {
+	public function add(string $ip, int $mask, string $comment = ''): JSONResponse {
+		// Make IPv6 lowercase for consistency
+		$ip = strtolower($ip);
+
+		if (!filter_var($ip, FILTER_VALIDATE_IP)
+			|| (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) && ($mask < 0 || $mask > 32))
+			|| (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) && ($mask < 0 || $mask > 128))) {
 			return new JSONResponse([], Http::STATUS_BAD_REQUEST);
 		}
 
-		$keys = $this->config->getAppKeys('bruteForce');
-		$keys = array_filter($keys, function ($key) {
-			$regex = '/^whitelist_/S';
-			return preg_match($regex, $key) === 1;
-		});
+		$newValue = $ip . '/' . $mask;
+		$configMap = $this->appConfig->getAllValues(Config::APPID, Config::ALLOWLIST_PREFIX);
 
 		$id = 0;
-		foreach ($keys as $key) {
-			$tmp = (int)substr($key, 10);
-			if ($tmp > $id) {
-				$id = $tmp;
+		$maxId = 0;
+		foreach ($configMap as $key => $value) {
+			$tmpId = (int)substr($key, strlen(Config::ALLOWLIST_PREFIX));
+			if ($value === $newValue && !str_ends_with($key, Config::COMMENT_SUFFIX)) {
+				$id = $tmpId;
+				break;
+			}
+
+			if ($tmpId > $maxId) {
+				$maxId = $tmpId;
 			}
 		}
-		$id++;
 
-		$value = $ip . '/' . $mask;
-		$this->config->setAppValue('bruteForce', 'whitelist_' . $id, $value);
+		if ($id === 0) {
+			$id = $maxId + 1;
+		}
+
+		$this->appConfig->setValueString(Config::APPID, Config::ALLOWLIST_PREFIX . $id, $newValue);
+		$comment = trim(substr($comment, 0, Config::MAX_COMMENT_LENGTH));
+		if ($comment !== '') {
+			$this->appConfig->setValueString(Config::APPID, Config::ALLOWLIST_PREFIX . $id . Config::COMMENT_SUFFIX, $comment, lazy: true);
+		}
+
 		return new JSONResponse([
 			'id' => $id,
 			'ip' => $ip,
 			'mask' => $mask,
+			'comment' => $comment,
 		]);
 	}
 
@@ -106,7 +111,8 @@ class IPWhitelistController extends Controller {
 	 * @return JSONResponse
 	 */
 	public function remove(int $id): JSONResponse {
-		$this->config->deleteAppValue('bruteForce', 'whitelist_' . $id);
+		$this->appConfig->deleteKey(Config::APPID, Config::ALLOWLIST_PREFIX . $id);
+		$this->appConfig->deleteKey(Config::APPID, Config::ALLOWLIST_PREFIX . $id . Config::COMMENT_SUFFIX);
 
 		return new JSONResponse([]);
 	}
