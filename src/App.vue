@@ -99,7 +99,7 @@
 					:disabled="loadingEdit"
 					@click="saveEdit">
 					<template #icon>
-						<PlusIcon v-if="!loadingEdit" />
+						<PencilIcon v-if="!loadingEdit" />
 						<NcLoadingIcon v-else />
 					</template>
 					{{ t('bruteforcesettings', 'Save') }}
@@ -121,6 +121,7 @@ import NcModal from '@nextcloud/vue/components/NcModal'
 import NcNoteCard from '@nextcloud/vue/components/NcNoteCard'
 import NcSettingsSection from '@nextcloud/vue/components/NcSettingsSection'
 import NcTextArea from '@nextcloud/vue/components/NcTextArea'
+import PencilIcon from 'vue-material-design-icons/PencilOutline.vue'
 import PlusIcon from 'vue-material-design-icons/Plus.vue'
 import BruteForceItem from './components/BruteForceItem.vue'
 import {
@@ -142,6 +143,7 @@ export default {
 		NcCheckboxRadioSwitch,
 		NcInputField,
 		NcTextArea,
+		PencilIcon,
 		PlusIcon,
 		NcModal,
 		NcLoadingIcon,
