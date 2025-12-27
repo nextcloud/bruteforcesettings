@@ -39,7 +39,7 @@
     "@nextcloud/webpack-vue-config": "^7.0.1",
     "@vitejs/plugin-vue": "^6.0.3",
     "@vitest/coverage-v8": "^3.2.4",
-    "jsdom": "^27.3.0",
+    "jsdom": "^27.4.0",
     "vitest": "^3.2.4"
   },
   "engines": {
