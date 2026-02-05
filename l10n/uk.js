@@ -12,7 +12,7 @@ OC.L10N.register(
     "There was an error adding the IP to the allow list." : "Помилка під час додавання адреси IP до дозволеного списку.",
     "There was an error updating the allow list entry." : "Помилка під час оновлення запису із дозволеного списку.",
     "Brute-force allow list" : "Дозволений список брутфорсу",
-    "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all." : "Зазначте діапазон адрес IP, які хочете виключити із захисту від брутфорсу. Зауважте, що з будь-якої дозволеної адреси IP можна буде здійснювати необмежену кількість авторизацій. З міркувань безпеки рекомендується зазначати якомога менше віддалених адрес або навіть жодної. ",
+    "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all." : "Зазначте діапазон адрес IP, які хочете виключити із захисту від брутфорсу. Зауважте, що з будь-якої дозволеної адреси IP можна буде здійснювати необмежену кількість автентифікації. З міркувань безпеки рекомендується зазначати якомога менше віддалених адрес або навіть жодної. ",
     "Bypass rate limiting for allowed IPs" : "Обійти обмеження оцінки для дозволених IP",
     "Add new IP address" : "Додати нову адресу IP",
     "IP address" : "Адреса IP",
@@ -24,7 +24,7 @@ OC.L10N.register(
     "Delete entry for {subnet}" : "Вилучити запис для {subnet}",
     "There was an error adding the IP to the whitelist." : "Помилка під час додавання адреси IP до білого списку.",
     "Brute-force IP whitelist" : "Білий список IP-адрес",
-    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Зазначте діапазони IP-адрес для додавання до білого списку. Майте на увазі, що користувачі з  білого списку адрес зможуть авторизовуватися без будь-яких обмежень. З міркувань безпеки рекомендовано додавати якнайменше адрес до білого списку чи навіть жодної.",
+    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Зазначте діапазони IP-адрес для додавання до білого списку. Майте на увазі, що користувачі з  білого списку адрес зможуть входити без будь-яких обмежень. З міркувань безпеки рекомендовано додавати якнайменше адрес до білого списку чи навіть жодної.",
     "Apply whitelist to rate limit" : "Застосувати білий список до рейтингу обмежень",
     "Add a new whitelist" : "Додати новий білий список"
 },
