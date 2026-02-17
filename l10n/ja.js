@@ -13,7 +13,7 @@ OC.L10N.register(
     "There was an error updating the allow list entry." : "許可リストのエントリを更新中にエラーが発生しました。",
     "Brute-force allow list" : "ブルートフォース許可リスト",
     "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all." : "ブルートフォース攻撃対策から除外するIP範囲を以下に指定してください。許可されたIPはスロットリングなしで認証試行を実行できる点に注意してください。セキュリティ上の理由から、可能な限り少ないリモートアドレスをリストするか、理想的には一切リストしないことを推奨します。",
-    "Bypass rate limiting for allowed IPs" : "許可されたIPアドレスに対するレート制限のバイパス",
+    "Bypass rate limiting for allowed IPs" : "許可されたIPアドレスリストを有効にする",
     "Add new IP address" : "新しいIPアドレスを追加する",
     "IP address" : "IPアドレス",
     "Mask" : "ネットマスク",
