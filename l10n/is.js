@@ -5,7 +5,6 @@ OC.L10N.register(
     "Whitelist IPs" : "Listi með leyfðum IP-tölum",
     "Comment" : "Athugasemd",
     "Add" : "Bæta við",
-    "Save" : "Vista",
-    "Brute-force IP whitelist" : "Þvinga fram lista með leyfðum IP-tölum (hvítlista)"
+    "Save" : "Vista"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");

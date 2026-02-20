@@ -19,11 +19,6 @@
     "Add" : "قوش",
     "Edit comment for {subnet}" : "{subnet} نىڭ ئىنكاسىنى تەھرىرلە",
     "Save" : "ساقلاش",
-    "Delete entry for {subnet}" : "{subnet} for نىڭ يازمىسىنى ئۆچۈرۈڭ",
-    "There was an error adding the IP to the whitelist." : "IP نى ئاق تىزىملىككە قوشۇشتا خاتالىق كۆرۈلدى.",
-    "Brute-force IP whitelist" : "رەھىمسىز IP ئاق تىزىملىك",
-    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "ئاق تىزىملىك IP غا رەھىمسىزلىكتىن قوغداش دائىرىسى تۆۋەندە كۆرسىتىڭ. شۇنىڭغا دىققەت قىلىڭكى ، ئاق تىزىملىكتىكى ھەر قانداق IP دەلىللەش سىنىقى ئېلىپ بارالايدۇ. بىخەتەرلىكنى كۆزدە تۇتۇپ ، ئىمكانقەدەر ئاز ساھىبجاماللارنى ئاقلاش تەۋسىيە قىلىنىدۇ ، ئەڭ ياخشىسى ھەتتا ھېچقايسىسى يوق.",
-    "Apply whitelist to rate limit" : "سۈرئەت چەكلىمىسىگە ئاق-تىزىملىكنى قوللان",
-    "Add a new whitelist" : "يېڭى ئاق تىزىملىك قوشۇڭ"
+    "Delete entry for {subnet}" : "{subnet} for نىڭ يازمىسىنى ئۆچۈرۈڭ"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

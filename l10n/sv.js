@@ -21,11 +21,6 @@ OC.L10N.register(
     "Add" : "Lägg till",
     "Edit comment for {subnet}" : "Redigera kommentar för {subnet}",
     "Save" : "Spara",
-    "Delete entry for {subnet}" : "Ta bort post för {subnet}",
-    "There was an error adding the IP to the whitelist." : "Det uppstod ett fel när IP-adressen skulle läggas till i vitlistan.",
-    "Brute-force IP whitelist" : "Brute-force IP-vitlista",
-    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Ange IP-intervall du vill utesluta från \"brute-force\" skyddet nedan. Observera att varje vitlistad IP kan utföra autentiseringsförsök utan någon strypning. Av säkerhetsskäl rekommenderas att du listar så få värdar som möjligt eller helst inga alls.",
-    "Apply whitelist to rate limit" : "Verkställ dessa undantag från brute-force skyddet",
-    "Add a new whitelist" : "Lägg till en ny vitlista"
+    "Delete entry for {subnet}" : "Ta bort post för {subnet}"
 },
 "nplurals=2; plural=(n != 1);");

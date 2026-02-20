@@ -7,9 +7,6 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Alamat jauh anda telah dikenalpasti sebagai \"{remoteAddress}\" dan tidak sedang disekat pada masa ini.",
     "IP address" : "Alamat IP",
     "Add" : "Tambah",
-    "Save" : "Simpan",
-    "There was an error adding the IP to the whitelist." : "Terdapat ralat ketika menambahkan IP pada senarai putih.",
-    "Brute-force IP whitelist" : "Senarai putih IP Brute-force",
-    "Add a new whitelist" : "Tambah senarai putih baharu"
+    "Save" : "Simpan"
 },
 "nplurals=1; plural=0;");

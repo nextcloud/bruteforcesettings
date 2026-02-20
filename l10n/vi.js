@@ -4,7 +4,6 @@ OC.L10N.register(
     "Brute-force settings" : "Cài đặt Brute-force",
     "Comment" : "Bình luận",
     "Add" : "Thêm",
-    "Save" : "Lưu",
-    "Brute-force IP whitelist" : "Brute-force IP whitelist"
+    "Save" : "Lưu"
 },
 "nplurals=1; plural=0;");

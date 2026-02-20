@@ -12,11 +12,6 @@ OC.L10N.register(
     "Comment" : "Kommentér",
     "Add" : "Tilføj",
     "Save" : "Gem",
-    "Delete entry for {subnet}" : "Slet indførsel for {subnet}",
-    "There was an error adding the IP to the whitelist." : "Der opstod en fejl under tilføjelse af IP'en til hvdlisten.",
-    "Brute-force IP whitelist" : "Brute-force IP whitelist",
-    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "For at hvidliste IP-områder fra brute-force beskyttelsen, skal du angive dem nedenfor. Bemærk, at enhver hvidlistet IP kan udføre godkendelsesforsøg uden at få nedsat svartiden. Af sikkerhedsmæssige årsager anbefales det at hvidliste så få IP adresser som muligt, eller helst slet ikke.",
-    "Apply whitelist to rate limit" : "Anvend hvidliste på rate begrænsning",
-    "Add a new whitelist" : "Tilføj en ny hvidliste"
+    "Delete entry for {subnet}" : "Slet indførsel for {subnet}"
 },
 "nplurals=2; plural=(n != 1);");

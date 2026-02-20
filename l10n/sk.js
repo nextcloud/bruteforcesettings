@@ -21,11 +21,6 @@ OC.L10N.register(
     "Add" : "Pridať",
     "Edit comment for {subnet}" : "Upraviť komentár pre {subnet}",
     "Save" : "Uložiť",
-    "Delete entry for {subnet}" : "Vymažte záznam pre {subnet}",
-    "There was an error adding the IP to the whitelist." : "Vyskytla sa chyba pri pridávaní IP adresy do zoznamu povolených.",
-    "Brute-force IP whitelist" : "Zoznam povolených IP adries pre útok hrubou silou",
-    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Zadať rozsahy adries IP ako dôveryhodné v rámci ochrany proti útoku hrubou silou môžete nižšie. Je potrebné si uvedomiť, že adresy z tohto zoznamu môžu uskutočňovať pokusy o overenie bez akéhokoľvek obmedzenia. Z bezpečnostných dôvodov odporúčame mať uvedených čo najmenej adries, ideálne žiadne.",
-    "Apply whitelist to rate limit" : "Aplikovať bielu listinu na obmedzenie rýchlosti",
-    "Add a new whitelist" : "Pridať nový zoznam povolených adries"
+    "Delete entry for {subnet}" : "Vymažte záznam pre {subnet}"
 },
 "nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);");
