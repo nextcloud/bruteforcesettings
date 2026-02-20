@@ -8,7 +8,6 @@ OC.L10N.register(
     "Mask" : "Maski",
     "Comment" : "Kommentti",
     "Add" : "Lisää",
-    "Save" : "Tallenna",
-    "Brute-force IP whitelist" : "Turvallisten IP-osoitteiden lista"
+    "Save" : "Tallenna"
 },
 "nplurals=2; plural=(n != 1);");

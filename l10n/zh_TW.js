@@ -21,11 +21,6 @@ OC.L10N.register(
     "Add" : "新增",
     "Edit comment for {subnet}" : "編輯 {subnet} 的註解",
     "Save" : "儲存",
-    "Delete entry for {subnet}" : "刪除 {subnet} 的條目",
-    "There was an error adding the IP to the whitelist." : "新增 IP 至白名單時發生錯誤。",
-    "Brute-force IP whitelist" : "暴力攻擊 IP 白名單",
-    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "在下面設定白名單 IP。請注意，在白名單中的 IP 可以不被限制進行驗證。基於安全性原因，建議僅設定少數來源 IP。",
-    "Apply whitelist to rate limit" : "將白名單套用至速率限制",
-    "Add a new whitelist" : "新增白名單"
+    "Delete entry for {subnet}" : "刪除 {subnet} 的條目"
 },
 "nplurals=1; plural=0;");

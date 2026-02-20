@@ -19,11 +19,6 @@
     "Add" : "Legg til",
     "Edit comment for {subnet}" : "Rediger kommentar for {subnet}",
     "Save" : "Lagre",
-    "Delete entry for {subnet}" : "Slett oppføring for {subnet}",
-    "There was an error adding the IP to the whitelist." : "Det oppstod en feil ved å legge til IP-adressen i hvitelisten.",
-    "Brute-force IP whitelist" : "Rå makt tillatte IP-addresser",
-    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "For å hviteliste IP-områder fra rå-makt-beskyttelsen, spesifiser dem nedenfor. Vær oppmerksom på at alle hvitelistede IP-adresser kan utføre autentiseringsforsøk uten struping. Av sikkerhetsgrunner anbefales det å hviteliste så få verter som mulig eller ideelt sett ingen i det hele tatt.",
-    "Apply whitelist to rate limit" : "Aktiver hvitliste for hastighetsgrense",
-    "Add a new whitelist" : "Legg til en ny hviteliste"
+    "Delete entry for {subnet}" : "Slett oppføring for {subnet}"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

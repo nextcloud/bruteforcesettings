@@ -19,11 +19,6 @@
     "Add" : "Ongeza",
     "Edit comment for {subnet}" : "Hariri maoni kwa {subnet}",
     "Save" : "Hifadhi",
-    "Delete entry for {subnet}" : "Futa uingiaji kwa {subnet}",
-    "There was an error adding the IP to the whitelist." : " Kulikuwa na hitilafu katika kuongeza IP kwenye orodha iliyoidhinishwa.",
-    "Brute-force IP whitelist" : "Orodha nyeupe ya IP ya nguvu mbaya",
-    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Ili kuorodhesha safu za IP kutoka kwa ulinzi wa nguvu-katili zieleze hapa chini. Kumbuka kuwa IP yoyote iliyoidhinishwa inaweza kufanya majaribio ya uthibitishaji bila kutetemeka. Kwa sababu za kiusalama, inashauriwa kuorodhesha wapangishi wachache iwezekanavyo au hata usiwepo kabisa.",
-    "Apply whitelist to rate limit" : "Tekeleza orodha iliyoidhinishwa ili kuongeza kiwango",
-    "Add a new whitelist" : "Ongeza orodha nyeupe mpya"
+    "Delete entry for {subnet}" : "Futa uingiaji kwa {subnet}"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

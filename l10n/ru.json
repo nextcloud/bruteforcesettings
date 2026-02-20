@@ -10,11 +10,6 @@
     "Comment" : "Комментарий",
     "Add" : "Добавить",
     "Save" : "Сохранить",
-    "Delete entry for {subnet}" : "Удалить записи для {subnet}",
-    "There was an error adding the IP to the whitelist." : "Произошла ошибка при добавлении IP-адреса в белый список.",
-    "Brute-force IP whitelist" : "Список IP-адресов, исключённых для защиты от перебора",
-    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Диапазоны адресов, перечисленные ниже, не будут защищены защитой от перебора пароля. Внимание: частота попыток входа с этих адресов не будет ограничиваться. Из соображений безопасности, рекомендуется указывать как можно меньше адресов, а в идеальном случае — не использовать этот список.",
-    "Apply whitelist to rate limit" : "Применить белый список для ограничения скорости",
-    "Add a new whitelist" : "Добавьте новый белый список"
+    "Delete entry for {subnet}" : "Удалить записи для {subnet}"
 },"pluralForm" :"nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);"
 }

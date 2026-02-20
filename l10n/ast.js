@@ -9,7 +9,6 @@ OC.L10N.register(
     "Comment" : "Comentariu",
     "Add" : "Amestar",
     "Save" : "Guardar",
-    "Delete entry for {subnet}" : "Desaniciar la entrada de {subnet}",
-    "There was an error adding the IP to the whitelist." : "Hebo un error al amestar la direición a la llista d'IPs permitíes."
+    "Delete entry for {subnet}" : "Desaniciar la entrada de {subnet}"
 },
 "nplurals=2; plural=(n != 1);");

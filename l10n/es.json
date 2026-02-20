@@ -19,11 +19,6 @@
     "Add" : "Añadir",
     "Edit comment for {subnet}" : "Editar comentario de {subnet}",
     "Save" : "Guardar",
-    "Delete entry for {subnet}" : "Eliminar entrada para {subnet}",
-    "There was an error adding the IP to the whitelist." : "Hubo un error al añadir la IP a la lista blanca.",
-    "Brute-force IP whitelist" : "Lista blanca de IPs para ataques de fuerza bruta",
-    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "Para incluir rangos de IP en la lista blanca de la protección de fuerza bruta, especifícalos abajo. Ten en cuenta que cualquier IP de la lista blanca puede realizar intentos de autenticación sin ningún freno. Por razones de seguridad, se recomienda incluir en la lista blanca tan pocos servidores como sea posible o incluso, idealmente, ninguno.",
-    "Apply whitelist to rate limit" : "Aplicar lista blanca al límite de tasa",
-    "Add a new whitelist" : "Añadir nueva lista blanca"
+    "Delete entry for {subnet}" : "Eliminar entrada para {subnet}"
 },"pluralForm" :"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }
