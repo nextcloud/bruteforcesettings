@@ -19,11 +19,6 @@
     "Add" : "ເພີ່ມ",
     "Edit comment for {subnet}" : "Edit comment for {subnet}",
     "Save" : "ບັນທຶກ",
-    "Delete entry for {subnet}" : "Delete entry for {subnet}",
-    "There was an error adding the IP to the whitelist." : "There was an error adding the IP to the whitelist.",
-    "Brute-force IP whitelist" : "Brute-force IP whitelist",
-    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all.",
-    "Apply whitelist to rate limit" : "Apply whitelist to rate limit",
-    "Add a new whitelist" : "Add a new whitelist"
+    "Delete entry for {subnet}" : "Delete entry for {subnet}"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

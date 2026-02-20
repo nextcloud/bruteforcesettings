@@ -21,11 +21,6 @@ OC.L10N.register(
     "Add" : "追加",
     "Edit comment for {subnet}" : "{subnet}のコメントを編集",
     "Save" : "保存する",
-    "Delete entry for {subnet}" : "{subnet} のエントリを削除します",
-    "There was an error adding the IP to the whitelist." : "ホワイトリストへのIPの追加中にエラーが発生しました。",
-    "Brute-force IP whitelist" : "ブルートフォースIPホワイトリスト",
-    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "ブルートフォース保護からホワイトリストにIP範囲を登録するには、以下を指定します。\nホワイトリストに登録されたIPは、認証試行を無制限に実行できることに注意してください。 セキュリティ上の理由から、できるだけ少ないホストをホワイトリストに登録するか、理想的にはまったく登録しないことをお勧めします。",
-    "Apply whitelist to rate limit" : "レート制限にホワイトリストを適用する",
-    "Add a new whitelist" : "新しいホワイトリストを追加する"
+    "Delete entry for {subnet}" : "{subnet} のエントリを削除します"
 },
 "nplurals=1; plural=0;");

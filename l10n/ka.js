@@ -10,8 +10,6 @@ OC.L10N.register(
     "Comment" : "Comment",
     "Add" : "Add",
     "Save" : "დამახსოვრება",
-    "Delete entry for {subnet}" : "Delete entry for {subnet}",
-    "Brute-force IP whitelist" : "Brute-force IP whitelist",
-    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all."
+    "Delete entry for {subnet}" : "Delete entry for {subnet}"
 },
 "nplurals=2; plural=(n!=1);");

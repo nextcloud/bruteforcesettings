@@ -21,11 +21,6 @@ OC.L10N.register(
     "Add" : "Ekle",
     "Edit comment for {subnet}" : "{subnet} açıklamasını düzenle",
     "Save" : "Kaydet",
-    "Delete entry for {subnet}" : "{subnet} kaydını sil",
-    "There was an error adding the IP to the whitelist." : "IP adresi izin verilenler listesine eklenirken bir sorun çıktı.",
-    "Brute-force IP whitelist" : "Kaba kuvvet saldırısı korumasında izin verilen IP adresleri listesi",
-    "To whitelist IP ranges from the brute-force protection specify them below. Note that any whitelisted IP can perform authentication attempts without any throttling. For security reasons, it is recommended to whitelist as few hosts as possible or ideally even none at all." : "İzin verilenler listesine eklenerek kaba kuvvet saldırısı korumasına katılmayacak IP aralıklarını aşağıda belirtebilirsiniz. İzin verilenler listesine alınan IP adreslerinin sınırsız sayıda kimlik doğrulama isteğinde bulunabileceğini unutmayın. Güvenlik nedeniyle olabildiğince ideal olarak hiç ya da olabildiğince az sayıda adres belirtmeniz önerilir.",
-    "Apply whitelist to rate limit" : "Hız sınırlamasında izin verilenler listesi kullanılsın",
-    "Add a new whitelist" : "Yeni bir izin verilenler listesi ekle"
+    "Delete entry for {subnet}" : "{subnet} kaydını sil"
 },
 "nplurals=2; plural=(n > 1);");
