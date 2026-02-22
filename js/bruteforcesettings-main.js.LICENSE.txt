@@ -75,6 +75,17 @@
 
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
 
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */
+
+/**
+ * @copyright Copyright (c) 2018 Roeland Jago Douma <roeland@famdouma.nl>
+ * @author Roeland Jago Douma <roeland@famdouma.nl>
+ * @license AGPL-3.0-or-later
+ *
+ * SPDX-FileCopyrightText: 2018 Roeland Jago Douma <roeland@famdouma.nl>
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
 /**
 * @vue/reactivity v3.5.27
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
