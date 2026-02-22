@@ -87,19 +87,19 @@
  */
 
 /**
-* @vue/reactivity v3.5.27
+* @vue/reactivity v3.5.28
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
 
 /**
-* @vue/runtime-dom v3.5.27
+* @vue/runtime-dom v3.5.28
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
 
 /**
-* @vue/shared v3.5.27
+* @vue/shared v3.5.28
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
