@@ -19,7 +19,7 @@
 			:disabled="loadingRateLimit"
 			type="switch"
 			@update:model-value="saveApplyAllowListToRateLimit">
-			{{ t('spreed', 'Bypass rate limiting for allowed IPs') }}
+			{{ t('bruteforcesettings', 'Bypass rate limiting for allowed IPs') }}
 		</NcCheckboxRadioSwitch>
 
 		<NcNoteCard
