@@ -10,6 +10,7 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Seu endereço remoto foi identificado como \"{remoteAddress}\" e está ignorando a proteção de força bruta.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Seu endereço remoto foi identificado como \"{remoteAddress}\" e não está ativamente limitado no momento.",
     "There was an error adding the IP to the allow list." : "Ocorreu um erro ao adicionar o IP à lista de permissões.",
+    "There was an error saving the rate limit setting." : "Ocorreu um erro ao salvar a configuração do limite de taxa.",
     "There was an error updating the allow list entry." : "Ocorreu um erro ao atualizar a entrada da lista de permissões.",
     "Brute-force allow list" : "Lista de permissões de força bruta",
     "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all." : "Para excluir intervalos de IP da proteção contra força bruta, especifique-os abaixo. Observe que qualquer IP permitido pode realizar tentativas de autenticação sem qualquer limitação. Por motivos de segurança, recomenda-se listar o menor número possível de endereços remotos ou, idealmente, nenhum.",
