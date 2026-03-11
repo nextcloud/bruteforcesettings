@@ -10,6 +10,7 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "您的遠端地址被識別為「{remoteAddress}」，並繞過了暴力攻擊防護。",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "您的遠端地址被識別為「{remoteAddress}」，目前未受節流限制。",
     "There was an error adding the IP to the allow list." : "錯誤：添加 IP 到允許清單時出現了錯誤。",
+    "There was an error saving the rate limit setting." : "儲存速率限制設定時發生錯誤。",
     "There was an error updating the allow list entry." : "更新允許清單項目記錄時發生錯誤。",
     "Brute-force allow list" : "Brute-force IP 允許清單",
     "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all." : "要排除 IP 範圍以避免暴力破解保護，請在下方指定。請注意，任何允許的 IP 都可以進行身份驗證嘗試，而不會有任何限制。出於安全原因，建議盡量少列出遠端地址，理想情況下甚至不列出。",

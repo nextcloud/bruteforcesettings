@@ -8,6 +8,7 @@
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment.",
     "There was an error adding the IP to the allow list." : "There was an error adding the IP to the allow list.",
+    "There was an error saving the rate limit setting." : "There was an error saving the rate limit setting.",
     "There was an error updating the allow list entry." : "There was an error updating the allow list entry.",
     "Brute-force allow list" : "Brute-force allow list",
     "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all." : "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all.",
