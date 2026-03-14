@@ -8,6 +8,7 @@
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "あなたのリモートアドレスは\"{remoteAddress}\"として認識され、ブルートフォース保護をバイパスしています。",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "あなたのリモートアドレスは\"{remoteAddress}\"として認識され、現在アクティブに調整されていません。",
     "There was an error adding the IP to the allow list." : "許可リストへのIP追加中にエラーが発生しました。",
+    "There was an error saving the rate limit setting." : "レート制限設定の保存中にエラーが発生しました。",
     "There was an error updating the allow list entry." : "許可リストのエントリを更新中にエラーが発生しました。",
     "Brute-force allow list" : "ブルートフォース許可リスト",
     "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all." : "ブルートフォース攻撃対策から除外するIP範囲を以下に指定してください。許可されたIPはスロットリングなしで認証試行を実行できる点に注意してください。セキュリティ上の理由から、可能な限り少ないリモートアドレスをリストするか、理想的には一切リストしないことを推奨します。",
