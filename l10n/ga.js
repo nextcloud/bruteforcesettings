@@ -10,6 +10,7 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Aithníodh do sheoladh cianda mar \"{remoteAddress}\" agus tá sé ag seachaint cosaint brúidiúil.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Aithníodh do sheoladh cianda mar \"{remoteAddress}\" agus níl sé faoi sníomh go gníomhach faoi láthair.",
     "There was an error adding the IP to the allow list." : "Tharla earráid agus an seoladh IP á chur leis an liosta ceadaithe.",
+    "There was an error saving the rate limit setting." : "Tharla earráid agus an socrú teorann ráta á shábháil.",
     "There was an error updating the allow list entry." : "Tharla earráid agus an iontráil sa liosta ceadanna á nuashonrú.",
     "Brute-force allow list" : "Liosta ceadanna brúidiúil",
     "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all." : "Chun raonta IP a eisiamh ón gcosaint brúidiúil, sonraigh iad thíos. Tabhair faoi deara gur féidir le haon IP ceadaithe iarrachtaí fíordheimhnithe a dhéanamh gan aon srianadh. Ar chúiseanna slándála, moltar chomh beag seoltaí iargúlta agus is féidir a liostáil nó fiú gan aon cheann ar chor ar bith.",
