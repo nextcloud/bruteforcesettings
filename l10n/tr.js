@@ -10,6 +10,7 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Uzak adresiniz \"{remoteAddress}\" olarak belirlenmiş ve kaba kuvvet saldırısı korumasını atlıyor.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Uzak adresiniz \"{remoteAddress}\" olarak belirlenmiş ve şu anda etkin olarak kısıtlanmıyor.",
     "There was an error adding the IP to the allow list." : "IP adresi izin verilenler listesine eklenirken bir sorun çıktı.",
+    "There was an error saving the rate limit setting." : "Hız sınırlaması ayarları kaydedilirken bir sorun çıktı.",
     "There was an error updating the allow list entry." : "İzin verilenler listesi kaydı güncellenirken bir sorun çıktı.",
     "Brute-force allow list" : "Kaba kuvvet saldırısı izin verilenler listesi",
     "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all." : "İzin verilenler listesine eklenerek kaba kuvvet saldırısı korumasına katılmayacak IP aralıklarını aşağıda belirtebilirsiniz. İzin verilenler listesine alınan IP adreslerinin herhangi bir hız sınırlaması uygulanmadan kimlik doğrulama isteğinde bulunabileceğini unutmayın. Güvenlik nedeniyle ideal olarak hiç ya da olabildiğince az sayıda uzak adres belirtmeniz önerilir.",
