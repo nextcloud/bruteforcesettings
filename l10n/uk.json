@@ -8,6 +8,7 @@
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Вашу віддалену адресу визначено як \"{remoteAddress}\", до неї не застосовуватиметься захист від підбору паролів.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Вашу віддалену адресу визначено як \"{remoteAddress}\". До цієї адреси наразі не застосовується обмеження.",
     "There was an error adding the IP to the allow list." : "Помилка під час додавання адреси IP до дозволеного списку.",
+    "There was an error saving the rate limit setting." : "Помилка під час збереження налаштування обмеження за рейтингом.",
     "There was an error updating the allow list entry." : "Помилка під час оновлення запису із дозволеного списку.",
     "Brute-force allow list" : "Дозволений список брутфорсу",
     "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all." : "Зазначте діапазон адрес IP, які хочете виключити із захисту від брутфорсу. Зауважте, що з будь-якої дозволеної адреси IP можна буде здійснювати необмежену кількість автентифікації. З міркувань безпеки рекомендується зазначати якомога менше віддалених адрес або навіть жодної. ",
