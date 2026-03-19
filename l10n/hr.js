@@ -10,6 +10,7 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Vaša udaljena adresa prepoznata je kao „{remoteAddress}” i zaobilazi zaštitu od brute-force napada.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Vaša udaljena adresa prepoznata je kao „{remoteAddress}” i trenutačno nije aktivno ograničena.",
     "There was an error adding the IP to the allow list." : "Došlo je do pogreške pri dodavanju IP adrese na popis dopuštenih.",
+    "There was an error saving the rate limit setting." : "Došlo je do pogreške pri spremanju postavke ograničenja brzine.",
     "There was an error updating the allow list entry." : "Došlo je do pogreške pri ažuriranju stavke na popisu dopuštenih.",
     "Brute-force allow list" : "Popis dopuštenih za brute-force zaštitu",
     "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all." : "Za izuzimanje IP raspona iz brute-force zaštite navedite ih u nastavku. Imajte na umu da svaka dopuštena IP adresa može provoditi pokušaje autentifikacije bez ikakvog ograničavanja. Iz sigurnosnih razloga preporučuje se navesti što manje udaljenih adresa ili, idealno, nijednu.",
