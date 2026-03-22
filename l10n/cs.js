@@ -10,6 +10,7 @@ OC.L10N.register(
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Vaše vzdálená adresa byla identifikována jako „{remoteAddress}“ a v tuto chvíli obchází ochranu před útokem hrubou silou.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Vaše vzdálená adresa byla identifikována jako „{remoteAddress}“ a v tuto chvíli z ní není provoz aktivně omezován.",
     "There was an error adding the IP to the allow list." : "Došlo k chybě při přidávání IP adresy na seznam povolených.",
+    "There was an error saving the rate limit setting." : "Při ukládání nastavení limitu četnosti došlo k chybě.",
     "There was an error updating the allow list entry." : "Při aktualizování položky seznamu povolených došlo k chybě.",
     "Brute-force allow list" : "Seznam vyjmutých ze zamezování útokům hrubou silou",
     "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all." : "Pro vynechání rozsahů IP adres z bezpečných ohledně ochrany proti útoku hrubou silou, zadejte je níže. Uvědomte si ale, že jakékoli povolené IP adresy mohou provádět pokusy o ověření bez jakéhokoli omezení. Z důvodu zabezpečení je doporučeno mít zde co nejméně vzdálených adres nebo ideálně vůbec žádné.",
