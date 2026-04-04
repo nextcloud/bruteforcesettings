@@ -8,6 +8,7 @@
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Din fjärradress identifierades som \"{remoteAddress}\" och kringgår brute-force skyddet.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Din fjärradress identifierades som \"{remoteAddress}\" och är inte aktivt strypt för tillfället.",
     "There was an error adding the IP to the allow list." : "Ett fel uppstod när IP-adressen skulle läggas till i tillåtelselistan.",
+    "There was an error saving the rate limit setting." : "Det uppstod ett fel vid sparandet av inställningen för begränsning av antalet förfrågningar.",
     "There was an error updating the allow list entry." : "Ett fel uppstod när posten i tillåtelselistan skulle uppdateras.",
     "Brute-force allow list" : "Brute-force tillåtelselista",
     "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all." : "För att undanta IP-intervall från brute-force-skyddet, ange dem nedan. Observera att alla tillåtna IP-adresser kan utföra autentiseringsförsök utan begränsning. Av säkerhetsskäl rekommenderas att ange så få fjärradresser som möjligt, eller helst inga alls.",
