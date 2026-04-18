@@ -167,8 +167,8 @@ export default {
 			openEditDialog: false,
 			editingItem: null,
 			hasExceededTextLimit: false,
-			helperText: t('bruteforcesettings', 'Comment cannot exceed {max} characters.', { max: COMMENT_MAX_LENGTH }),
-			commentHint: t('bruteforcesettings', 'Leave an internal comment, why this IP is allowed, e.g. the  location, so it can be revoked, when it is no longer needed.'),
+			helperText: t('bruteforcesettings', 'The comment cannot exceed {max} characters.', { max: COMMENT_MAX_LENGTH }),
+			commentHint: t('bruteforcesettings', 'Leave an internal comment explaining why this IP address is allowed, for example its location, so the entry can be removed when it is no longer needed.'),
 		}
 	},
 
@@ -181,12 +181,12 @@ export default {
 
 		noteCardText() {
 			if (this.delay) {
-				return t('bruteforcesettings', 'Your remote address was identified as "{remoteAddress}" and is throttled at the moment by {delay}ms.', { remoteAddress: this.remoteAddress, delay: this.delay })
+				return t('bruteforcesettings', 'Your current IP address is detected as "{remoteAddress}". This address is currently throttled. Current delay: {delay} ms.', { remoteAddress: this.remoteAddress, delay: this.delay })
 			}
 			if (this.isBypassListed) {
-				return t('bruteforcesettings', 'Your remote address was identified as "{remoteAddress}" and is bypassing brute-force protection.', { remoteAddress: this.remoteAddress })
+				return t('bruteforcesettings', 'Your current IP address is detected as "{remoteAddress}". This address bypasses brute-force protection.', { remoteAddress: this.remoteAddress })
 			}
-			return t('bruteforcesettings', 'Your remote address was identified as "{remoteAddress}" and is not actively throttled at the moment.', { remoteAddress: this.remoteAddress })
+			return t('bruteforcesettings', 'Your current IP address is detected as "{remoteAddress}". This address is not currently throttled.', { remoteAddress: this.remoteAddress })
 		},
 
 		noteCardLevel() {
@@ -237,7 +237,7 @@ export default {
 				this.newWhitelist.mask = ''
 				this.newWhitelist.comment = ''
 			} catch {
-				showError(t('bruteforcesettings', 'There was an error adding the IP to the allow list.'))
+				showError(t('bruteforcesettings', 'Failed to add the IP address to the allow list.'))
 			}
 		},
 
@@ -254,7 +254,7 @@ export default {
 				},
 				error: () => {
 					this.loadingRateLimit = false
-					showError(t('bruteforcesettings', 'There was an error saving the rate limit setting.'))
+					showError(t('bruteforcesettings', 'Failed to save the rate limit setting.'))
 				},
 			})
 		},
@@ -280,7 +280,7 @@ export default {
 					this.items.splice(index, 1, response.data)
 				}
 			} catch {
-				showError(t('bruteforcesettings', 'There was an error updating the allow list entry.'))
+				showError(t('bruteforcesettings', 'Failed to update the allow list entry.'))
 			} finally {
 				this.loadingEdit = false
 			}
