@@ -4,14 +4,14 @@ OC.L10N.register(
     "Brute-force settings" : "Ρυθμίσεις brute-force",
     "Whitelist IPs" : "Εξαιρούμενες IP",
     "Brute-force protection is meant to protect Nextcloud servers from attempts to\nguess account passwords in various ways. Besides the obvious \"*let's try a big\nlist of commonly used passwords*\" attack, it also makes it harder to use\nslightly more sophisticated attacks via the reset password form or trying to\nfind app password tokens.\n\nIf triggered, brute-force protection makes requests coming from an IP on a\nbrute-force protected controller with the same API slower for a 24 hour period.\n\nWith this app, the admin can exempt an IP address or range from this\nprotection which can be useful for testing purposes or when there are false\npositives due to a lot of accounts on one IP address." : "Η προστασία brute-force έχει σκοπό να προστατεύσει τους διακομιστές Nextcloud από προσπάθειες\nεξακρίβωσης κωδικών πρόσβασης λογαριασμών με διάφορους τρόπους. Εκτός από την προφανή επίθεση\n\"*ας δοκιμάσουμε μια μεγάλη λίστα από κοινούς κωδικούς πρόσβασης*\", καθιστά επίσης πιο δύσκολη\nτη χρήση ελαφρώς πιο εξελιγμένων επιθέσεων μέσω της φόρμας επαναφοράς κωδικού πρόσβασης ή προσπάθειας\nεύρεσης διακριτικών κωδικών πρόσβασης εφαρμογών.\n\nΕάν ενεργοποιηθεί, η προστασία brute-force καθιστά τις αιτήσεις που προέρχονται από μια IP\nσε έναν ελεγκτή προστατευμένο από brute-force με το ίδιο API πιο αργές για μια περίοδο 24 ωρών.\n\nΜε αυτήν την εφαρμογή, ο διαχειριστής μπορεί να εξαιρέσει μια διεύθυνση IP ή εύρος από αυτήν\nτην προστασία, κάτι που μπορεί να είναι χρήσιμο για σκοπούς δοκιμής ή όταν υπάρχουν ψευδώς\nθετικά αποτελέσματα λόγω πολλών λογαριασμών σε μία διεύθυνση IP.",
-    "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Η απομακρυσμένη διεύθυνσή σας αναγνωρίστηκε ως \"{remoteAddress}\" και περιορίζεται προς το παρόν κατά {delay}ms.",
-    "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Η απομακρυσμένη διεύθυνσή σας αναγνωρίστηκε ως \"{remoteAddress}\" και παρακάμπτει την προστασία brute-force.",
-    "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Η απομακρυσμένη διεύθυνσή σας αναγνωρίστηκε ως \"{remoteAddress}\" και δεν περιορίζεται ενεργά προς το παρόν.",
     "IP address" : "Διεύθυνση IP",
     "Mask" : "Μάσκα",
     "Comment" : "Σχόλιο",
     "Add" : "Προσθήκη",
     "Save" : "Αποθήκευση",
-    "Delete entry for {subnet}" : "Διαγραφή καταχώρησης για {subnet}"
+    "Delete entry for {subnet}" : "Διαγραφή καταχώρησης για {subnet}",
+    "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Η απομακρυσμένη διεύθυνσή σας αναγνωρίστηκε ως \"{remoteAddress}\" και περιορίζεται προς το παρόν κατά {delay}ms.",
+    "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Η απομακρυσμένη διεύθυνσή σας αναγνωρίστηκε ως \"{remoteAddress}\" και παρακάμπτει την προστασία brute-force.",
+    "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Η απομακρυσμένη διεύθυνσή σας αναγνωρίστηκε ως \"{remoteAddress}\" και δεν περιορίζεται ενεργά προς το παρόν."
 },
 "nplurals=2; plural=(n != 1);");
