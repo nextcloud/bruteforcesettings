@@ -243,7 +243,7 @@ export default {
 
 		saveApplyAllowListToRateLimit(value) {
 			this.loadingRateLimit = true
-			OCP.AppConfig.setValue('bruteforcesettings', 'apply_allowlist_to_ratelimit', value ? 1 : 0, {
+			OCP.AppConfig.setValue('bruteforcesettings', 'apply_allowlist_to_ratelimit', value ? '1' : '0', {
 				success: () => {
 					this.loadingRateLimit = false
 					this.isApplyAllowListToRateLimitEnabled = value
