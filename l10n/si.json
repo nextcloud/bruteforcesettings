@@ -1,6 +1,7 @@
 { "translations": {
     "Whitelist IPs" : "සුදු ලැයිස්තුගත අ.ජා. කෙ. (IPs)",
     "Comment" : "අදහස",
-    "Add" : "එකතු කරන්න"
+    "Add" : "එකතු කරන්න",
+    "Save" : "Save"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
