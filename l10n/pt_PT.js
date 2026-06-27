@@ -3,8 +3,11 @@ OC.L10N.register(
     {
     "Brute-force settings" : "Definições de \"brute-force\"",
     "Whitelist IPs" : "Lista branca de IPs",
+    "Leave an internal comment explaining why this IP address is allowed, for example its location, so the entry can be removed when it is no longer needed." : "Deixe um comentário interno explicando porque este endereço IP é permitido, por exemplo, a sua localização, para que a entrada possa ser removida quando não for mais necessária.",
+    "Failed to add the IP address to the allow list." : "Falha ao adicionar o endereço IP à lista de permissões.",
     "Comment" : "Comentário",
     "Add" : "Adicionar",
-    "Save" : "Guardar"
+    "Save" : "Guardar",
+    "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Seu endereço remoto foi identificado como \"{remoteAddress}\" e está limitado a {delay}ms no momento."
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
