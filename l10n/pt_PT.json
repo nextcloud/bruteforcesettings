@@ -9,6 +9,7 @@
     "Add" : "Adicionar",
     "Save" : "Guardar",
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Seu endereço remoto foi identificado como \"{remoteAddress}\" e está limitado a {delay}ms no momento.",
-    "There was an error adding the IP to the allow list." : "Ocorreu um erro ao adicionar o IP à lista de permissões."
+    "There was an error adding the IP to the allow list." : "Ocorreu um erro ao adicionar o IP à lista de permissões.",
+    "There was an error updating the allow list entry." : "Ocorreu um erro ao atualizar a entrada da lista de permissões."
 },"pluralForm" :"nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }
