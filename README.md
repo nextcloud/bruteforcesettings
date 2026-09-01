@@ -60,13 +60,56 @@ This application merely manages some of the settings associated with brute force
 
 ## Related
 
-* The optional [`suspicious_login` app](https://github.com/nextcloud/suspicious_login).
+* The [`suspicious_login` app](https://github.com/nextcloud/suspicious_login):
+  - *Detects logins to a Nextcloud account that are successful but potentially suspicious based on their IP address without requiring any upkeep (or, generally, configuration)*
+* The [`password_policy` app](
+https://github.com/nextcloud/password_policy)
+  - *Manages password related policies with sane defaults and some flexibility*
 * [Using `fail2ban` with Nextcloud Server](https://docs.nextcloud.com/server/latest/admin_manual/installation/harden_server.html#setup-fail2ban).
 * The [Hardening and security guidance](https://docs.nextcloud.com/server/latest/admin_manual/installation/harden_server.html) chapter of the Nextcloud Administration Manual.
 * The [Logging](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/logging_configuration.html) chapter of the Nextcloud Administration Manual.
 * The [optional audit log](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/logging_configuration.html#admin-audit-log-optional) provided by the `admin_audit` app.
 * The [Reverse Proxy configuration](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/reverse_proxy_configuration.html) chapter of the Nextcloud Administration Manual.
 * [Rate limiting](https://docs.nextcloud.com/server/latest/developer_manual/digging_deeper/security.html#programmatic-rate-limiting) in Nextcloud Server (built into some sensitive areas) and [using it](https://docs.nextcloud.com/server/latest/developer_manual/basics/controllers.html#rate-limiting)
+
+## Troubleshooting
+
+*invalid password attempts from *any* IP address are disabling accounts*
+
+* The above is likely the `password_policy` app if accounts are being *deactivated* outright.
+* If actions are merely being slowed down or reported as temporarily unavailable (for no more 30 minutes), that sounds like Brute force protection. Reviewing the BFP chapter in the Nextcloud Admin Manual will help you understand how it functions and decide how to best integrate it into your environment as well as the most probable reasons for false positives and nuisance triggers.
+* If multiple accounts are impacted, make sure to confirm the source IP addresses indicated in the Nextcloud Log for each client connection are unique. If not, you may need to review your Trusted Proxies configuration.
+* It's possible for more than one of the above to be true simultaneously.
+
+*valid login attempts are triggering emails about logins from suspicious IP addresses*
+
+* The above is the `suspicious_login` app.
+
+*certain functions (transactions) return errors when used too heavily*
+
+* This is Nextcloud's Rate Limiting functionality, which limits transactions that are otherwise valid (and coming from already authenticated users), but are occurring too frequently*.
+* In some cases, such as CalDAV, this rate limiting may be customizable. In most cases, reasonable defaults are hard coded.
+
+*transactions - and certainly login attempts - are slow or seem to be banned for up to 30 minutes for some (or all) users*
+
+* If seemingly **all** (or many) users are impacted, make sure to confirm the source IP addresses indicated in the Nextcloud Log for each client connection are unique. If not, you may need to review your Trusted Proxies configuration.
+* If some, this is likely BPF
+
+## Development ideas:
+
+<-- xxx Add links to Issues tracking, where applicable -->
+* Additional monitoring
+ - Reset attempts history for an IP address from the Web UI
+ - Reporting/Summarizing (per account, per system)
+* Management
+  - Whitelist/blacklist management
+  - Additional customization of behavior 
+* Delegation
+* Integration
+  - With `suspicious_login`
+  - A single/consolidated Security panel (BPF, Password Policies, 
+
+(to be filled in)
 
 ## Help & Contributing
 
