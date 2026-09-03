@@ -3,8 +3,14 @@ OC.L10N.register(
     {
     "Brute-force settings" : "Stillingar þvingunar",
     "Whitelist IPs" : "Listi með leyfðum IP-tölum",
+    "The comment cannot exceed {max} characters." : "Athugasemdin má ekki vera lengri en {max} stafir.",
+    "Add new IP address" : "Bæta við nýju IP-vistfangi",
+    "IP address" : "IP-vistfang",
+    "Mask" : "Maski",
     "Comment" : "Athugasemd",
     "Add" : "Bæta við",
-    "Save" : "Vista"
+    "Edit comment for {subnet}" : "Breyta athugasemd fyrir {subnet}",
+    "Save" : "Vista",
+    "Delete entry for {subnet}" : "Eyða færslu fyrir {subnet}"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");
