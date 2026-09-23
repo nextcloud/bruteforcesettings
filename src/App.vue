@@ -57,10 +57,10 @@
 					type="number"
 					name="mask"
 					min="1"
-					max="128"
+					:max="isIPv4 ? 32 : 128"
 					maxlength="2"
 					:label="t('bruteforcesettings', 'Mask')"
-					placeholder="64" />
+					:placeholder="isIPv4 ? '32' : '64'" />
 			</div>
 			<NcTextArea
 				id="comment"
@@ -197,6 +197,10 @@ export default {
 				return 'warning'
 			}
 			return 'success'
+		},
+
+		isIPv4() {
+			return this.newWhitelist.ip.includes('.') && !this.newWhitelist.ip.includes(':')
 		},
 
 		disabled() {
