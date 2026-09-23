@@ -91,4 +91,22 @@ describe('App', () => {
 		expect(deleteWhitelist).toHaveBeenCalledWith(1)
 		expect(wrapper.findAll('li')).toHaveLength(0)
 	})
+
+	test('suggests mask based on IP version', async () => {
+		getWhitelist.mockResolvedValue({ data: [] })
+		const wrapper = mount(App)
+		const ipInput = wrapper.find('input[name="ip"]')
+		const maskInput = () => wrapper.find('input[name="mask"]')
+
+		expect(maskInput().attributes('placeholder')).toBe('64')
+		expect(maskInput().attributes('max')).toBe('128')
+
+		await ipInput.setValue('192.168.1.1')
+		expect(maskInput().attributes('placeholder')).toBe('32')
+		expect(maskInput().attributes('max')).toBe('32')
+
+		await ipInput.setValue('::ffff:192.168.1.1')
+		expect(maskInput().attributes('placeholder')).toBe('64')
+		expect(maskInput().attributes('max')).toBe('128')
+	})
 })
