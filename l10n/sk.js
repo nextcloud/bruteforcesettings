@@ -13,7 +13,7 @@ OC.L10N.register(
     "Failed to save the rate limit setting." : "Nepodarilo sa uložiť nastavenie obmedzenia frekvencie.",
     "Failed to update the allow list entry." : "Nepodarilo sa aktualizovať položku zoznamu povolených.",
     "Brute-force allow list" : "Zoznam povolených prístupov pre Brute-force",
-    "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all." : "Aby ste vylúčili rozsahy IP adries z ochrany pred hrubou silou, zadajte ich nižšie. Upozorňujeme, že akákoľvek povolená IP adresa môže vykonávať pokusy o autentifikáciu bez akéhokoľvek obmedzenia. Z bezpečnostných dôvodov sa odporúča uvádzať čo najmenej vzdialených adries, alebo ideálne žiadnu.",
+    "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all." : "Aby ste vylúčili rozsahy IP adries z ochrany pred útokmi hrubou silou, zadajte ich nižšie. Upozorňujeme, že akákoľvek povolená IP adresa môže vykonávať pokusy o autentifikáciu bez akéhokoľvek obmedzenia. Z bezpečnostných dôvodov sa odporúča uvádzať čo najmenej vzdialených adries, alebo ideálne žiadnu.",
     "Bypass rate limiting for allowed IPs" : "Obísť obmedzenie rýchlosti pre povolené IP adresy",
     "Add new IP address" : "Pridať novú IP adresu",
     "IP address" : "IP adresa",
