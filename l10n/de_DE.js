@@ -24,7 +24,7 @@ OC.L10N.register(
     "Save" : "Speichern",
     "Delete entry for {subnet}" : "Eintrag für {subnet} löschen",
     "Comment cannot exceed {max} characters." : "Der Kommentar darf nicht länger als {max} Zeichen sein.",
-    "Leave an internal comment, why this IP is allowed, e.g. the  location, so it can be revoked, when it is no longer needed." : "Einen internen Kommentar hinterlegen, warum diese IP erlaubt ist, z.B. den Standort, damit sie widerrufen werden kann, wenn sie nicht mehr benötigt wird.",
+    "Leave an internal comment, why this IP is allowed, e.g. the  location, so it can be revoked, when it is no longer needed." : "Einen internen Kommentar hinterlegen, warum diese IP erlaubt ist, z. B. den Standort, damit sie widerrufen werden kann, wenn sie nicht mehr benötigt wird.",
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Ihre Remote-Adresse wurde als \"{remoteAddress}\" identifiziert und ist derzeit um {delay}ms gedrosselt.",
     "Your remote address was identified as \"{remoteAddress}\" and is bypassing brute-force protection." : "Ihre Remote-Adresse wurde als \"{remoteAddress}\" identifiziert und umgeht den Brute-Force-Schutz.",
     "Your remote address was identified as \"{remoteAddress}\" and is not actively throttled at the moment." : "Ihre Remote-Adresse wurde als \"{remoteAddress}\" identifiziert und wird derzeit nicht aktiv gedrosselt.",
