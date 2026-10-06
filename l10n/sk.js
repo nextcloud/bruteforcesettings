@@ -22,7 +22,7 @@ OC.L10N.register(
     "Add" : "Pridať",
     "Edit comment for {subnet}" : "Upraviť komentár pre {subnet}",
     "Save" : "Uložiť",
-    "Delete entry for {subnet}" : "Vymažte záznam pre {subnet}",
+    "Delete entry for {subnet}" : "Vymazať záznam pre {subnet}",
     "Comment cannot exceed {max} characters." : "Komentár nemôže presiahnuť {max} znakov.",
     "Leave an internal comment, why this IP is allowed, e.g. the  location, so it can be revoked, when it is no longer needed." : "Zanechajte interný komentár, prečo je táto IP povolená, napr. miesto, aby ju bolo možné zrušiť, keď už nebude potrebná.",
     "Your remote address was identified as \"{remoteAddress}\" and is throttled at the moment by {delay}ms." : "Vaša vzdialená adresa bola identifikovaná ako \"{remoteAddress}\" a momentálne je obmedzená na {delay} ms.",
