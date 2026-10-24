@@ -29,7 +29,7 @@
     "@nextcloud/vue": "^9.0.1",
     "@vue/test-utils": "^2.4.11",
     "vue": "^3.5.44",
-    "vue-material-design-icons": "^5.3.1"
+    "vue-material-design-icons": "^5.3.2"
   },
   "devDependencies": {
     "@nextcloud/babel-config": "^1.2.0",
