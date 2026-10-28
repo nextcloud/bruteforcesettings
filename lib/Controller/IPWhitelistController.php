@@ -10,11 +10,14 @@ declare(strict_types=1);
 
 namespace OCA\BruteForceSettings\Controller;
 
+use OCA\BruteForceSettings\AuditLog\AuditEventFactory;
+use OCA\BruteForceSettings\AuditLog\Operation;
 use OCA\BruteForceSettings\Config;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\Attribute\PasswordConfirmationRequired;
 use OCP\AppFramework\Http\JSONResponse;
+use OCP\EventDispatcher\IEventDispatcher;
 use OCP\IAppConfig;
 use OCP\IRequest;
 
@@ -24,6 +27,7 @@ class IPWhitelistController extends Controller {
 		string $appName,
 		IRequest $request,
 		private readonly IAppConfig $appConfig,
+		private readonly IEventDispatcher $eventDispatcher,
 	) {
 		parent::__construct($appName, $request);
 	}
@@ -90,7 +94,8 @@ class IPWhitelistController extends Controller {
 			}
 		}
 
-		if ($id === 0) {
+		$isNew = $id === 0;
+		if ($isNew) {
 			$id = $maxId + 1;
 		}
 
@@ -98,6 +103,15 @@ class IPWhitelistController extends Controller {
 		$comment = trim(substr($comment, 0, Config::MAX_COMMENT_LENGTH));
 		if ($comment !== '') {
 			$this->appConfig->setValueString(Config::APPID, Config::ALLOWLIST_PREFIX . $id . Config::COMMENT_SUFFIX, $comment, lazy: true);
+		}
+
+		// An existing range only gets its comment updated, and the comment is never logged
+		if ($isNew) {
+			$this->eventDispatcher->dispatchTyped(AuditEventFactory::create(
+				Operation::AllowlistEntryAdded,
+				'Brute-force allowlist entry %s added for %s/%s',
+				['entryId' => $id, 'ip' => $ip, 'mask' => $mask],
+			));
 		}
 
 		return new JSONResponse([
@@ -114,8 +128,18 @@ class IPWhitelistController extends Controller {
 	 */
 	#[PasswordConfirmationRequired]
 	public function remove(int $id): JSONResponse {
+		$range = $this->appConfig->getValueString(Config::APPID, Config::ALLOWLIST_PREFIX . $id);
 		$this->appConfig->deleteKey(Config::APPID, Config::ALLOWLIST_PREFIX . $id);
 		$this->appConfig->deleteKey(Config::APPID, Config::ALLOWLIST_PREFIX . $id . Config::COMMENT_SUFFIX);
+
+		if ($range !== '') {
+			[$ip, $mask] = explode('/', $range);
+			$this->eventDispatcher->dispatchTyped(AuditEventFactory::create(
+				Operation::AllowlistEntryRemoved,
+				'Brute-force allowlist entry %s removed for %s/%s',
+				['entryId' => $id, 'ip' => $ip, 'mask' => (int)$mask],
+			));
+		}
 
 		return new JSONResponse([]);
 	}
