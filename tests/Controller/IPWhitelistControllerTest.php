@@ -14,6 +14,7 @@ namespace OCA\BruteForceSettings\Tests\Controller;
 use OCA\BruteForceSettings\Config;
 use OCA\BruteForceSettings\Controller\IPWhitelistController;
 use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\Attribute\PasswordConfirmationRequired;
 use OCP\AppFramework\Http\JSONResponse;
 use OCP\IAppConfig;
 use OCP\IRequest;
@@ -139,5 +140,18 @@ class IPWhitelistControllerTest extends TestCase {
 
 		$expected = new JSONResponse([]);
 		$this->assertEquals($expected, $this->controller->remove(42));
+	}
+
+	public static function dataPasswordConfirmationRequired(): array {
+		return [
+			['add'],
+			['remove'],
+		];
+	}
+
+	#[DataProvider('dataPasswordConfirmationRequired')]
+	public function testPasswordConfirmationRequired(string $method): void {
+		$attributes = (new \ReflectionMethod(IPWhitelistController::class, $method))->getAttributes(PasswordConfirmationRequired::class);
+		$this->assertCount(1, $attributes);
 	}
 }

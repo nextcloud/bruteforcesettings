@@ -4,7 +4,10 @@
  */
 
 import axios from '@nextcloud/axios'
+import { confirmPassword } from '@nextcloud/password-confirmation'
 import { generateUrl } from '@nextcloud/router'
+
+import '@nextcloud/password-confirmation/style.css'
 
 /**
  * Get the current IP whitelist
@@ -22,6 +25,7 @@ export async function getWhitelist() {
  * @param {string} item.comment Comment
  */
 export async function addWhitelist(item) {
+	await confirmPassword()
 	return axios.post(
 		generateUrl('apps/bruteforcesettings/ipwhitelist'),
 		item,
@@ -34,5 +38,6 @@ export async function addWhitelist(item) {
  * @param {string} id ID of the IP to delete
  */
 export async function deleteWhitelist(id) {
+	await confirmPassword()
 	return axios.delete(generateUrl(`apps/bruteforcesettings/ipwhitelist/${id}`))
 }

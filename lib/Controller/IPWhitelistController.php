@@ -13,6 +13,7 @@ namespace OCA\BruteForceSettings\Controller;
 use OCA\BruteForceSettings\Config;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\Attribute\PasswordConfirmationRequired;
 use OCP\AppFramework\Http\JSONResponse;
 use OCP\IAppConfig;
 use OCP\IRequest;
@@ -61,6 +62,7 @@ class IPWhitelistController extends Controller {
 	 * @param string $comment
 	 * @return JSONResponse
 	 */
+	#[PasswordConfirmationRequired]
 	public function add(string $ip, int $mask, string $comment = ''): JSONResponse {
 		// Make IPv6 lowercase for consistency
 		$ip = strtolower($ip);
@@ -110,6 +112,7 @@ class IPWhitelistController extends Controller {
 	 * @param int $id
 	 * @return JSONResponse
 	 */
+	#[PasswordConfirmationRequired]
 	public function remove(int $id): JSONResponse {
 		$this->appConfig->deleteKey(Config::APPID, Config::ALLOWLIST_PREFIX . $id);
 		$this->appConfig->deleteKey(Config::APPID, Config::ALLOWLIST_PREFIX . $id . Config::COMMENT_SUFFIX);
