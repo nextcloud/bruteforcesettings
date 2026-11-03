@@ -1,7 +1,17 @@
 OC.L10N.register(
     "bruteforcesettings",
     {
+    "Brute-force settings" : "Brute-force параметри",
     "Whitelist IPs" : "Дозволена листа на IP адреси",
+    "Your current IP address is detected as \"{remoteAddress}\". This address is currently throttled. Current delay: {delay} ms." : "Вашата моментална IP-адреса е детектирана како \"{remoteAddress}\". За оваа адреса моментално е ограничена брзината. Моментално доцнење: {delay}ms.",
+    "Your current IP address is detected as \"{remoteAddress}\". This address bypasses brute-force protection." : "Вашата моментална IP-адреса е детектирана како \"{remoteAddress}\". Оваа адреса ја заобиколува заштитата од „brute-force“ напади.",
+    "Your current IP address is detected as \"{remoteAddress}\". This address is not currently throttled." : "Вашата моментална IP-адреса е детектирана како \"{remoteAddress}\". За оваа адреса моментално не е применет лимит на брзината.",
+    "Brute-force allow list" : "Список на дозволени адреси за Brute-force",
+    "To exclude IP ranges from the brute-force protection specify them below. Note that any allowed IP can perform authentication attempts without any throttling. For security reasons, it is recommended to list as few remote addresses as possible or ideally even none at all." : "За да исклучите опсези на IP-адреси од заштитата против „brute-force“ напади, наведете ги подолу. Имајте предвид дека секоја дозволена IP-адреса може да врши обиди за автентикација без никакво ограничување на брзината. Од безбедносни причини, се препорачува да наведете што е можно помал број оддалечени адреси, а идеално ниедна.",
+    "Bypass rate limiting for allowed IPs" : "Заобиколете го ограничувањето на стапката за дозволените IP-адреси",
+    "Add new IP address" : "Додај нова IP адреса",
+    "IP address" : "IP адреса",
+    "Mask" : "Маска",
     "Comment" : "Коментар",
     "Add" : "Додади",
     "Save" : "Сними"
