@@ -11,13 +11,17 @@
 
 namespace OCA\BruteForceSettings\Tests\Controller;
 
+use OCA\BruteForceSettings\AuditLog\Operation;
 use OCA\BruteForceSettings\Config;
 use OCA\BruteForceSettings\Controller\IPWhitelistController;
+use OCA\BruteForceSettings\Tests\AuditLog\AuditEventHelper;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\Attribute\PasswordConfirmationRequired;
 use OCP\AppFramework\Http\JSONResponse;
+use OCP\EventDispatcher\IEventDispatcher;
 use OCP\IAppConfig;
 use OCP\IRequest;
+use OCP\Log\Audit\CriticalActionPerformedEvent;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use Test\TestCase;
@@ -25,17 +29,33 @@ use Test\TestCase;
 class IPWhitelistControllerTest extends TestCase {
 
 	private IAppConfig&MockObject $config;
+	private IEventDispatcher&MockObject $eventDispatcher;
 	private IPWhitelistController $controller;
 
 	public function setUp(): void {
 		parent::setUp();
 
 		$this->config = $this->createMock(IAppConfig::class);
+		$this->eventDispatcher = $this->createMock(IEventDispatcher::class);
 		$this->controller = new IPWhitelistController(
 			'bruteforce',
 			$this->createMock(IRequest::class),
-			$this->config
+			$this->config,
+			$this->eventDispatcher,
 		);
+	}
+
+	private function expectAuditEvent(Operation $operation, string $message, array $parameters): void {
+		$this->eventDispatcher->expects($this->once())
+			->method('dispatchTyped')
+			->with($this->callback(fn (CriticalActionPerformedEvent $event): bool => $event->getLogMessage() === $message
+				&& $event->getParameters() === $parameters
+				&& AuditEventHelper::hasOperation($event, $operation->value)));
+	}
+
+	private function expectNoAuditEvent(): void {
+		$this->eventDispatcher->expects($this->never())
+			->method('dispatchTyped');
 	}
 
 	public function testGetAll(): void {
@@ -127,10 +147,36 @@ class IPWhitelistControllerTest extends TestCase {
 			]);
 		}
 
+		if ($valid && $expectedId === 100) {
+			$this->expectAuditEvent(
+				Operation::AllowlistEntryAdded,
+				'Brute-force allowlist entry %s added for %s/%s',
+				['entryId' => 100, 'ip' => $expectedIp, 'mask' => $mask],
+			);
+		} else {
+			$this->expectNoAuditEvent();
+		}
+
 		$this->assertEquals($expected, $this->controller->add($ip, $mask));
 	}
 
+	public function testAddDoesNotLogComment(): void {
+		$this->config->method('getAllValues')
+			->willReturn([]);
+
+		$this->expectAuditEvent(
+			Operation::AllowlistEntryAdded,
+			'Brute-force allowlist entry %s added for %s/%s',
+			['entryId' => 1, 'ip' => '10.0.0.0', 'mask' => 8],
+		);
+
+		$this->controller->add('10.0.0.0', 8, 'Office network');
+	}
+
 	public function testRemove() {
+		$this->config->method('getValueString')
+			->with('bruteForce', 'whitelist_42')
+			->willReturn('dead:beef::/64');
 		$this->config->expects($this->exactly(2))
 			->method('deleteKey')
 			->with(
@@ -138,8 +184,25 @@ class IPWhitelistControllerTest extends TestCase {
 				$this->stringStartsWith('whitelist_42')
 			);
 
+		$this->expectAuditEvent(
+			Operation::AllowlistEntryRemoved,
+			'Brute-force allowlist entry %s removed for %s/%s',
+			['entryId' => 42, 'ip' => 'dead:beef::', 'mask' => 64],
+		);
+
 		$expected = new JSONResponse([]);
 		$this->assertEquals($expected, $this->controller->remove(42));
+	}
+
+	public function testRemoveUnknown(): void {
+		$this->config->method('getValueString')
+			->willReturn('');
+		$this->config->expects($this->exactly(2))
+			->method('deleteKey');
+
+		$this->expectNoAuditEvent();
+
+		$this->assertEquals(new JSONResponse([]), $this->controller->remove(42));
 	}
 
 	public static function dataPasswordConfirmationRequired(): array {
