@@ -110,7 +110,7 @@
 </template>
 
 <script>
-import { showError } from '@nextcloud/dialogs'
+import { showError } from '@nextcloud/dialogs/toast'
 import { loadState } from '@nextcloud/initial-state'
 import { t } from '@nextcloud/l10n'
 import NcButton from '@nextcloud/vue/components/NcButton'
