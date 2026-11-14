@@ -20,6 +20,9 @@
     "test:coverage": "vitest run --coverage",
     "watch": "NODE_ENV=development webpack --progress --watch --config webpack.js"
   },
+  "overrides": {
+    "minimatch": "^11.0.1"
+  },
   "dependencies": {
     "@nextcloud/axios": "^2.5.1",
     "@nextcloud/dialogs": "^7.3.0",
@@ -27,7 +30,6 @@
     "@nextcloud/l10n": "^3.4.1",
     "@nextcloud/router": "^3.1.0",
     "@nextcloud/vue": "^9.4.0",
-    "@vue/test-utils": "^2.4.11",
     "vue": "^3.5.44",
     "vue-material-design-icons": "^5.3.2"
   },
@@ -39,6 +41,7 @@
     "@nextcloud/webpack-vue-config": "^7.0.2",
     "@vitejs/plugin-vue": "^6.0.10",
     "@vitest/coverage-v8": "^4.1.11",
+    "@vue/test-utils": "^2.4.11",
     "jsdom": "^29.1.1",
     "vitest": "^4.1.11"
   },
