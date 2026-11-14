@@ -24,7 +24,8 @@
     "@emnapi/core": "^1.10.0",
     "@emnapi/runtime": "^1.10.0",
     "@emnapi/wasi-threads": "^1.2.2",
-    "@noble/hashes": "^1.8.0"
+    "@noble/hashes": "^1.8.0",
+    "minimatch": "^11.0.1"
   },
   "dependencies": {
     "@nextcloud/axios": "^2.5.2",
@@ -33,7 +34,6 @@
     "@nextcloud/l10n": "^3.4.1",
     "@nextcloud/router": "^3.1.0",
     "@nextcloud/vue": "^9.8.2",
-    "@vue/test-utils": "^2.4.6",
     "vue": "^3.5.44",
     "vue-material-design-icons": "^5.3.2"
   },
@@ -45,6 +45,7 @@
     "@nextcloud/webpack-vue-config": "^7.0.2",
     "@vitejs/plugin-vue": "^6.0.10",
     "@vitest/coverage-v8": "^4.1.11",
+    "@vue/test-utils": "^2.4.6",
     "jsdom": "^29.1.1",
     "vitest": "^4.1.11"
   },
