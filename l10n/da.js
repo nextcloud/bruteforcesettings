@@ -17,7 +17,7 @@ OC.L10N.register(
     "Bypass rate limiting for allowed IPs" : "Spring hastighedsbegrænsning over for tilladte IP-adresser",
     "Add new IP address" : "Tilføj ny IP-adresse",
     "IP address" : "IP-adresse",
-    "Mask" : "Maske",
+    "Mask" : "Netmaske",
     "Comment" : "Kommentar",
     "Add" : "Tilføj",
     "Edit comment for {subnet}" : "Rediger kommentar for {subnet}",
